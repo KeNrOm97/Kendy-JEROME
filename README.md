@@ -1,6 +1,6 @@
 # Kendy JEROME
 
-**Ingénieur Systèmes et Réseaux** spécialisé en infrastructure Linux/FreeBSD, VoIP et automatisation DevOps.  
+**Ingénieur Systèmes** spécialisé en infrastructure Linux/FreeBSD, VoIP et automatisation DevOps.  
 Basé à **Fort-de-France, Martinique** 🇫🇷
 
 ---
