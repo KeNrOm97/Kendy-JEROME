@@ -11,7 +11,7 @@ Basé à **Fort-de-France, Martinique** 🇫🇷
 - Architecture VoIP et téléphonie d'entreprise (Asterisk, WebRTC)
 - Automatisation et déploiement Infrastructure-as-Code (Ansible)
 - Sécurité réseau et firewalling (PF, iptables)
-- Virtualisation et conténéurisation (VMware, Docker)
+- Virtualisation et conteneurisation (VMware, Docker)
 
 ---
 
@@ -30,7 +30,7 @@ Basé à **Fort-de-France, Martinique** 🇫🇷
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![Lighttpd](https://img.shields.io/badge/Lighttpd-1F4D7F?style=for-the-badge)
 
-### Virtualisation & Conténéurisation
+### Virtualisation & Conteneurisation
 ![VMware](https://img.shields.io/badge/VMware-607078?style=for-the-badge&logo=vmware&logoColor=white)
 ![VirtualBox](https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white)
 ![QEMU](https://img.shields.io/badge/QEMU-FF6600?style=for-the-badge&logo=qemu&logoColor=white)
@@ -96,18 +96,11 @@ Serveur de communication temps réel avec chiffrement des flux (TLS/SRTP) et int
 
 ---
 
-## 📊 Statistiques GitHub
-
-![Stats](https://github-readme-stats.vercel.app/api?username=KeNrOm97&show_icons=true&theme=dark&hide_border=true&count_private=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KeNrOm97&layout=compact&theme=dark&hide_border=true)
-
----
-
 ## 📫 Contact
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kendy-jerome-4b147234b)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kendyjerome20@gmail.com)
-[![Téléphone](https://img.shields.io/badge/T%C3%A9l%C3%A9phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+596696786932)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KeNrOm97)
 
 **📍 Localisation** : Fort-de-France, Martinique (972)  
 **💼 Statut** : Ouvert aux opportunités en infrastructure, VoIP et DevOps  
