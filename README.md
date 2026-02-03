@@ -11,7 +11,7 @@ Basé à **Fort-de-France, Martinique** 🇫🇷
 - Architecture VoIP et téléphonie d'entreprise (Asterisk, WebRTC)
 - Automatisation et déploiement Infrastructure-as-Code (Ansible)
 - Sécurité réseau et firewalling (PF, iptables)
-- Virtualisation et conteneurisation (VMware, Docker)
+- Virtualisation et conténéurisation (VMware, Docker)
 
 ---
 
@@ -30,7 +30,7 @@ Basé à **Fort-de-France, Martinique** 🇫🇷
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![Lighttpd](https://img.shields.io/badge/Lighttpd-1F4D7F?style=for-the-badge)
 
-### Virtualisation & Conteneurisation
+### Virtualisation & Conténéurisation
 ![VMware](https://img.shields.io/badge/VMware-607078?style=for-the-badge&logo=vmware&logoColor=white)
 ![VirtualBox](https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white)
 ![QEMU](https://img.shields.io/badge/QEMU-FF6600?style=for-the-badge&logo=qemu&logoColor=white)
@@ -63,6 +63,8 @@ Basé à **Fort-de-France, Martinique** 🇫🇷
 ## 📂 Projets Majeurs
 
 ### ▸ OpenWCC - Plateforme Centre de Contacts
+[![Repo](https://img.shields.io/badge/GitHub-OpenWCC-181717?style=flat-square&logo=github)](https://github.com/KeNrOm97/OpenWCC)
+
 Architecture complète sous FreeBSD intégrant Asterisk, PostgreSQL, Redis, OpenLDAP avec automatisation Ansible et sécurité PF.
 
 **Technologies** : FreeBSD • Asterisk • PostgreSQL • Redis • OpenLDAP • PF Firewall • Ansible
@@ -105,7 +107,7 @@ Serveur de communication temps réel avec chiffrement des flux (TLS/SRTP) et int
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kendy-jerome-4b147234b)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kendyjerome20@gmail.com)
-[![Téléphone](https://img.shields.io/badge/Téléphone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+596696786932)
+[![Téléphone](https://img.shields.io/badge/T%C3%A9l%C3%A9phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+596696786932)
 
 **📍 Localisation** : Fort-de-France, Martinique (972)  
 **💼 Statut** : Ouvert aux opportunités en infrastructure, VoIP et DevOps  
