@@ -28,6 +28,7 @@ Basé à **Fort-de-France, Martinique** 🇫🇷
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![Lighttpd](https://img.shields.io/badge/Lighttpd-1F4D7F?style=for-the-badge)
 
 ### Virtualisation & Conteneurisation
 ![VMware](https://img.shields.io/badge/VMware-607078?style=for-the-badge&logo=vmware&logoColor=white)
@@ -80,7 +81,7 @@ Système de sauvegarde hiérarchisé avec compression tar.gz, transfert SCP et r
 ### ▸ Infrastructure WebRTC Asterisk
 Serveur de communication temps réel avec chiffrement des flux (TLS/SRTP) et intégration navigateurs web.
 
-**Technologies** : Asterisk • WebRTC • Let's Encrypt • Nginx • FreeBSD
+**Technologies** : Asterisk • WebRTC • Let's Encrypt • Lighttpd • FreeBSD
 
 ---
 
