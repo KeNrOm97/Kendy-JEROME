@@ -69,8 +69,17 @@ Architecture complète sous FreeBSD intégrant Asterisk, PostgreSQL, Redis, Open
 
 ---
 
+### ▸ SVI Python / Asterisk
+[![Repo](https://img.shields.io/badge/GitHub-Asterisk--svi--python--cassandra-181717?style=flat-square&logo=github)](https://github.com/KeNrOm97/Asterisk-svi-python-cassandra)
+
+Serveur Vocal Interactif (IVR) en Python connecté à Cassandra pour gestion avancée des appels et routage intelligent.
+
+**Technologies** : Python • Asterisk AGI • Cassandra • Redis
+
+---
+
 ### ▸ Backup Automatisé 3 Niveaux
-[![Repo](https://img.shields.io/badge/GitHub-backup--tar--scp-181717?style=flat-square&logo=github)](https://github.com/KeNrOm97/backup-tar-scp)
+[![Repo](https://img.shields.io/badge/GitHub-backup--tar--scp-181717?style=flat-square&logo=github)](https://github.com/KeNrOm97/Backup-tar-scp)
 
 Système de sauvegarde hiérarchisé avec compression tar.gz, transfert SCP et rotation automatique.
 
@@ -82,13 +91,6 @@ Système de sauvegarde hiérarchisé avec compression tar.gz, transfert SCP et r
 Serveur de communication temps réel avec chiffrement des flux (TLS/SRTP) et intégration navigateurs web.
 
 **Technologies** : Asterisk • WebRTC • Let's Encrypt • Lighttpd • FreeBSD
-
----
-
-### ▸ SVI Python / Asterisk
-Serveur Vocal Interactif (IVR) en Python connecté à Cassandra pour gestion avancée des appels et routage intelligent.
-
-**Technologies** : Python • Asterisk AGI • Cassandra • Redis
 
 ---
 
