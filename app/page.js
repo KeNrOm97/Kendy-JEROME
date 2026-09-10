@@ -492,14 +492,14 @@ export default function Home() {
               <circle cx="765" cy="246" r="3" />
               <circle cx="765" cy="326" r="3" />
             </g>
-            <g fontFamily="var(--font-fragment-mono), monospace" fontSize="10" fill="#7c8790">
-              <text x="705" y="160">
+            <g fontFamily="var(--font-fragment-mono), monospace" fontSize="10" fill="#7c8790" textAnchor="middle">
+              <text x="732" y="160">
                 SQL
               </text>
-              <text x="705" y="240">
+              <text x="732" y="240">
                 cache
               </text>
-              <text x="705" y="320">
+              <text x="732" y="320">
                 LDAP
               </text>
             </g>
@@ -1329,28 +1329,52 @@ export default function Home() {
       </div>
       {/* PROJETS WEB */}
       <div style={{padding: '56px 48px 0 48px'}}>
-        <h2 style={{margin: '0 0 12px 0', fontSize: '30px', fontWeight: '700', letterSpacing: '-0.015em'}}>
-          Projets web
-        </h2>
-        <p style={{margin: '0 0 22px 0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
-          Je garde un pied côté développement et déploiement continu, en parallèle de l'infrastructure.
-        </p>
-        <div style={{display: 'flex', flexDirection: 'column', fontSize: '15px', color: '#b4bcc2'}}>
-          <div style={{display: 'grid', gridTemplateColumns: '160px 1fr', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
-            <span style={{color: '#eef1f0', fontWeight: '600'}}>MiruStream</span>
-            <span>media center web · Next.js · Supabase · Vercel</span>
+        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '18px'}}>
+          <h2 style={{margin: '0', fontSize: '30px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+            Projets web
+          </h2>
+          <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
+            à côté, pour ne pas rouiller
+          </span>
+        </div>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '16px'}}>
+          <div className="card" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
+            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Media center</div>
+            <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruStream</h3>
+            <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Catalogue, lecture et déploiement continu.</p>
+            <div style={{display: 'flex', flexWrap: 'wrap', gap: '6px', paddingTop: '4px'}}>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Next.js</span>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Supabase</span>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
+            </div>
           </div>
-          <div style={{display: 'grid', gridTemplateColumns: '160px 1fr', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
-            <span style={{color: '#eef1f0', fontWeight: '600'}}>MiruStream API</span>
-            <span>backend conteneurisé · FastAPI · Python · Docker</span>
+          <div className="card" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
+            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>API</div>
+            <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruStream API</h3>
+            <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Backend REST qui alimente MiruStream, livré en conteneur.</p>
+            <div style={{display: 'flex', flexWrap: 'wrap', gap: '6px', paddingTop: '4px'}}>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>FastAPI</span>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Python</span>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Docker</span>
+            </div>
           </div>
-          <div style={{display: 'grid', gridTemplateColumns: '160px 1fr', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
-            <span style={{color: '#eef1f0', fontWeight: '600'}}>MiruList</span>
-            <span>suivi de catalogue · JavaScript · Vercel</span>
+          <div className="card" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
+            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Catalogue</div>
+            <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruList</h3>
+            <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Suivi de catalogue et de progression avec interface web.</p>
+            <div style={{display: 'flex', flexWrap: 'wrap', gap: '6px', paddingTop: '4px'}}>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>JavaScript</span>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
+            </div>
           </div>
-          <div style={{display: 'grid', gridTemplateColumns: '160px 1fr', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024', borderBottom: '1px solid #1c2024'}}>
-            <span style={{color: '#eef1f0', fontWeight: '600'}}>Loup_G</span>
-            <span>jeu multijoueur · TypeScript · Vercel</span>
+          <div className="card" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
+            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Jeu</div>
+            <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>Loup_G</h3>
+            <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Jeu multijoueur en ligne.</p>
+            <div style={{display: 'flex', flexWrap: 'wrap', gap: '6px', paddingTop: '4px'}}>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>TypeScript</span>
+              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
+            </div>
           </div>
         </div>
       </div>
