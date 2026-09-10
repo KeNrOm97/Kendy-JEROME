@@ -146,23 +146,3 @@ figure {
     display: none !important;
   }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-  .ticker-track,
-  .flow,
-  .flow-slow,
-  .led,
-  .led2,
-  .led3,
-  .caret {
-    animation: none !important;
-  }
-}
