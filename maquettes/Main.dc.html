@@ -73,13 +73,11 @@
 
     <!-- PANNEAU LIVE -->
     <div style="border: 1px solid #1c2024; background: #101317; border-radius: 6px; overflow: hidden;">
-      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid #1c2024; font-family: 'Fragment Mono', monospace; font-size: 11.5px; color: #7c8790;">
-        <span>session · cette page</span>
+      <div style="display: flex; align-items: center; justify-content: flex-end; padding: 12px 18px; border-bottom: 1px solid #1c2024; font-family: 'Fragment Mono', monospace; font-size: 11.5px; color: #7c8790;">
         <span style="display: flex; align-items: center; gap: 6px;"><span class="led" style="width: 6px; height: 6px; border-radius: 50%; background: #2dd8b8; display: inline-block;"></span>en direct</span>
       </div>
-      <div style="padding: 26px 18px 10px 18px; text-align: center;">
+      <div style="padding: 26px 18px 22px 18px; text-align: center;">
         <div id="dc-uptime" style="font-family: 'Fragment Mono', monospace; font-size: 46px; font-weight: 500; letter-spacing: 0.03em; color: #eef1f0;">{{uptime}}</div>
-        <div style="font-family: 'Fragment Mono', monospace; font-size: 11px; color: #5c666e; padding-top: 6px;">temps passé sur cette page, pas une métrique de prod, juste une horloge qui tourne</div>
       </div>
       <div style="display: flex; flex-direction: column; font-family: 'Fragment Mono', monospace; font-size: 12px; border-top: 1px solid #1c2024;">
         <div style="display: flex; align-items: center; gap: 12px; padding: 11px 18px; border-bottom: 1px solid #16191d;"><span class="led" style="width: 6px; height: 6px; border-radius: 50%; background: #2dd8b8; display: inline-block;"></span><span style="flex-grow: 1; color: #c7ccce;">asterisk 18</span><span style="color: #5c666e;">svi actif</span></div>
@@ -199,7 +197,7 @@
           <text x="438" y="320">SMTP</text>
         </g>
         <path class="flow" d="M585 118 V130" stroke="#c7ccce" stroke-width="1.6" fill="none" marker-end="url(#arA)"></path>
-        <text x="592" y="129" font-family="'Fragment Mono', monospace" font-size="10" fill="#7c8790">reverse proxy</text>
+        <text x="600" y="129" font-family="'Fragment Mono', monospace" font-size="10" fill="#7c8790">reverse proxy</text>
 
         <!-- données -->
         <g fill="none" stroke="#dde3e5" stroke-width="2">
@@ -239,9 +237,9 @@
           <circle cx="765" cy="166" r="3"></circle><circle cx="765" cy="246" r="3"></circle><circle cx="765" cy="326" r="3"></circle>
         </g>
         <g font-family="'Fragment Mono', monospace" font-size="10" fill="#7c8790">
-          <text x="770" y="120">SQL</text>
-          <text x="770" y="200">cache</text>
-          <text x="770" y="280">LDAP</text>
+          <text x="705" y="160">SQL</text>
+          <text x="705" y="240">cache</text>
+          <text x="705" y="320">LDAP</text>
         </g>
 
         <!-- pilotage -->
@@ -669,12 +667,24 @@
     </div>
   </div>
 
+  <!-- PROJETS WEB -->
+  <div style="padding: 56px 48px 0 48px;">
+    <h2 style="margin: 0 0 12px 0; font-size: 30px; font-weight: 700; letter-spacing: -0.015em;">Projets web</h2>
+    <p style="margin: 0 0 22px 0; font-size: 15.5px; line-height: 1.65; color: #b4bcc2;">Je garde un pied côté développement et déploiement continu, en parallèle de l'infrastructure.</p>
+    <div style="display: flex; flex-direction: column; font-size: 15px; color: #b4bcc2;">
+      <div style="display: grid; grid-template-columns: 160px 1fr; gap: 20px; padding: 14px 0; border-top: 1px solid #1c2024;"><span style="color: #eef1f0; font-weight: 600;">MiruStream</span><span>media center web · Next.js · Supabase · Vercel</span></div>
+      <div style="display: grid; grid-template-columns: 160px 1fr; gap: 20px; padding: 14px 0; border-top: 1px solid #1c2024;"><span style="color: #eef1f0; font-weight: 600;">MiruStream API</span><span>backend conteneurisé · FastAPI · Python · Docker</span></div>
+      <div style="display: grid; grid-template-columns: 160px 1fr; gap: 20px; padding: 14px 0; border-top: 1px solid #1c2024;"><span style="color: #eef1f0; font-weight: 600;">MiruList</span><span>suivi de catalogue · JavaScript · Vercel</span></div>
+      <div style="display: grid; grid-template-columns: 160px 1fr; gap: 20px; padding: 14px 0; border-top: 1px solid #1c2024; border-bottom: 1px solid #1c2024;"><span style="color: #eef1f0; font-weight: 600;">Loup_G</span><span>jeu multijoueur · TypeScript · Vercel</span></div>
+    </div>
+  </div>
+
   <!-- CONTACT -->
   <div id="contact" style="padding: 72px 48px 64px 48px; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; scroll-margin-top: 70px;">
     <div>
       <div style="font-family: 'Fragment Mono', monospace; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #2dd8b8; padding-bottom: 14px;">Ouvert aux opportunités</div>
       <h2 style="margin: 0; font-size: 40px; font-weight: 700; letter-spacing: -0.015em; max-width: 14em;">Infrastructure, VoIP ou DevOps : parlons-en.</h2>
-      <div style="font-family: 'Fragment Mono', monospace; font-size: 13px; color: #7c8790; padding-top: 14px;">Martinique · métropole · télétravail · permis B, véhiculé</div>
+      <div style="font-family: 'Fragment Mono', monospace; font-size: 13px; color: #7c8790; padding-top: 14px;">Martinique · Métropole · Télétravail · Permis B, véhiculé</div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
       <a href="mailto:kendyjerome20@gmail.com" style="display: inline-flex; align-items: center; height: 52px; padding: 0 28px; background: #2dd8b8; color: #06120f; font-weight: 700; font-size: 15px; border-radius: 4px;">kendyjerome20@gmail.com</a>

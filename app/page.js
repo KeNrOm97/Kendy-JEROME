@@ -54,20 +54,14 @@ export default function Home() {
         </div>
         {/* PANNEAU LIVE */}
         <div style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', overflow: 'hidden'}}>
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 18px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', color: '#7c8790'}}>
-            <span>
-              session · cette page
-            </span>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '12px 18px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', color: '#7c8790'}}>
             <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
               <span className="led" style={{width: '6px', height: '6px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
               en direct
             </span>
           </div>
-          <div style={{padding: '26px 18px 10px 18px', textAlign: 'center'}}>
+          <div style={{padding: '26px 18px 22px 18px', textAlign: 'center'}}>
             <div id="dc-uptime" style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '46px', fontWeight: '500', letterSpacing: '0.03em', color: '#eef1f0'}}><UptimeClock /></div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#5c666e', paddingTop: '6px'}}>
-              temps passé sur cette page, pas une métrique de prod, juste une horloge qui tourne
-            </div>
           </div>
           <div style={{display: 'flex', flexDirection: 'column', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', borderTop: '1px solid #1c2024'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 18px', borderBottom: '1px solid #16191d'}}>
@@ -432,7 +426,7 @@ export default function Home() {
               </text>
             </g>
             <path className="flow" d="M585 118 V130" stroke="#c7ccce" strokeWidth="1.6" fill="none" markerEnd="url(#arA)" />
-            <text x="592" y="129" fontFamily="var(--font-fragment-mono), monospace" fontSize="10" fill="#7c8790">
+            <text x="600" y="129" fontFamily="var(--font-fragment-mono), monospace" fontSize="10" fill="#7c8790">
               reverse proxy
             </text>
             {/* données */}
@@ -499,13 +493,13 @@ export default function Home() {
               <circle cx="765" cy="326" r="3" />
             </g>
             <g fontFamily="var(--font-fragment-mono), monospace" fontSize="10" fill="#7c8790">
-              <text x="770" y="120">
+              <text x="705" y="160">
                 SQL
               </text>
-              <text x="770" y="200">
+              <text x="705" y="240">
                 cache
               </text>
-              <text x="770" y="280">
+              <text x="705" y="320">
                 LDAP
               </text>
             </g>
@@ -1333,6 +1327,33 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* PROJETS WEB */}
+      <div style={{padding: '56px 48px 0 48px'}}>
+        <h2 style={{margin: '0 0 12px 0', fontSize: '30px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+          Projets web
+        </h2>
+        <p style={{margin: '0 0 22px 0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
+          Je garde un pied côté développement et déploiement continu, en parallèle de l'infrastructure.
+        </p>
+        <div style={{display: 'flex', flexDirection: 'column', fontSize: '15px', color: '#b4bcc2'}}>
+          <div style={{display: 'grid', gridTemplateColumns: '160px 1fr', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
+            <span style={{color: '#eef1f0', fontWeight: '600'}}>MiruStream</span>
+            <span>media center web · Next.js · Supabase · Vercel</span>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: '160px 1fr', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
+            <span style={{color: '#eef1f0', fontWeight: '600'}}>MiruStream API</span>
+            <span>backend conteneurisé · FastAPI · Python · Docker</span>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: '160px 1fr', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
+            <span style={{color: '#eef1f0', fontWeight: '600'}}>MiruList</span>
+            <span>suivi de catalogue · JavaScript · Vercel</span>
+          </div>
+          <div style={{display: 'grid', gridTemplateColumns: '160px 1fr', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024', borderBottom: '1px solid #1c2024'}}>
+            <span style={{color: '#eef1f0', fontWeight: '600'}}>Loup_G</span>
+            <span>jeu multijoueur · TypeScript · Vercel</span>
+          </div>
+        </div>
+      </div>
       {/* CONTACT */}
       <div id="contact" style={{padding: '72px 48px 64px 48px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap', scrollMarginTop: '70px'}}>
         <div>
@@ -1343,7 +1364,7 @@ export default function Home() {
             Infrastructure, VoIP ou DevOps : parlons-en.
           </h2>
           <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13px', color: '#7c8790', paddingTop: '14px'}}>
-            Martinique · métropole · télétravail · permis B, véhiculé
+            Martinique · Métropole · Télétravail · Permis B, véhiculé
           </div>
         </div>
         <div style={{display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'flex-end'}}>
