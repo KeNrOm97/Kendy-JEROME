@@ -585,7 +585,7 @@ export default function Home() {
       <div id="stack" style={{padding: '72px 48px 0 48px', scrollMarginTop: '70px'}}>
         <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '26px'}}>
           <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
-            Ma stack
+            Stack
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
             chaque brique, le projet où elle sert
