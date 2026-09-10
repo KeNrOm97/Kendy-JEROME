@@ -4,26 +4,26 @@ export default function Home() {
   return (
     <div style={{minHeight: '6620px', background: '#0d0f12', color: '#eef1f0', fontFamily: "var(--font-familjen-grotesk), system-ui, sans-serif"}}>
       {/* BARRE */}
-      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '24px', padding: '0 48px', height: '54px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), ui-monospace, monospace", fontSize: '12.5px', color: '#7c8790'}}>
+      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '24px', padding: '0 48px', height: '54px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), ui-monospace, monospace", fontSize: '14px', color: '#7c8790'}}>
         <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
           <span className="led" style={{width: '7px', height: '7px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
           <span>
-            kendy jerome — infrastructure
+            kendy jerome · infrastructure
             &amp;
             systèmes
           </span>
         </div>
         <div style={{display: 'flex', gap: '26px'}}>
-          <a href="#" style={{color: '#7c8790'}}>
+          <a href="#architecture" style={{color: '#7c8790'}}>
             architecture
           </a>
-          <a href="#" style={{color: '#7c8790'}}>
+          <a href="#stack" style={{color: '#7c8790'}}>
             stack
           </a>
-          <a href="#" style={{color: '#7c8790'}}>
+          <a href="#projets" style={{color: '#7c8790'}}>
             projets
           </a>
-          <a href="#" style={{color: '#7c8790'}}>
+          <a href="#contact" style={{color: '#7c8790'}}>
             contact
           </a>
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
         <div style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', overflow: 'hidden'}}>
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 18px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', color: '#7c8790'}}>
             <span>
-              session — cette page
+              session · cette page
             </span>
             <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
               <span className="led" style={{width: '6px', height: '6px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
@@ -66,7 +66,7 @@ export default function Home() {
           <div style={{padding: '26px 18px 10px 18px', textAlign: 'center'}}>
             <div id="dc-uptime" style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '46px', fontWeight: '500', letterSpacing: '0.03em', color: '#eef1f0'}}><UptimeClock /></div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#5c666e', paddingTop: '6px'}}>
-              temps passé sur cette page — pas une métrique de prod, juste une horloge qui tourne
+              temps passé sur cette page, pas une métrique de prod, juste une horloge qui tourne
             </div>
           </div>
           <div style={{display: 'flex', flexDirection: 'column', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', borderTop: '1px solid #1c2024'}}>
@@ -250,7 +250,7 @@ export default function Home() {
         </div>
       </div>
       {/* ARCHITECTURE ANIMÉE */}
-      <div style={{padding: '72px 48px 0 48px'}}>
+      <div id="architecture" style={{padding: '72px 48px 0 48px', scrollMarginTop: '70px'}}>
         <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '24px'}}>
           <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
             OpenWCC, en train de tourner
@@ -259,7 +259,7 @@ export default function Home() {
             flux réel · FreeBSD 14
           </span>
         </div>
-        <p style={{margin: '0 0 24px 0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
+        <p style={{margin: '0 0 24px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
           Un centre de contacts, d'habitude, c'est une licence propriétaire et une boîte noire. On m'a demandé d'en construire un avec des briques ouvertes, le tout derrière un pare-feu, sur FreeBSD. La partie dont je suis le plus fier ne se voit pas : chaque brique est écrite dans un playbook Ansible, donc la plateforme entière se redéploie sans intervention manuelle.
         </p>
         <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: '28px 32px 22px 32px'}}>
@@ -388,7 +388,7 @@ export default function Home() {
             </g>
             <g fontFamily="var(--font-familjen-grotesk), sans-serif" fontSize="13" fill="#dde3e5">
               <text x="520" y="82">
-                lighttpd — frontal TLS
+                lighttpd · frontal TLS
               </text>
               <text x="520" y="162">
                 Tomcat 10 · OpenJDK 11
@@ -574,7 +574,7 @@ export default function Home() {
             </g>
           </svg>
           <figcaption style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', color: '#7c8790', lineHeight: '1.6', paddingTop: '16px', borderTop: '1px solid #1c2024', marginTop: '14px'}}>
-            Fig. 01 — Tous les flux entrants passent par PF avant d'atteindre un service ; les services partagent un même accès aux données. Ansible pose l'ensemble, la supervision le regarde tourner.
+            Fig. 01. Tous les flux entrants passent par PF avant d'atteindre un service ; les services partagent un même accès aux données. Ansible pose l'ensemble, la supervision le regarde tourner.
             <a href="https://github.com/KeNrOm97/OpenWCC">
               github.com/KeNrOm97/OpenWCC
             </a>
@@ -582,10 +582,10 @@ export default function Home() {
         </figure>
       </div>
       {/* STACK EN TUILES */}
-      <div style={{padding: '72px 48px 0 48px'}}>
+      <div id="stack" style={{padding: '72px 48px 0 48px', scrollMarginTop: '70px'}}>
         <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '26px'}}>
           <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
-            La stack
+            Ma stack
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
             chaque brique, le projet où elle sert
@@ -714,7 +714,7 @@ export default function Home() {
               Redis
             </div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              cache — OpenWCC · SVI
+              cache · OpenWCC · SVI
             </div>
           </div>
           <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
@@ -726,7 +726,7 @@ export default function Home() {
               Nginx
             </div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              reverse proxy — module Odoo
+              reverse proxy · module Odoo
             </div>
           </div>
           <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
@@ -742,7 +742,7 @@ export default function Home() {
               lighttpd
             </div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              frontal TLS — OpenWCC · WebRTC
+              frontal TLS · OpenWCC · WebRTC
             </div>
           </div>
           <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
@@ -754,7 +754,7 @@ export default function Home() {
               Prometheus
             </div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              métriques — OpenWCC
+              métriques · OpenWCC
             </div>
           </div>
           <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
@@ -766,7 +766,7 @@ export default function Home() {
               Zabbix
             </div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              alertes — OpenWCC
+              alertes · OpenWCC
             </div>
           </div>
           <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
@@ -824,13 +824,13 @@ export default function Home() {
               Let's Encrypt
             </div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              certificats — passerelle WebRTC
+              certificats · passerelle WebRTC
             </div>
           </div>
         </div>
       </div>
       {/* SÉQUENCE ANIMÉE */}
-      <div style={{padding: '72px 48px 0 48px'}}>
+      <div id="projets" style={{padding: '72px 48px 0 48px', scrollMarginTop: '70px'}}>
         <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '24px'}}>
           <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Un appel dans le SVI
@@ -839,8 +839,8 @@ export default function Home() {
             Python · Asterisk AGI · Cassandra
           </span>
         </div>
-        <p style={{margin: '0 0 24px 0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
-          Un serveur vocal interactif classique code son routage en dur dans le dialplan : le moindre changement demande une intervention. J'ai écrit le mien en Python, branché sur Asterisk via AGI, avec les données d'appel lues et écrites en direct dans Cassandra — changer un routage devient une écriture en base, pas une modification de configuration.
+        <p style={{margin: '0 0 24px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
+          Un serveur vocal interactif classique code son routage en dur dans le dialplan : le moindre changement demande une intervention. J'ai écrit le mien en Python, branché sur Asterisk via AGI, avec les données d'appel lues et écrites en direct dans Cassandra. Changer un routage devient une écriture en base, pas une modification de configuration.
         </p>
         <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: '28px 32px 22px 32px'}}>
           <svg viewBox="0 0 1000 470" role="img" aria-label="Déroulé d'un appel : l'appelant joint Asterisk, qui lance le script Python AGI ; le script lit le dossier dans Cassandra, fait jouer l'annonce, reçoit la touche DTMF, écrit la trace d'appel et renvoie la destination de routage à Asterisk, qui met l'appelant en relation." style={{width: '100%', height: 'auto', display: 'block'}}>
@@ -933,7 +933,7 @@ export default function Home() {
             </g>
           </svg>
           <figcaption style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', color: '#7c8790', lineHeight: '1.6', paddingTop: '16px', borderTop: '1px solid #1c2024', marginTop: '14px'}}>
-            Fig. 02 — Le seul lien qui compte est en turquoise : la destination remonte du script, pas d'une règle figée dans le dialplan. Changer un routage devient une écriture en base, pas une modification de configuration.
+            Fig. 02. Le seul lien qui compte est en turquoise : la destination remonte du script, pas d'une règle figée dans le dialplan. Changer un routage devient une écriture en base, pas une modification de configuration.
             <a href="https://github.com/KeNrOm97/Asterisk-svi-python-cassandra">
               Asterisk-svi-python-cassandra
             </a>
@@ -950,10 +950,10 @@ export default function Home() {
             Odoo 18 · Docker Compose
           </span>
         </div>
-        <p style={{margin: '0 0 12px 0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
-          Un dossier de subvention se monte d'ordinaire à coups de tableurs et de pièces jointes éparpillées, sans trace fiable de qui a validé quoi. J'ai construit un module Odoo 18 qui en fait un vrai objet métier : formulaire unique, justificatifs rattachés, circuit de validation par états, historique conservé.
+        <p style={{margin: '0 0 12px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
+          Un dossier de subvention se monte d'ordinaire à coups de tableurs et de pièces jointes éparpillées, sans trace fiable de qui a validé quoi. Lors d'une mission, j'ai construit un module Odoo 18 qui en fait un vrai objet métier : formulaire unique, justificatifs rattachés, circuit de validation par états, historique conservé.
         </p>
-        <p style={{margin: '0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
+        <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
           Le retour en brouillon est la transition qui justifie le module : elle remplace les allers-retours par courriel et garde la trace de ce qui manquait. Odoo, PostgreSQL et Nginx tournent en services séparés sous Docker Compose, addons montés en volume.
         </p>
         <div style={{display: 'flex', gap: '8px', flexWrap: 'wrap', padding: '18px 0 24px 0'}}>
@@ -1043,7 +1043,7 @@ export default function Home() {
             </g>
           </svg>
           <figcaption style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', color: '#7c8790', lineHeight: '1.6', paddingTop: '14px', borderTop: '1px solid #1c2024', marginTop: '12px'}}>
-            Fig. 03 — Le retour en brouillon est la transition qui justifie le module : c'est elle qui remplace les allers-retours par courriel et garde la trace de ce qui manquait. Odoo, PostgreSQL et Nginx tournent en services séparés sous Docker Compose, addons montés en volume.
+            Fig. 03. Le retour en brouillon est la transition qui justifie le module : c'est elle qui remplace les allers-retours par courriel et garde la trace de ce qui manquait. Odoo, PostgreSQL et Nginx tournent en services séparés sous Docker Compose, addons montés en volume.
           </figcaption>
         </figure>
       </div>
@@ -1057,10 +1057,10 @@ export default function Home() {
             Asterisk · WebRTC · TLS/SRTP
           </span>
         </div>
-        <p style={{margin: '0 0 12px 0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
+        <p style={{margin: '0 0 12px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
           Une passerelle temps réel qui supprime le logiciel client : signalisation WebSocket sécurisée, flux média chiffrés en SRTP, certificats Let's Encrypt renouvelés tout seuls, servis par lighttpd sur FreeBSD.
         </p>
-        <p style={{margin: '0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
+        <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
           Le poste de l'agent n'installe rien : la page arrive de lighttpd, la voix passe chiffrée par le pare-feu jusqu'à Asterisk, qui met en relation avec les postes SIP internes.
         </p>
         <div style={{display: 'flex', gap: '8px', flexWrap: 'wrap', padding: '18px 0 24px 0'}}>
@@ -1151,7 +1151,7 @@ export default function Home() {
             <path className="flow-slow" d="M230 185 H176" stroke="#2dd8b8" strokeWidth="1.7" fill="none" markerEnd="url(#wroW)" />
           </svg>
           <figcaption style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', color: '#7c8790', lineHeight: '1.6', paddingTop: '14px', borderTop: '1px solid #1c2024', marginTop: '12px'}}>
-            Fig. 05 — Le poste de l'agent n'installe rien : la page arrive de lighttpd, la voix passe chiffrée par PF jusqu'à Asterisk. Le certificat se renouvelle sans intervention.
+            Fig. 05. Le poste de l'agent n'installe rien : la page arrive de lighttpd, la voix passe chiffrée par PF jusqu'à Asterisk. Le certificat se renouvelle sans intervention.
           </figcaption>
         </figure>
       </div>
@@ -1165,11 +1165,11 @@ export default function Home() {
             Shell · tar/gzip · SCP/SSH · cron
           </span>
         </div>
-        <p style={{margin: '0 0 12px 0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
+        <p style={{margin: '0 0 12px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
           Pas de logiciel à installer : compression tar.gz, transfert SCP vers un hôte distant, rotation sur deux jours, déclenchement par cron. Pensée pour tourner seule en production et rester lisible par la personne qui me remplacera.
         </p>
-        <p style={{margin: '0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
-          La purge ferme la boucle : sans elle, le disque distant se remplit tout seul. Tar, scp et cron sont déjà là — aucune dépendance à installer.
+        <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
+          La purge ferme la boucle : sans elle, le disque distant se remplit tout seul. Tar, scp et cron sont déjà là. Aucune dépendance à installer.
         </p>
         <div style={{display: 'flex', gap: '8px', flexWrap: 'wrap', padding: '18px 0 24px 0'}}>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', padding: '5px 10px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>
@@ -1240,7 +1240,7 @@ export default function Home() {
             </text>
           </svg>
           <figcaption style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', color: '#7c8790', lineHeight: '1.6', paddingTop: '14px', borderTop: '1px solid #1c2024', marginTop: '12px'}}>
-            Fig. 04 — Aucune dépendance à installer : tar, scp et cron sont déjà là. La purge ferme la boucle, sinon le disque distant se remplit tout seul.
+            Fig. 04. Aucune dépendance à installer : tar, scp et cron sont déjà là. La purge ferme la boucle, sinon le disque distant se remplit tout seul.
             <a href="https://github.com/KeNrOm97/Backup-tar-scp">
               Backup-tar-scp
             </a>
@@ -1257,25 +1257,25 @@ export default function Home() {
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '36px'}}>
           <div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
-              01 — jamais deux fois pareil
+              01. jamais deux fois pareil
             </div>
-            <p style={{margin: '0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
+            <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
               Un playbook Ansible même quand l'installation à la main irait plus vite. Ça se paie le jour où il faut remonter la machine dans l'urgence.
             </p>
           </div>
           <div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
-              02 — jamais après
+              02. jamais après
             </div>
-            <p style={{margin: '0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
+            <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
               Pare-feu et certificats posés avec le service, jamais après. Ouvrir large en se disant qu'on refermera plus tard finit en règle oubliée.
             </p>
           </div>
           <div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
-              03 — restaurée, vraiment
+              03. restaurée, vraiment
             </div>
-            <p style={{margin: '0', fontSize: '15.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
+            <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
               Une sauvegarde qu'on n'a jamais restaurée, on ne sait pas encore si c'en est une. Je documente au fur et à mesure.
             </p>
           </div>
@@ -1311,7 +1311,7 @@ export default function Home() {
           </div>
           <div style={{display: 'grid', gridTemplateColumns: '130px 1fr 240px', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
             <span style={{color: '#2dd8b8'}}>
-              —
+              -
             </span>
             <span style={{color: '#dde3e5'}}>
               Certification CCNA, réseaux Cisco
@@ -1334,16 +1334,16 @@ export default function Home() {
         </div>
       </div>
       {/* CONTACT */}
-      <div style={{padding: '72px 48px 64px 48px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap'}}>
+      <div id="contact" style={{padding: '72px 48px 64px 48px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap', scrollMarginTop: '70px'}}>
         <div>
           <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
             Ouvert aux opportunités
           </div>
           <h2 style={{margin: '0', fontSize: '40px', fontWeight: '700', letterSpacing: '-0.015em', maxWidth: '14em'}}>
-            Infrastructure, VoIP ou DevOps — parlons-en.
+            Infrastructure, VoIP ou DevOps : parlons-en.
           </h2>
           <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13px', color: '#7c8790', paddingTop: '14px'}}>
-            Martinique · métropole · télétravail — permis B, véhiculé
+            Martinique · métropole · télétravail · permis B, véhiculé
           </div>
         </div>
         <div style={{display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'flex-end'}}>
