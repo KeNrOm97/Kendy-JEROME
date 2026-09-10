@@ -315,7 +315,7 @@ export default function Home() {
               <text x="70" y="115">
                 postes internes
               </text>
-              <text x="70" y="215">
+              <text x="55" y="215">
                 sans logiciel client
               </text>
               <text x="70" y="315">
@@ -401,7 +401,7 @@ export default function Home() {
               <text x="520" y="179">
                 application métier
               </text>
-              <text x="520" y="259">
+              <text x="490" y="259">
                 SVI · files d'attente · routage
               </text>
               <text x="520" y="339">
