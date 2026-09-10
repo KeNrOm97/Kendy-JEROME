@@ -227,16 +227,14 @@ export default function Home() {
         </div>
         {/* PANNEAU LIVE */}
         <div style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', overflow: 'hidden'}}>
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 18px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', color: '#8a949d'}}>
-            <span>pile type d’un projet</span>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '12px 18px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', color: '#7c8790'}}>
             <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
               <span className="led" style={{width: '6px', height: '6px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
-              session
+              en direct
             </span>
           </div>
           <div style={{padding: '26px 18px 22px 18px', textAlign: 'center'}}>
-            <div id="dc-uptime" style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(30px, 9vw, 46px)', fontWeight: '400', letterSpacing: '0.03em', color: '#eef1f0'}}><UptimeClock /></div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#8a949d', paddingTop: '8px'}}>temps passé sur la page</div>
+            <div id="dc-uptime" style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(30px, 9vw, 46px)', fontWeight: '500', letterSpacing: '0.03em', color: '#eef1f0'}}><UptimeClock /></div>
           </div>
           <div style={{display: 'flex', flexDirection: 'column', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', borderTop: '1px solid #1c2024'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 18px', borderBottom: '1px solid #16191d'}}>
@@ -244,7 +242,7 @@ export default function Home() {
               <span style={{flexGrow: '1', color: '#c7ccce'}}>
                 asterisk 18
               </span>
-              <span style={{color: '#8a949d'}}>
+              <span style={{color: '#5c666e'}}>
                 svi actif
               </span>
             </div>
@@ -253,7 +251,7 @@ export default function Home() {
               <span style={{flexGrow: '1', color: '#c7ccce'}}>
                 postgresql 15
               </span>
-              <span style={{color: '#8a949d'}}>
+              <span style={{color: '#5c666e'}}>
                 connecté
               </span>
             </div>
@@ -262,7 +260,7 @@ export default function Home() {
               <span style={{flexGrow: '1', color: '#c7ccce'}}>
                 pare-feu pf
               </span>
-              <span style={{color: '#8a949d'}}>
+              <span style={{color: '#5c666e'}}>
                 règles chargées
               </span>
             </div>
@@ -425,7 +423,7 @@ export default function Home() {
             OpenWCC, en train de tourner
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
-            architecture · FreeBSD 14
+            flux réel · FreeBSD 14
           </span>
         </div>
         <p style={{margin: '0 0 24px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
