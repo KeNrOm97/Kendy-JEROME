@@ -116,3 +116,9 @@ figure {
     grid-template-columns: 1fr !important;
   }
 }
+
+@media (max-width: 640px) {
+  .topbar-sub {
+    display: none !important;
+  }
+}

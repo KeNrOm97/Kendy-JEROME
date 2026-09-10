@@ -8,9 +8,8 @@ export default function Home() {
         <div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '0', flex: '1 1 auto'}}>
           <span className="led" style={{width: '7px', height: '7px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block', flexShrink: '0'}} />
           <span style={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: '0'}}>
-            Kendy Jerome · infrastructure
-            &amp;
-            systèmes
+            Kendy Jerome
+            <span className="topbar-sub"> · infrastructure &amp; systèmes</span>
           </span>
         </div>
         <div style={{display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px, 4vw, 26px)'}}>

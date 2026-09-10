@@ -44,6 +44,10 @@
     @media (max-width: 760px) {
       .hero-grid { grid-template-columns: 1fr !important; }
     }
+
+    @media (max-width: 640px) {
+      .topbar-sub { display: none !important; }
+    }
   </style>
 </helmet>
 
@@ -53,7 +57,7 @@
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; padding: clamp(12px, 3vw, 16px) clamp(16px, 5vw, 48px); border-bottom: 1px solid #1c2024; font-family: 'Fragment Mono', ui-monospace, monospace; font-size: clamp(11px, 2.8vw, 14px); color: #7c8790;">
     <div style="display: flex; align-items: center; gap: 10px; min-width: 0;">
       <span class="led" style="width: 7px; height: 7px; border-radius: 50%; background: #2dd8b8; display: inline-block; flex-shrink: 0;"></span>
-      <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0;">Kendy Jerome · infrastructure &amp; systèmes</span>
+      <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0;">Kendy Jerome<span class="topbar-sub"> · infrastructure &amp; systèmes</span></span>
     </div>
     <div style="display: flex; flex-wrap: wrap; gap: clamp(12px, 4vw, 26px);">
       <a href="#architecture" style="color: #7c8790;">architecture</a>
