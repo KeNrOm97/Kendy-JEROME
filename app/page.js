@@ -1338,7 +1338,7 @@ export default function Home() {
           </span>
         </div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '16px'}}>
-          <div className="card" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
+          <a className="card" href="https://kodi-v2.vercel.app/browse" target="_blank" rel="noopener noreferrer" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px', textDecoration: 'none', color: 'inherit'}}>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Media center</div>
             <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruStream</h3>
             <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Catalogue, lecture et déploiement continu.</p>
@@ -1347,7 +1347,7 @@ export default function Home() {
               <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Supabase</span>
               <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
             </div>
-          </div>
+          </a>
           <div className="card" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>API</div>
             <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruStream API</h3>
@@ -1358,7 +1358,7 @@ export default function Home() {
               <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Docker</span>
             </div>
           </div>
-          <div className="card" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
+          <a className="card" href="https://mywatchlist-ten.vercel.app/" target="_blank" rel="noopener noreferrer" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px', textDecoration: 'none', color: 'inherit'}}>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Catalogue</div>
             <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruList</h3>
             <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Suivi de catalogue et de progression avec interface web.</p>
@@ -1366,7 +1366,7 @@ export default function Home() {
               <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>JavaScript</span>
               <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
             </div>
-          </div>
+          </a>
           <div className="card" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Jeu</div>
             <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>Loup_G</h3>
