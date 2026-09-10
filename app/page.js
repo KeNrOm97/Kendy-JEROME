@@ -8,7 +8,7 @@ export default function Home() {
         <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
           <span className="led" style={{width: '7px', height: '7px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
           <span>
-            kendy jerome · infrastructure
+            Kendy Jerome · infrastructure
             &amp;
             systèmes
           </span>
