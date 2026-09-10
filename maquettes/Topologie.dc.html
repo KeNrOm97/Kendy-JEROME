@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #22d3ee; text-decoration: none; }
+    a:hover { color: #a5f3fc; }
+    p { text-wrap: pretty; }
+  </style>
+</helmet>
+
+<div style="min-height: 2560px; background: #060b14; color: #dce7f2; font-family: 'Sora', system-ui, sans-serif;">
+
+
+  <!-- HERO TOPOLOGIE -->
+  <div style="position: relative; padding: 0 0 24px 0; border-bottom: 1px solid #14243a;">
+    <svg viewBox="0 0 1400 560" width="100%" height="560" style="display: block;">
+      <defs>
+        <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"></stop>
+          <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.9"></stop>
+        </linearGradient>
+      </defs>
+
+      <g stroke="#14243a" stroke-width="1">
+        <path d="M0 80 H1400 M0 160 H1400 M0 240 H1400 M0 320 H1400 M0 400 H1400 M0 480 H1400"></path>
+        <path d="M80 0 V560 M240 0 V560 M400 0 V560 M560 0 V560 M720 0 V560 M880 0 V560 M1040 0 V560 M1200 0 V560 M1360 0 V560"></path>
+      </g>
+
+      <g stroke="url(#fade)" stroke-width="1.6" fill="none">
+        <path d="M770 120 H860 V250 H960"></path>
+        <path d="M770 250 H960"></path>
+        <path d="M770 380 H860 V250"></path>
+        <path d="M1060 250 H1110 V96 H1190"></path>
+        <path d="M1110 250 H1190"></path>
+        <path d="M1110 250 V404 H1190"></path>
+      </g>
+
+      <g fill="none" stroke="#22d3ee" stroke-width="1.6">
+        <rect x="660" y="98" width="110" height="44" rx="2"></rect>
+        <rect x="660" y="228" width="110" height="44" rx="2"></rect>
+        <rect x="660" y="358" width="110" height="44" rx="2"></rect>
+        <rect x="960" y="212" width="100" height="76" rx="2" stroke="#ff7847" stroke-width="2.4"></rect>
+        <rect x="1190" y="74" width="150" height="44" rx="2"></rect>
+        <rect x="1190" y="228" width="150" height="44" rx="2"></rect>
+        <rect x="1190" y="382" width="150" height="44" rx="2"></rect>
+      </g>
+
+      <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#8aa6c2">
+        <text x="676" y="125">postes SIP</text>
+        <text x="676" y="255">navigateur</text>
+        <text x="676" y="385">mail / XMPP</text>
+        <text x="982" y="245" fill="#ff7847">pare-feu</text>
+        <text x="1000" y="262" fill="#ff7847">PF</text>
+        <text x="1206" y="101" fill="#dce7f2">lighttpd — TLS</text>
+        <text x="1206" y="255" fill="#dce7f2">Asterisk 18 — SVI</text>
+        <text x="1206" y="409" fill="#dce7f2">PostgreSQL · LDAP</text>
+      </g>
+
+      <g font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#3f5a78">
+        <text x="960" y="330">ansible + shell</text>
+        <text x="960" y="350">prometheus · zabbix</text>
+      </g>
+    </svg>
+
+    <div style="position: absolute; left: 56px; top: 96px; max-width: 520px;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #22d3ee; padding-bottom: 18px;">Ingénieur systèmes &amp; infrastructure</div>
+      <h1 style="margin: 0; font-size: 72px; font-weight: 800; line-height: 0.94; letter-spacing: -0.045em;">Kendy<br>Jerome</h1>
+      <p style="margin: 24px 0 0 0; font-size: 17.5px; line-height: 1.6; color: #9fb4ca; max-width: 26em;">Je dessine l'architecture, je monte chaque brique, je l'automatise et je la surveille. FreeBSD, Linux, Asterisk, Ansible, Docker.</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 28px;">
+        <a href="mailto:kendyjerome20@gmail.com" style="display: inline-flex; align-items: center; height: 50px; padding: 0 26px; background: #22d3ee; color: #06121a; font-weight: 600; font-size: 15px; border-radius: 2px;">Me contacter</a>
+        <a href="https://github.com/KeNrOm97" style="display: inline-flex; align-items: center; height: 50px; padding: 0 26px; border: 1px solid #1d3350; color: #dce7f2; font-size: 15px; border-radius: 2px;">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 0; border-bottom: 1px solid #14243a; font-family: 'JetBrains Mono', monospace; font-size: 12.5px;">
+    <div style="flex-grow: 1; padding: 16px 56px; color: #5f7a99;">Fort-de-France (972) · mobilité métropole et télétravail</div>
+    <div style="padding: 16px 32px; border-left: 1px solid #14243a; color: #5f7a99;">Certifié Cisco CCNA</div>
+    <div style="padding: 16px 56px 16px 32px; border-left: 1px solid #14243a; color: #22d3ee;">Ouvert aux opportunités</div>
+  </div>
+
+  <!-- CHEMINS -->
+  <div style="padding: 60px 56px 0 56px;">
+    <h2 style="margin: 0 0 8px 0; font-size: 42px; font-weight: 800; letter-spacing: -0.03em;">Chaque projet est un chemin.</h2>
+    <p style="margin: 0 0 40px 0; font-size: 16.5px; line-height: 1.6; color: #7d95ae; max-width: 46em;">De l'entrée du flux jusqu'à la donnée qui se pose, voici comment circulent les cinq systèmes que j'ai montés.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+
+      <div style="border: 1px solid #14243a; border-left: 3px solid #22d3ee; background: #0a1220; padding: 28px 30px;">
+        <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-bottom: 18px;">
+          <h3 style="margin: 0; font-size: 26px; font-weight: 600;">OpenWCC</h3>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #ff7847;">plateforme complète · FreeBSD 14</span>
+        </div>
+        <svg viewBox="0 0 1000 64" width="100%" height="64" style="display: block;">
+          <g fill="none" stroke="#22d3ee" stroke-width="1.4">
+            <rect x="0" y="16" width="150" height="34" rx="2"></rect>
+            <rect x="212" y="16" width="150" height="34" rx="2"></rect>
+            <rect x="424" y="16" width="150" height="34" rx="2"></rect>
+            <rect x="636" y="16" width="150" height="34" rx="2"></rect>
+            <rect x="848" y="16" width="150" height="34" rx="2"></rect>
+            <path d="M150 33 H206 M362 33 H418 M574 33 H630 M786 33 H842"></path>
+          </g>
+          <g fill="#22d3ee"><path d="M212 33 l-8 -4 v8 z"></path><path d="M424 33 l-8 -4 v8 z"></path><path d="M636 33 l-8 -4 v8 z"></path><path d="M848 33 l-8 -4 v8 z"></path></g>
+          <g font-family="'JetBrains Mono', monospace" font-size="11.5" fill="#dce7f2">
+            <text x="16" y="37">postes &amp; navigateur</text>
+            <text x="228" y="37">pare-feu PF</text>
+            <text x="440" y="37">Asterisk 18</text>
+            <text x="652" y="37">Tomcat / lighttpd</text>
+            <text x="864" y="37">PostgreSQL · LDAP</text>
+          </g>
+        </svg>
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 36px; padding-top: 18px;">
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #9fb4ca;">Centre de contacts open source monté service par service : Asterisk 18, Apache James, Openfire, OpenLDAP, PostgreSQL 15, Redis, Tomcat 10 sur OpenJDK 11, frontal lighttpd. Installation et configuration industrialisées par playbooks Ansible et scripts Shell, donc la plateforme se redéploie intégralement sans intervention manuelle.</p>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; line-height: 1.9; color: #7d95ae;">Mon rôle : de l'OS au frontal web · automatisation · AD/LDAP · VPN, DNS, VLAN, PF · Prometheus et Zabbix · support N2/N3 et documentation.<br><a href="https://github.com/KeNrOm97/OpenWCC">github.com/KeNrOm97/OpenWCC</a></div>
+        </div>
+      </div>
+
+      <div style="border: 1px solid #14243a; border-left: 3px solid #14243a; background: #0a1220; padding: 28px 30px;">
+        <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-bottom: 18px;">
+          <h3 style="margin: 0; font-size: 26px; font-weight: 600;">Module Odoo 18 — dossiers de subvention</h3>
+        </div>
+        <svg viewBox="0 0 1000 64" width="100%" height="64" style="display: block;">
+          <g fill="none" stroke="#22d3ee" stroke-width="1.4">
+            <rect x="0" y="16" width="180" height="34" rx="2"></rect>
+            <rect x="250" y="16" width="180" height="34" rx="2"></rect>
+            <rect x="500" y="16" width="200" height="34" rx="2"></rect>
+            <rect x="770" y="16" width="180" height="34" rx="2"></rect>
+            <path d="M180 33 H244 M430 33 H494 M700 33 H764"></path>
+          </g>
+          <g fill="#22d3ee"><path d="M250 33 l-8 -4 v8 z"></path><path d="M500 33 l-8 -4 v8 z"></path><path d="M770 33 l-8 -4 v8 z"></path></g>
+          <g font-family="'JetBrains Mono', monospace" font-size="11.5" fill="#dce7f2">
+            <text x="16" y="37">agent instructeur</text>
+            <text x="266" y="37">Nginx reverse proxy</text>
+            <text x="516" y="37">Odoo 18 — module</text>
+            <text x="786" y="37">PostgreSQL</text>
+          </g>
+        </svg>
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 36px; padding-top: 18px;">
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #9fb4ca;">Le dossier de subvention devient un objet métier : formulaire unique, pièces justificatives rattachées, circuit de validation par états, historique conservé. Services séparés sous Docker Compose, addons montés en volume avec rechargement à chaud.</p>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; line-height: 1.9; color: #7d95ae;">Odoo 18 · Python · ORM Odoo · XML · Docker Compose · Nginx · PostgreSQL</div>
+        </div>
+      </div>
+
+      <div style="border: 1px solid #14243a; border-left: 3px solid #14243a; background: #0a1220; padding: 28px 30px;">
+        <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-bottom: 18px;">
+          <h3 style="margin: 0; font-size: 26px; font-weight: 600;">SVI Python pour Asterisk</h3>
+        </div>
+        <svg viewBox="0 0 1000 64" width="100%" height="64" style="display: block;">
+          <g fill="none" stroke="#22d3ee" stroke-width="1.4">
+            <rect x="0" y="16" width="150" height="34" rx="2"></rect>
+            <rect x="220" y="16" width="150" height="34" rx="2"></rect>
+            <rect x="440" y="16" width="190" height="34" rx="2"></rect>
+            <rect x="700" y="16" width="150" height="34" rx="2"></rect>
+            <path d="M150 33 H214 M370 33 H434 M630 33 H694"></path>
+            <path d="M775 50 V60 H75 V50" stroke-dasharray="4 3"></path>
+          </g>
+          <g fill="#22d3ee"><path d="M220 33 l-8 -4 v8 z"></path><path d="M440 33 l-8 -4 v8 z"></path><path d="M700 33 l-8 -4 v8 z"></path></g>
+          <g font-family="'JetBrains Mono', monospace" font-size="11.5" fill="#dce7f2">
+            <text x="16" y="37">appel entrant</text>
+            <text x="236" y="37">Asterisk</text>
+            <text x="456" y="37">script Python AGI</text>
+            <text x="716" y="37">Cassandra</text>
+          </g>
+          <text x="380" y="59" font-family="'JetBrains Mono', monospace" font-size="10" fill="#3f5a78">routage décidé à l'exécution</text>
+        </svg>
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 36px; padding-top: 18px;">
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #9fb4ca;">Serveur vocal interactif branché sur Asterisk via AGI. Les données d'appel sont lues et écrites en CQL dans Cassandra, ce qui permet de décider le routage à l'exécution plutôt que de le figer dans le dialplan.</p>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; line-height: 1.9; color: #7d95ae;">Python · Asterisk AGI · Cassandra · Redis<br><a href="https://github.com/KeNrOm97/Asterisk-svi-python-cassandra">Asterisk-svi-python-cassandra</a></div>
+        </div>
+      </div>
+
+      <div style="border: 1px solid #14243a; border-left: 3px solid #14243a; background: #0a1220; padding: 28px 30px;">
+        <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-bottom: 18px;">
+          <h3 style="margin: 0; font-size: 26px; font-weight: 600;">Infrastructure WebRTC chiffrée</h3>
+        </div>
+        <svg viewBox="0 0 1000 64" width="100%" height="64" style="display: block;">
+          <g fill="none" stroke="#22d3ee" stroke-width="1.4">
+            <rect x="0" y="16" width="170" height="34" rx="2"></rect>
+            <rect x="240" y="16" width="150" height="34" rx="2"></rect>
+            <rect x="460" y="16" width="200" height="34" rx="2"></rect>
+            <rect x="730" y="16" width="170" height="34" rx="2"></rect>
+            <path d="M170 33 H234 M390 33 H454 M660 33 H724"></path>
+          </g>
+          <g fill="#22d3ee"><path d="M240 33 l-8 -4 v8 z"></path><path d="M460 33 l-8 -4 v8 z"></path><path d="M730 33 l-8 -4 v8 z"></path></g>
+          <g font-family="'JetBrains Mono', monospace" font-size="11.5" fill="#dce7f2">
+            <text x="16" y="37">navigateur</text>
+            <text x="256" y="37">pare-feu PF</text>
+            <text x="476" y="37">WSS + SRTP chiffrés</text>
+            <text x="746" y="37">Asterisk · postes SIP</text>
+          </g>
+        </svg>
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 36px; padding-top: 18px;">
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #9fb4ca;">Appeler depuis un simple navigateur, sans logiciel client. Signalisation WebSocket sécurisée, flux média chiffrés en SRTP, certificats Let's Encrypt renouvelés automatiquement, servis par lighttpd sur FreeBSD.</p>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; line-height: 1.9; color: #7d95ae;">Asterisk · WebRTC · TLS/SRTP · Let's Encrypt · lighttpd · FreeBSD</div>
+        </div>
+      </div>
+
+      <div style="border: 1px solid #14243a; border-left: 3px solid #14243a; background: #0a1220; padding: 28px 30px;">
+        <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-bottom: 18px;">
+          <h3 style="margin: 0; font-size: 26px; font-weight: 600;">Sauvegarde automatisée à 3 niveaux</h3>
+        </div>
+        <svg viewBox="0 0 1000 64" width="100%" height="64" style="display: block;">
+          <g fill="none" stroke="#22d3ee" stroke-width="1.4">
+            <rect x="0" y="16" width="150" height="34" rx="2"></rect>
+            <rect x="220" y="16" width="160" height="34" rx="2"></rect>
+            <rect x="450" y="16" width="170" height="34" rx="2"></rect>
+            <rect x="690" y="16" width="180" height="34" rx="2"></rect>
+            <path d="M150 33 H214 M380 33 H444 M620 33 H684"></path>
+          </g>
+          <g fill="#22d3ee"><path d="M220 33 l-8 -4 v8 z"></path><path d="M450 33 l-8 -4 v8 z"></path><path d="M690 33 l-8 -4 v8 z"></path></g>
+          <g font-family="'JetBrains Mono', monospace" font-size="11.5" fill="#dce7f2">
+            <text x="16" y="37">cron</text>
+            <text x="236" y="37">compression tar.gz</text>
+            <text x="466" y="37">transfert SCP/SSH</text>
+            <text x="706" y="37">rotation 2 jours</text>
+          </g>
+        </svg>
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 36px; padding-top: 18px;">
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #9fb4ca;">Chaîne de sauvegarde sans dépendance, pensée pour tourner seule sur un serveur en production et rester lisible par le prochain administrateur. Purge automatique des archives expirées.</p>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; line-height: 1.9; color: #7d95ae;">Shell · tar/gzip · SCP/SSH · cron · FreeBSD<br><a href="https://github.com/KeNrOm97/Backup-tar-scp">Backup-tar-scp</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COMPÉTENCES + MÉTHODE -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 64px 56px 0 56px;">
+    <div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #22d3ee; padding-bottom: 22px;">Ce que je sais faire</div>
+      <div style="display: flex; flex-direction: column; gap: 18px; font-size: 15.5px; line-height: 1.6; color: #9fb4ca;">
+        <div><span style="color: #dce7f2; font-weight: 600;">Infrastructure.</span> Serveurs FreeBSD, Linux et Windows Server, virtualisation VMware, QEMU, VirtualBox et Docker, bases PostgreSQL, MariaDB, Redis et Cassandra, frontaux Nginx, lighttpd et Tomcat.</div>
+        <div><span style="color: #dce7f2; font-weight: 600;">Temps réel.</span> Asterisk avec SVI, files d'attente et routage d'appel, WebRTC chiffré TLS/SRTP, messagerie Apache James, XMPP Openfire, annuaire AD/LDAP.</div>
+        <div><span style="color: #dce7f2; font-weight: 600;">Exploitation.</span> Ansible et Shell en Infrastructure-as-Code, supervision Prometheus et Zabbix, VPN, DNS, VLAN, PF et iptables, support N2/N3 et procédures écrites.</div>
+      </div>
+    </div>
+    <div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #22d3ee; padding-bottom: 22px;">Comment je travaille</div>
+      <div style="display: flex; flex-direction: column; gap: 16px; font-size: 15.5px; line-height: 1.65; color: #9fb4ca;">
+        <p style="margin: 0;">Je passe par un playbook Ansible ou un script même quand l'installation à la main irait plus vite sur le moment. Une machine montée de mémoire ne se refait jamais deux fois pareil.</p>
+        <p style="margin: 0;">Le pare-feu et les certificats arrivent en même temps que le service, jamais après. Je documente au fur et à mesure, parce qu'un service finit toujours par changer de mains.</p>
+        <p style="margin: 0; color: #22d3ee;">Une sauvegarde qu'on n'a jamais restaurée, on ne sait pas encore si c'en est une.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARCOURS + CONTACT -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 56px 56px 64px 56px;">
+    <div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #22d3ee; padding-bottom: 22px;">Parcours</div>
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; gap: 20px; padding: 12px 0; border-top: 1px solid #14243a; font-size: 15px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5f7a99; width: 100px; flex-shrink: 0;">2023–2025</span><span style="color: #9fb4ca;">Mastère MPP option informatique — Keyce Academy</span></div>
+        <div style="display: flex; gap: 20px; padding: 12px 0; border-top: 1px solid #14243a; font-size: 15px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5f7a99; width: 100px; flex-shrink: 0;">2023</span><span style="color: #9fb4ca;">Licence pro MRIT, Internet des Objets — Lycée Joseph Gaillard</span></div>
+        <div style="display: flex; gap: 20px; padding: 12px 0; border-top: 1px solid #14243a; font-size: 15px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5f7a99; width: 100px; flex-shrink: 0;">—</span><span style="color: #9fb4ca;">Certification CCNA — Cisco</span></div>
+        <div style="display: flex; gap: 20px; padding: 12px 0; border-top: 1px solid #14243a; border-bottom: 1px solid #14243a; font-size: 15px;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #5f7a99; width: 100px; flex-shrink: 0;">2022</span><span style="color: #9fb4ca;">BTS SN option informatique et réseaux</span></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; justify-content: flex-end; gap: 18px;">
+      <h2 style="margin: 0; font-size: 34px; font-weight: 800; letter-spacing: -0.025em; line-height: 1.15;">Ouvert aux opportunités en infrastructure, VoIP et DevOps.</h2>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5f7a99;">Martinique · métropole · télétravail — permis B, véhiculé</div>
+      <div style="display: flex; gap: 24px; flex-wrap: wrap; font-family: 'JetBrains Mono', monospace; font-size: 14px; padding-top: 4px;">
+        <a href="mailto:kendyjerome20@gmail.com">kendyjerome20@gmail.com</a>
+        <a href="https://linkedin.com/in/kendy-jerome-4b147234b">linkedin</a>
+        <a href="https://github.com/KeNrOm97">github</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #1c4f7c; text-decoration: none; border-bottom: 1px solid #a9c0d2; }
+    a:hover { color: #a8482c; border-bottom-color: #d9ad9c; }
+    p { text-wrap: pretty; }
+  </style>
+</helmet>
+
+<div style="min-height: 2020px; background: #f2efe8; background-image: linear-gradient(#dfd9cc 1px, transparent 1px), linear-gradient(90deg, #dfd9cc 1px, transparent 1px); background-size: 32px 32px; color: #16232b; font-family: 'Newsreader', Georgia, serif;">
+
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 22px 64px; border-bottom: 1.5px solid #16232b; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;">
+    <span>Kendy Jerome — dossier technique</span>
+    <span style="color: #5c6b74;">Fort-de-France (972) · révision 2026</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; padding: 64px; border-bottom: 1.5px solid #16232b; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #a8482c;">Ingénieur systèmes &amp; infrastructure</div>
+      <h1 style="margin: 0; font-size: 62px; line-height: 1.02; font-weight: 600; letter-spacing: -0.015em;">Linux, FreeBSD,<br>VoIP, automatisation.</h1>
+      <p style="margin: 0; font-size: 19px; line-height: 1.62; color: #37474f; max-width: 30em;">De la maquette au service en production. Je conçois l'architecture, j'installe chaque brique, j'automatise le déploiement, je ferme le pare-feu et je supervise ce qui tourne.</p>
+      <div style="display: flex; gap: 28px; padding-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px;">
+        <a href="mailto:kendyjerome20@gmail.com">kendyjerome20@gmail.com</a>
+        <a href="https://linkedin.com/in/kendy-jerome-4b147234b">LinkedIn</a>
+        <a href="https://github.com/KeNrOm97">GitHub</a>
+      </div>
+    </div>
+
+    <div style="background: #fbfaf6; border: 1.5px solid #16232b; padding: 22px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #5c6b74; padding-bottom: 14px;">Fig. 1 — Plateforme OpenWCC sous FreeBSD 14</div>
+      <svg viewBox="0 0 460 320" width="100%" height="290" style="display: block;">
+        <g fill="none" stroke="#1c4f7c" stroke-width="1.4">
+          <rect x="8" y="20" width="96" height="34"></rect>
+          <rect x="8" y="70" width="96" height="34"></rect>
+          <rect x="8" y="120" width="96" height="34"></rect>
+          <rect x="168" y="66" width="88" height="42" stroke="#a8482c" stroke-width="1.8"></rect>
+          <rect x="304" y="14" width="140" height="34"></rect>
+          <rect x="304" y="62" width="140" height="34"></rect>
+          <rect x="304" y="110" width="140" height="34"></rect>
+          <rect x="304" y="158" width="140" height="34"></rect>
+          <rect x="304" y="216" width="140" height="34" stroke-dasharray="4 3"></rect>
+          <rect x="304" y="264" width="140" height="34" stroke-dasharray="4 3"></rect>
+          <path d="M104 37 H150 V87 H168"></path>
+          <path d="M104 87 H168"></path>
+          <path d="M104 137 H150 V87"></path>
+          <path d="M256 87 H280 V31 H304"></path>
+          <path d="M280 87 H304"></path>
+          <path d="M280 87 V127 H304"></path>
+          <path d="M280 127 V175 H304"></path>
+          <path d="M256 87 H280 V233 H304" stroke-dasharray="4 3"></path>
+          <path d="M280 233 V281 H304" stroke-dasharray="4 3"></path>
+        </g>
+        <g font-family="'IBM Plex Mono', monospace" font-size="9.5" fill="#16232b">
+          <text x="20" y="41">postes SIP</text>
+          <text x="20" y="91">navigateur</text>
+          <text x="20" y="141">mail / XMPP</text>
+          <text x="182" y="84" fill="#a8482c">pare-feu</text>
+          <text x="196" y="97" fill="#a8482c">PF</text>
+          <text x="316" y="35">lighttpd — frontal TLS</text>
+          <text x="316" y="83">Asterisk 18 — SVI</text>
+          <text x="316" y="131">Apache James / Openfire</text>
+          <text x="316" y="179">Tomcat 10 / OpenJDK 11</text>
+          <text x="316" y="237" fill="#5c6b74">PostgreSQL 15 · Redis</text>
+          <text x="316" y="285" fill="#5c6b74">OpenLDAP</text>
+        </g>
+      </svg>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #5c6b74; padding-top: 12px; line-height: 1.5; border-top: 1px solid #e0dacd; margin-top: 8px;">Chaque brique est installée et configurée par playbook Ansible : la plateforme se redéploie de bout en bout sans intervention manuelle.</div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1.5px solid #16232b;">
+    <div style="padding: 40px 40px 40px 64px; border-right: 1px solid #cfc8b9;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #a8482c; padding-bottom: 16px;">01 — Infrastructure</div>
+      <div style="display: flex; flex-direction: column; gap: 9px; font-size: 16px; line-height: 1.5; color: #37474f;">
+        <div>Serveurs FreeBSD, Linux, Windows Server en production</div>
+        <div>Virtualisation VMware, QEMU, VirtualBox, Docker</div>
+        <div>PostgreSQL, MySQL/MariaDB, Redis, Cassandra</div>
+        <div>Nginx, lighttpd, Tomcat sur OpenJDK</div>
+      </div>
+    </div>
+    <div style="padding: 40px; border-right: 1px solid #cfc8b9;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #a8482c; padding-bottom: 16px;">02 — Temps réel</div>
+      <div style="display: flex; flex-direction: column; gap: 9px; font-size: 16px; line-height: 1.5; color: #37474f;">
+        <div>Asterisk : SVI, files d'attente, routage d'appel</div>
+        <div>WebRTC navigateur chiffré TLS/SRTP</div>
+        <div>Apache James et XMPP Openfire</div>
+        <div>Annuaire AD/LDAP et gestion des comptes</div>
+      </div>
+    </div>
+    <div style="padding: 40px 64px 40px 40px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #a8482c; padding-bottom: 16px;">03 — Exploitation</div>
+      <div style="display: flex; flex-direction: column; gap: 9px; font-size: 16px; line-height: 1.5; color: #37474f;">
+        <div>Infrastructure-as-Code : Ansible et Shell</div>
+        <div>Supervision Prometheus et Zabbix</div>
+        <div>VPN, DNS, VLAN, PF et iptables</div>
+        <div>Support N2/N3, procédures d'exploitation</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 56px 64px; border-bottom: 1.5px solid #16232b;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 32px;">
+      <h2 style="margin: 0; font-size: 34px; font-weight: 600; letter-spacing: -0.01em;">Fiches projets</h2>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74;">cinq systèmes en production ou en maquette</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0;">
+
+      <div style="display: grid; grid-template-columns: 64px 1.3fr 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid #cfc8b9;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #a8482c;">01</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600;">OpenWCC — centre de contacts open source</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #37474f;">Téléphonie Asterisk 18, messagerie Apache James, XMPP Openfire, annuaire OpenLDAP, PostgreSQL 15, Redis, Tomcat 10 sur OpenJDK 11, frontal lighttpd, le tout derrière PF. Industrialisé par Ansible et Shell.</p>
+          <a href="https://github.com/KeNrOm97/OpenWCC" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; align-self: flex-start;">github.com/KeNrOm97/OpenWCC</a>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; line-height: 1.9;">FreeBSD 14 · Asterisk 18 · PostgreSQL 15 · Redis · OpenLDAP · Tomcat 10 · lighttpd · PF · Ansible · Shell · Python 3</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px 1.3fr 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid #cfc8b9;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #a8482c;">02</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600;">Module Odoo 18 — dossiers de subvention</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #37474f;">Un dossier de subvention se monte d'ordinaire à coups de tableurs et de pièces éparpillées. Le module en fait un objet métier : formulaire unique, justificatifs rattachés, validation par états, historique conservé.</p>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; line-height: 1.9;">Odoo 18 · Python · ORM Odoo · XML · Docker Compose · Nginx · PostgreSQL</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px 1.3fr 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid #cfc8b9;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #a8482c;">03</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600;">SVI Python pour Asterisk</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #37474f;">Serveur vocal interactif branché sur Asterisk via AGI, lisant et écrivant les données d'appel en CQL dans Cassandra. Le routage se décide à l'exécution plutôt que codé en dur dans le dialplan.</p>
+          <a href="https://github.com/KeNrOm97/Asterisk-svi-python-cassandra" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; align-self: flex-start;">github.com/KeNrOm97/Asterisk-svi-python-cassandra</a>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; line-height: 1.9;">Python · Asterisk AGI · Cassandra · Redis</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px 1.3fr 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid #cfc8b9;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #a8482c;">04</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600;">Infrastructure WebRTC chiffrée</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #37474f;">Passerelle temps réel permettant d'appeler depuis un simple navigateur, sans logiciel client. Signalisation WebSocket sécurisée, média SRTP, certificats Let's Encrypt renouvelés automatiquement.</p>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; line-height: 1.9;">Asterisk · WebRTC · TLS/SRTP · Let's Encrypt · lighttpd · FreeBSD</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 64px 1.3fr 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid #cfc8b9; border-bottom: 1px solid #cfc8b9;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #a8482c;">05</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600;">Sauvegarde automatisée à 3 niveaux</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #37474f;">Compression tar.gz, transfert SCP vers un hôte distant, rotation sur deux jours, déclenchement par cron. Sans dépendance, pensée pour rester lisible par le prochain administrateur.</p>
+          <a href="https://github.com/KeNrOm97/Backup-tar-scp" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; align-self: flex-start;">github.com/KeNrOm97/Backup-tar-scp</a>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; line-height: 1.9;">Shell · tar/gzip · SCP/SSH · cron · FreeBSD</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; padding: 56px 64px; border-bottom: 1.5px solid #16232b;">
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #a8482c;">Méthode</div>
+      <p style="margin: 0; font-size: 22px; line-height: 1.55; font-style: italic; color: #16232b;">« Une machine montée de mémoire, on ne la refait jamais deux fois pareil, et ça se paie le jour où il faut la remonter dans l'urgence. »</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #37474f;">Le pare-feu et les certificats arrivent en même temps que le service, jamais après. Je documente au fur et à mesure, parce qu'un service finit toujours par changer de mains. Et je restaure vraiment mes sauvegardes de temps en temps : une sauvegarde qu'on n'a jamais restaurée, on ne sait pas encore si c'en est une.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #a8482c;">Parcours</div>
+      <div style="display: flex; flex-direction: column; font-size: 15px; color: #37474f;">
+        <div style="display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid #e0dacd;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; width: 88px; flex-shrink: 0;">2023–2025</span><span>Mastère MPP, option informatique — Keyce Academy</span></div>
+        <div style="display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid #e0dacd;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; width: 88px; flex-shrink: 0;">2023</span><span>Licence pro MRIT, Internet des Objets — Lycée Joseph Gaillard</span></div>
+        <div style="display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid #e0dacd;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; width: 88px; flex-shrink: 0;">—</span><span>Certification CCNA — Cisco</span></div>
+        <div style="display: flex; gap: 16px; padding: 10px 0;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74; width: 88px; flex-shrink: 0;">2022</span><span>BTS SN, option informatique et réseaux</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 40px 64px;">
+    <div style="font-size: 20px; font-weight: 600;">Ouvert aux opportunités en infrastructure, VoIP et DevOps.</div>
+    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5c6b74;">Martinique · Métropole · télétravail — permis B, véhiculé</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

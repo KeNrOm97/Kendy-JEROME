@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Fragment+Mono&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #2dd8b8; text-decoration: none; }
+    a:hover { color: #8bf0dd; }
+    p { text-wrap: pretty; }
+    figure { margin: 0; }
+
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    .flow { stroke-dasharray: 5 7; animation: flow 1s linear infinite; }
+    .flow-slow { stroke-dasharray: 3 6; animation: flow 1.8s linear infinite; }
+
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.28; } }
+    .led { animation: blink 2.2s ease-in-out infinite; }
+
+    @keyframes caret { 50% { opacity: 0; } }
+    .caret { animation: caret 0.9s step-end infinite; }
+
+    .card { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+    .card:hover { transform: translateY(-4px); border-color: #2dd8b8 !important; box-shadow: 0 14px 34px rgba(0,0,0,0.35); }
+    .tile:hover .tile-icon { transform: scale(1.1); }
+    .tile-icon { transition: transform .2s ease; }
+  </style>
+</helmet>
+<div style="min-height: 633px; background: #0d0f12; color: #eef1f0; font-family: 'Familjen Grotesk', system-ui, sans-serif; display: flex;">
+<div style="width: 236px; flex-shrink: 0; background: #101317; border-right: 1px solid #1c2024; display: flex; flex-direction: column; padding: 32px 20px;">
+      <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 24px; border-bottom: 1px solid #1c2024; margin-bottom: 20px;">
+        <div style="width: 42px; height: 42px; border-radius: 50%; background: #2dd8b8; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #06120f; font-size: 14px; flex-shrink: 0;">KJ</div>
+        <div>
+          <div style="font-weight: 700; font-size: 14.5px; color: #eef1f0;">Kendy Jerome</div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 10.5px; color: #7c8790;">infra &amp; systèmes</div>
+        </div>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 2px;">
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; border-radius: 4px; background: #172420; color: #2dd8b8; font-weight: 700; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2dd8b8; flex-shrink: 0;"></span>Accueil</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>La stack</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>OpenWCC</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Odoo 18</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>SVI Asterisk</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>WebRTC</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Sauvegarde</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Contact</div>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 8px; font-family: 'Fragment Mono', monospace; font-size: 11px; color: #7c8790; margin-top: 28px; padding-top: 16px; border-top: 1px solid #1c2024;">
+        <span class="led" style="width: 6px; height: 6px; border-radius: 50%; background: #2dd8b8; display: inline-block;"></span>disponible — 972
+      </div>
+    </div>
+    <div style="flex-grow: 1; padding: 56px 64px; display: flex; flex-direction: column; gap: 40px;">
+
+      <div>
+        <div style="font-family: 'Fragment Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #2dd8b8; padding-bottom: 18px;">Fort-de-France (972) · certifié Cisco CCNA</div>
+        <h1 style="margin: 0; font-size: 54px; font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; max-width: 14em;">Des systèmes qui tiennent, pendant que je fais autre chose.</h1>
+        <p style="margin: 22px 0 0 0; font-size: 17px; line-height: 1.6; color: #b4bcc2; max-width: 34em;">Infrastructures FreeBSD et Linux, téléphonie Asterisk, réseaux chiffrés, déploiements automatisés. Je conçois, j'installe, j'automatise, je sécurise, je supervise<span class="caret" style="color: #2dd8b8;">_</span></p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 28px;">
+          <a href="mailto:kendyjerome20@gmail.com" style="display: inline-flex; align-items: center; height: 48px; padding: 0 24px; background: #2dd8b8; color: #06120f; font-weight: 700; font-size: 14.5px; border-radius: 4px;">Me contacter</a>
+          <a href="https://github.com/KeNrOm97" style="display: inline-flex; align-items: center; height: 48px; padding: 0 24px; border: 1px solid #262b30; color: #eef1f0; font-size: 14.5px; border-radius: 4px;">GitHub</a>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0; border-top: 1px solid #1c2024;">
+        <div style="flex: 1; padding: 20px 24px 0 0; border-right: 1px solid #1c2024;">
+          <div style="font-size: 24px; font-weight: 700; color: #2dd8b8;">5</div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11.5px; color: #7c8790; padding-top: 4px;">systèmes montés du sol au service</div>
+        </div>
+        <div style="flex: 1; padding: 20px 24px 0 24px; border-right: 1px solid #1c2024;">
+          <div style="font-size: 24px; font-weight: 700;">CCNA</div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11.5px; color: #7c8790; padding-top: 4px;">certifié Cisco, réseaux</div>
+        </div>
+        <div style="flex: 1; padding: 20px 24px 0 24px; border-right: 1px solid #1c2024;">
+          <div style="font-size: 24px; font-weight: 700;">972</div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11.5px; color: #7c8790; padding-top: 4px;">Martinique · métropole · télétravail</div>
+        </div>
+        <div style="flex: 1; padding: 20px 0 0 24px;">
+          <div style="font-size: 24px; font-weight: 700; color: #2dd8b8;">disponible</div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11.5px; color: #7c8790; padding-top: 4px;">ouvert aux opportunités</div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+</x-dc>
+</body>
+</html>

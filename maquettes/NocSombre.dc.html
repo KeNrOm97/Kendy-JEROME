@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #2dd4a7; text-decoration: none; }
+    a:hover { color: #7ff0cd; }
+    p { text-wrap: pretty; }
+  </style>
+</helmet>
+
+<div style="min-height: 2020px; background: #0a0e0d; color: #e4ece7; font-family: 'Space Grotesk', system-ui, sans-serif;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 72px; border-bottom: 1px solid #1c2724; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #7c9a8f;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: #2dd4a7; display: inline-block;"></span>
+      <span style="color: #b9cec6;">kendy@fort-de-france</span>
+      <span>:~$</span>
+      <span style="color: #e4ece7;">whoami</span>
+    </div>
+    <div style="display: flex; gap: 28px;">
+      <a href="#">compétences</a>
+      <a href="#">projets</a>
+      <a href="#">méthode</a>
+      <a href="#">contact</a>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; padding: 72px 72px 64px 72px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 26px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #2dd4a7;">Kendy Jerome</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #7c9a8f;">Ingénieur systèmes &amp; infrastructure</div>
+      </div>
+      <h1 style="margin: 0; font-size: 56px; line-height: 1.06; font-weight: 700; letter-spacing: -0.02em;">Je construis des systèmes qui doivent tenir 24/7.</h1>
+      <p style="margin: 0; font-size: 18px; line-height: 1.6; color: #a9c1b8; max-width: 30em;">Infrastructures FreeBSD et Linux, téléphonie Asterisk, WebRTC chiffré, applications métier conteneurisées. De la maquette au service en production : je conçois, j'installe, j'automatise, je sécurise, je supervise.</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 6px;">
+        <a href="mailto:kendyjerome20@gmail.com" style="display: inline-flex; align-items: center; height: 48px; padding: 0 26px; background: #2dd4a7; color: #06110d; font-weight: 700; font-size: 15px; border-radius: 3px;">Me contacter</a>
+        <a href="#" style="display: inline-flex; align-items: center; height: 48px; padding: 0 26px; border: 1px solid #294038; color: #cfe0d9; font-size: 15px; border-radius: 3px;">Voir les projets</a>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; padding-top: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+        <span style="padding: 6px 12px; border: 1px solid #1f2f2a; color: #8fb0a6; border-radius: 2px;">Fort-de-France, Martinique</span>
+        <span style="padding: 6px 12px; border: 1px solid #1f2f2a; color: #8fb0a6; border-radius: 2px;">Certifié Cisco CCNA</span>
+        <span style="padding: 6px 12px; border: 1px solid #2dd4a7; color: #2dd4a7; border-radius: 2px;">Ouvert aux opportunités</span>
+      </div>
+    </div>
+
+    <div style="border: 1px solid #1c2724; background: #0d1412; border-radius: 4px; overflow: hidden;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid #1c2724; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #7c9a8f;">
+        <span>openwcc — service status</span>
+        <span style="color: #2dd4a7;">freebsd 14</span>
+      </div>
+      <div style="display: flex; flex-direction: column; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+        <div style="display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid #141d1a;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #2dd4a7;"></span><span style="flex-grow: 1; color: #d5e3dd;">asterisk 18</span><span style="color: #6f8d83;">SVI, files d'attente</span></div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid #141d1a;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #2dd4a7;"></span><span style="flex-grow: 1; color: #d5e3dd;">postgresql 15</span><span style="color: #6f8d83;">données métier</span></div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid #141d1a;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #2dd4a7;"></span><span style="flex-grow: 1; color: #d5e3dd;">openldap</span><span style="color: #6f8d83;">annuaire</span></div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid #141d1a;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #2dd4a7;"></span><span style="flex-grow: 1; color: #d5e3dd;">apache james</span><span style="color: #6f8d83;">messagerie</span></div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid #141d1a;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #2dd4a7;"></span><span style="flex-grow: 1; color: #d5e3dd;">openfire</span><span style="color: #6f8d83;">XMPP</span></div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid #141d1a;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #2dd4a7;"></span><span style="flex-grow: 1; color: #d5e3dd;">tomcat 10 / openjdk 11</span><span style="color: #6f8d83;">applicatif</span></div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 13px 18px; border-bottom: 1px solid #141d1a;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #2dd4a7;"></span><span style="flex-grow: 1; color: #d5e3dd;">lighttpd</span><span style="color: #6f8d83;">frontal TLS</span></div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 13px 18px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #f0a23c;"></span><span style="flex-grow: 1; color: #d5e3dd;">pf</span><span style="color: #6f8d83;">pare-feu</span></div>
+      </div>
+      <div style="padding: 12px 18px; border-top: 1px solid #1c2724; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6f8d83; line-height: 1.5;">déploiement : ansible + shell — la plateforme se redéploie intégralement sans intervention manuelle</div>
+    </div>
+  </div>
+
+  <div style="padding: 56px 72px; border-top: 1px solid #141d1a;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #2dd4a7; padding-bottom: 28px;">// ce que je sais faire</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <h3 style="margin: 0; font-size: 19px; font-weight: 700;">Infrastructure &amp; systèmes</h3>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.5; color: #a9c1b8;">
+          <div>Serveurs FreeBSD, Linux, Windows Server en production</div>
+          <div>Virtualisation VMware, QEMU, VirtualBox, Docker</div>
+          <div>Bases PostgreSQL, MySQL/MariaDB, Redis, Cassandra</div>
+          <div>Frontaux Nginx, lighttpd, Tomcat sur OpenJDK</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <h3 style="margin: 0; font-size: 19px; font-weight: 700;">Communication temps réel</h3>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.5; color: #a9c1b8;">
+          <div>Architecture Asterisk : SVI, files d'attente, routage d'appel</div>
+          <div>WebRTC navigateur avec chiffrement TLS/SRTP</div>
+          <div>Messagerie Apache James et XMPP Openfire</div>
+          <div>Annuaire AD/LDAP et administration des comptes</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <h3 style="margin: 0; font-size: 19px; font-weight: 700;">Exploitation &amp; sécurité</h3>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.5; color: #a9c1b8;">
+          <div>Déploiement Infrastructure-as-Code avec Ansible et Shell</div>
+          <div>Supervision Prometheus et Zabbix</div>
+          <div>Réseau : VPN, DNS, VLAN, pare-feu PF et iptables</div>
+          <div>Support N2/N3 et procédures d'exploitation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 56px 72px; border-top: 1px solid #141d1a;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #2dd4a7; padding-bottom: 28px;">// projets</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;">
+
+      <div style="grid-column: span 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; padding: 32px; background: #0d1412; border: 1px solid #1c2724; border-radius: 4px;">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #f0a23c;">projet principal</div>
+          <h3 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.01em;">OpenWCC</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #a9c1b8;">Plateforme de centre de contacts open source montée service par service sous FreeBSD 14, derrière un pare-feu PF. Installation et configuration industrialisées par playbooks Ansible et scripts Shell.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px;">
+            <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">FreeBSD 14</span>
+            <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Asterisk 18</span>
+            <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">PostgreSQL 15</span>
+            <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Ansible</span>
+            <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">PF</span>
+          </div>
+          <a href="https://github.com/KeNrOm97/OpenWCC" style="font-family: 'JetBrains Mono', monospace; font-size: 13px;">github.com/KeNrOm97/OpenWCC</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #8fb0a6; border-left: 1px solid #1c2724; padding-left: 32px;">
+          <div style="color: #6f8d83;">mon rôle</div>
+          <div style="color: #cfe0d9;">de l'OS au frontal web</div>
+          <div>automatisation Ansible et Shell</div>
+          <div>annuaire AD/LDAP et comptes</div>
+          <div>VPN, DNS, VLAN, règles PF</div>
+          <div>supervision Prometheus et Zabbix</div>
+          <div>support N2/N3 et documentation</div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px; padding: 26px; background: #0d1412; border: 1px solid #1c2724; border-radius: 4px;">
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700;">Module Odoo 18 — dossiers de subvention</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #a9c1b8;">Le dossier devient un objet métier : formulaire unique, pièces justificatives rattachées, circuit de validation par états, historique conservé. Environnement conteneurisé reproductible d'un poste à l'autre.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: auto;">
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Odoo 18</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Docker Compose</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Nginx</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px; padding: 26px; background: #0d1412; border: 1px solid #1c2724; border-radius: 4px;">
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700;">SVI Python pour Asterisk</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #a9c1b8;">Serveur vocal interactif branché sur Asterisk via AGI. Données d'appel lues et écrites en CQL dans Cassandra : le routage se décide à l'exécution plutôt que codé en dur dans le dialplan.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: auto;">
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Python</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Asterisk AGI</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Cassandra</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px; padding: 26px; background: #0d1412; border: 1px solid #1c2724; border-radius: 4px;">
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700;">Infrastructure WebRTC chiffrée</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #a9c1b8;">Appeler depuis un simple navigateur, sans logiciel client. Signalisation WebSocket sécurisée, média chiffré en SRTP, certificats Let's Encrypt renouvelés automatiquement, servis par lighttpd sur FreeBSD.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: auto;">
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">WebRTC</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">TLS/SRTP</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Let's Encrypt</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px; padding: 26px; background: #0d1412; border: 1px solid #1c2724; border-radius: 4px;">
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700;">Sauvegarde automatisée à 3 niveaux</h3>
+        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #a9c1b8;">Chaîne sans dépendance : compression tar.gz, transfert SCP, rotation sur deux jours, déclenchement par cron. Pensée pour tourner seule et rester lisible par le prochain administrateur.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-top: auto;">
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">Shell</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">SCP/SSH</span>
+          <span style="padding: 5px 10px; background: #132019; color: #8fb0a6; border-radius: 2px;">cron</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="padding: 56px 72px; border-top: 1px solid #141d1a;">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #2dd4a7; padding-bottom: 28px;">// comment je travaille</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px;">
+      <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #b9cec6;">Je passe par un playbook Ansible ou un script même quand l'installation à la main irait plus vite sur le moment. Une machine montée de mémoire, on ne la refait jamais deux fois pareil, et ça se paie le jour où il faut la remonter dans l'urgence.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #b9cec6;">Le pare-feu et les certificats arrivent en même temps que le service, jamais après. Je documente au fur et à mesure, parce qu'un service finit toujours par changer de mains. Et une sauvegarde qu'on n'a jamais restaurée, on ne sait pas encore si c'en est une.</p>
+    </div>
+  </div>
+
+  <div style="padding: 56px 72px 64px 72px; border-top: 1px solid #141d1a; display: flex; justify-content: space-between; align-items: flex-end; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <h2 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -0.01em;">Ouvert aux opportunités en infrastructure, VoIP et DevOps.</h2>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #7c9a8f;">Martinique · Métropole · télétravail — permis B, véhiculé</div>
+      <div style="display: flex; gap: 22px; padding-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 14px;">
+        <a href="mailto:kendyjerome20@gmail.com">kendyjerome20@gmail.com</a>
+        <a href="https://linkedin.com/in/kendy-jerome-4b147234b">linkedin</a>
+        <a href="https://github.com/KeNrOm97">github</a>
+      </div>
+    </div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #4d6960; text-align: right; max-width: 22em; line-height: 1.6;">« Une infrastructure solide est invisible. On ne la remarque que le jour où elle manque. »</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

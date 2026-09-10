@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #0d0f12;
+}
+
+a {
+  color: #2dd8b8;
+  text-decoration: none;
+}
+a:hover {
+  color: #8bf0dd;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+figure {
+  margin: 0;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+.flow {
+  stroke-dasharray: 5 7;
+  animation: flow 1s linear infinite;
+}
+.flow-slow {
+  stroke-dasharray: 3 6;
+  animation: flow 1.8s linear infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.28;
+  }
+}
+.led {
+  animation: blink 2.2s ease-in-out infinite;
+}
+.led2 {
+  animation: blink 2.2s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.led3 {
+  animation: blink 2.2s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+.caret {
+  animation: caret 0.9s step-end infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ticker-track {
+  animation: marquee 26s linear infinite;
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  animation: rise 0.6s ease-out both;
+}
+
+.card {
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #2dd8b8 !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+}
+.tile:hover .tile-icon {
+  transform: scale(1.12) rotate(-3deg);
+}
+.tile-icon {
+  transition: transform 0.25s ease;
+}

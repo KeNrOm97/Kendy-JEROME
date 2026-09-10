@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Fragment+Mono&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #2dd8b8; text-decoration: none; }
+    a:hover { color: #8bf0dd; }
+    p { text-wrap: pretty; }
+    figure { margin: 0; }
+
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    .flow { stroke-dasharray: 5 7; animation: flow 1s linear infinite; }
+    .flow-slow { stroke-dasharray: 3 6; animation: flow 1.8s linear infinite; }
+
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.28; } }
+    .led { animation: blink 2.2s ease-in-out infinite; }
+
+    @keyframes caret { 50% { opacity: 0; } }
+    .caret { animation: caret 0.9s step-end infinite; }
+
+    .card { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+    .card:hover { transform: translateY(-4px); border-color: #2dd8b8 !important; box-shadow: 0 14px 34px rgba(0,0,0,0.35); }
+    .tile:hover .tile-icon { transform: scale(1.1); }
+    .tile-icon { transition: transform .2s ease; }
+  </style>
+</helmet>
+<div style="min-height: 936px; background: #0d0f12; color: #eef1f0; font-family: 'Familjen Grotesk', system-ui, sans-serif; display: flex;">
+<div style="width: 236px; flex-shrink: 0; background: #101317; border-right: 1px solid #1c2024; display: flex; flex-direction: column; padding: 32px 20px;">
+      <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 24px; border-bottom: 1px solid #1c2024; margin-bottom: 20px;">
+        <div style="width: 42px; height: 42px; border-radius: 50%; background: #2dd8b8; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #06120f; font-size: 14px; flex-shrink: 0;">KJ</div>
+        <div>
+          <div style="font-weight: 700; font-size: 14.5px; color: #eef1f0;">Kendy Jerome</div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 10.5px; color: #7c8790;">infra &amp; systèmes</div>
+        </div>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 2px;">
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Accueil</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>La stack</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>OpenWCC</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Odoo 18</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; border-radius: 4px; background: #172420; color: #2dd8b8; font-weight: 700; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2dd8b8; flex-shrink: 0;"></span>SVI Asterisk</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>WebRTC</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Sauvegarde</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Contact</div>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 8px; font-family: 'Fragment Mono', monospace; font-size: 11px; color: #7c8790; margin-top: 28px; padding-top: 16px; border-top: 1px solid #1c2024;">
+        <span class="led" style="width: 6px; height: 6px; border-radius: 50%; background: #2dd8b8; display: inline-block;"></span>disponible — 972
+      </div>
+    </div>
+    <div style="flex-grow: 1; padding: 40px 48px; display: flex; flex-direction: column; gap: 18px; min-width: 0;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 24px;">
+        <div style="max-width: 620px; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; color: #2dd8b8;">Téléphonie · Python · Cassandra</div>
+          <h2 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.15;">SVI Asterisk — un routage décidé en direct</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #b4bcc2;">Un serveur vocal interactif classique code son routage en dur dans le dialplan : le moindre changement demande une intervention. J'ai écrit le mien en Python, branché sur Asterisk via AGI, avec les données d'appel lues et écrites en direct dans Cassandra.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #b4bcc2;">Le seul lien qui compte dans le déroulé est la destination de routage : elle remonte du script, pas d'une règle figée. Changer un routage devient une écriture en base, pas une modification de configuration.</p>
+          <div style="display: flex; align-items: center; gap: 16px; padding-top: 4px; flex-wrap: wrap;">
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;"><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">Python</span><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">Asterisk AGI</span><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">Cassandra</span><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">Redis</span></div>
+          </div>
+          <a href="https://github.com/KeNrOm97/Asterisk-svi-python-cassandra" style="font-family: 'Fragment Mono', monospace; font-size: 12.5px; font-weight: 600;">github.com/KeNrOm97/Asterisk-svi-python-cassandra</a>
+        </div>
+        <div style="font-family: 'Fragment Mono', monospace; font-size: 12px; color: #7c8790; text-align: right; flex-shrink: 0; padding-top: 4px;">projet 3 / 5</div>
+      </div>
+      <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; min-height: 0;">
+            <figure style="border: 1px solid #1c2024; background: #101317; border-radius: 6px; padding: 28px 32px 22px 32px;">
+      <svg viewBox="0 0 1000 470" role="img" aria-label="Déroulé d'un appel : l'appelant joint Asterisk, qui lance le script Python AGI ; le script lit le dossier dans Cassandra, fait jouer l'annonce, reçoit la touche DTMF, écrit la trace d'appel et renvoie la destination de routage à Asterisk, qui met l'appelant en relation." style="height: 340px; width: auto; max-width: 100%; display: block; margin: 0 auto;">
+        <defs>
+          <marker id="sqA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#c7ccce"></path></marker>
+          <marker id="sqoA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2dd8b8"></path></marker>
+        </defs>
+
+        <g fill="none" stroke="#dde3e5" stroke-width="2">
+          <rect x="15" y="8" width="170" height="40"></rect>
+          <rect x="275" y="8" width="170" height="40"></rect>
+          <rect x="555" y="8" width="170" height="40"></rect>
+          <rect x="815" y="8" width="170" height="40"></rect>
+        </g>
+        <g font-family="'Familjen Grotesk', sans-serif" font-size="13" fill="#dde3e5" text-anchor="middle">
+          <text x="100" y="33">Appelant</text>
+          <text x="360" y="33">Asterisk 18</text>
+          <text x="640" y="33">Script Python AGI</text>
+          <text x="900" y="33">Cassandra</text>
+        </g>
+        <g stroke="#2b3137" stroke-width="1.4" stroke-dasharray="4 5">
+          <path d="M100 48 V452"></path><path d="M360 48 V452"></path><path d="M640 48 V452"></path><path d="M900 48 V452"></path>
+        </g>
+
+        <g class="flow" stroke="#9aa3a9" stroke-width="1.6" fill="none" marker-end="url(#sqA)">
+          <path d="M100 90 H356" style="animation-delay: 0s;"></path>
+          <path d="M360 122 H636" style="animation-delay: .2s;"></path>
+          <path d="M640 154 H896" style="animation-delay: .4s;"></path>
+          <path d="M640 218 H364" style="animation-delay: .6s;"></path>
+          <path d="M360 250 H104" style="animation-delay: .8s;"></path>
+          <path d="M100 282 H356" style="animation-delay: 1s;"></path>
+          <path d="M360 314 H636" style="animation-delay: 1.2s;"></path>
+          <path d="M640 346 H896" style="animation-delay: 1.4s;"></path>
+          <path d="M360 442 H104" style="animation-delay: 1.8s;"></path>
+        </g>
+        <path class="flow" d="M900 186 H644" stroke="#9aa3a9" stroke-width="1.6" fill="none" marker-end="url(#sqA)" style="animation-delay: .5s;"></path>
+        <path class="flow" d="M640 394 H364" stroke="#2dd8b8" stroke-width="2.2" fill="none" marker-end="url(#sqoA)" style="animation-delay: 1.6s;"></path>
+
+        <g font-family="'Fragment Mono', monospace" font-size="11" fill="#dde3e5" text-anchor="middle">
+          <text x="228" y="84">appel entrant</text>
+          <text x="498" y="116">lancement du script (AGI)</text>
+          <text x="768" y="148">lecture CQL du dossier</text>
+          <text x="772" y="180" fill="#7c8790">données client</text>
+          <text x="502" y="212">annonce et menu à jouer</text>
+          <text x="232" y="244">message vocal</text>
+          <text x="228" y="276">saisie DTMF</text>
+          <text x="498" y="308">touche transmise</text>
+          <text x="768" y="340">écriture de la trace d'appel</text>
+          <text x="502" y="388" fill="#2dd8b8">destination de routage</text>
+          <text x="232" y="436">mise en relation</text>
+        </g>
+        <g font-family="'Fragment Mono', monospace" font-size="10" fill="#7c8790" text-anchor="middle">
+          <text x="502" y="406">décidée à l'exécution, pas dans le dialplan</text>
+        </g>
+      </svg>
+      <figcaption style="font-family: 'Fragment Mono', monospace; font-size: 12px; color: #7c8790; line-height: 1.6; padding-top: 16px; border-top: 1px solid #1c2024; margin-top: 14px;">Fig. 02 — Le seul lien qui compte est en turquoise : la destination remonte du script, pas d'une règle figée dans le dialplan. Changer un routage devient une écriture en base, pas une modification de configuration. <a href="https://github.com/KeNrOm97/Asterisk-svi-python-cassandra">Asterisk-svi-python-cassandra</a></figcaption>
+    </figure>
+      </div>
+    </div>
+
+</div>
+</x-dc>
+</body>
+</html>

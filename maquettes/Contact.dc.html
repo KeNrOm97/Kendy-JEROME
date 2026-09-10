@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Fragment+Mono&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #2dd8b8; text-decoration: none; }
+    a:hover { color: #8bf0dd; }
+    p { text-wrap: pretty; }
+    figure { margin: 0; }
+
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    .flow { stroke-dasharray: 5 7; animation: flow 1s linear infinite; }
+    .flow-slow { stroke-dasharray: 3 6; animation: flow 1.8s linear infinite; }
+
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.28; } }
+    .led { animation: blink 2.2s ease-in-out infinite; }
+
+    @keyframes caret { 50% { opacity: 0; } }
+    .caret { animation: caret 0.9s step-end infinite; }
+
+    .card { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+    .card:hover { transform: translateY(-4px); border-color: #2dd8b8 !important; box-shadow: 0 14px 34px rgba(0,0,0,0.35); }
+    .tile:hover .tile-icon { transform: scale(1.1); }
+    .tile-icon { transition: transform .2s ease; }
+  </style>
+</helmet>
+<div style="min-height: 758px; background: #0d0f12; color: #eef1f0; font-family: 'Familjen Grotesk', system-ui, sans-serif; display: flex;">
+<div style="width: 236px; flex-shrink: 0; background: #101317; border-right: 1px solid #1c2024; display: flex; flex-direction: column; padding: 32px 20px;">
+      <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 24px; border-bottom: 1px solid #1c2024; margin-bottom: 20px;">
+        <div style="width: 42px; height: 42px; border-radius: 50%; background: #2dd8b8; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #06120f; font-size: 14px; flex-shrink: 0;">KJ</div>
+        <div>
+          <div style="font-weight: 700; font-size: 14.5px; color: #eef1f0;">Kendy Jerome</div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 10.5px; color: #7c8790;">infra &amp; systèmes</div>
+        </div>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 2px;">
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Accueil</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>La stack</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>OpenWCC</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Odoo 18</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>SVI Asterisk</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>WebRTC</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Sauvegarde</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; border-radius: 4px; background: #172420; color: #2dd8b8; font-weight: 700; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2dd8b8; flex-shrink: 0;"></span>Contact</div>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 8px; font-family: 'Fragment Mono', monospace; font-size: 11px; color: #7c8790; margin-top: 28px; padding-top: 16px; border-top: 1px solid #1c2024;">
+        <span class="led" style="width: 6px; height: 6px; border-radius: 50%; background: #2dd8b8; display: inline-block;"></span>disponible — 972
+      </div>
+    </div>
+    <div style="flex-grow: 1; padding: 48px 56px; display: flex; flex-direction: column; gap: 32px;">
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding-bottom: 28px; border-bottom: 1px solid #1c2024;">
+        <div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #2dd8b8; padding-bottom: 10px;">01 — jamais deux fois pareil</div>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #b4bcc2;">Un playbook Ansible même quand l'installation à la main irait plus vite. Ça se paie le jour où il faut remonter la machine dans l'urgence.</p>
+        </div>
+        <div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #2dd8b8; padding-bottom: 10px;">02 — jamais après</div>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #b4bcc2;">Pare-feu et certificats posés avec le service, jamais après. Ouvrir large en se disant qu'on refermera plus tard finit en règle oubliée.</p>
+        </div>
+        <div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #2dd8b8; padding-bottom: 10px;">03 — restaurée, vraiment</div>
+          <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #b4bcc2;">Une sauvegarde qu'on n'a jamais restaurée, on ne sait pas encore si c'en est une. Je documente au fur et à mesure.</p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px;">
+        <div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #7c8790; padding-bottom: 14px;">Parcours</div>
+          <div style="display: flex; flex-direction: column; font-family: 'Fragment Mono', monospace; font-size: 12.5px;">
+            <div style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid #1c2024;"><span style="color: #2dd8b8;">2023–2025</span><span style="color: #dde3e5;">Mastère MPP, manager de portefeuille de projets — Keyce Academy</span></div>
+            <div style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid #1c2024;"><span style="color: #2dd8b8;">2023</span><span style="color: #dde3e5;">Licence pro MRIT, Internet des Objets — Lycée Joseph Gaillard</span></div>
+            <div style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid #1c2024;"><span style="color: #2dd8b8;">—</span><span style="color: #dde3e5;">Certification CCNA, réseaux Cisco</span></div>
+            <div style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid #1c2024; border-bottom: 1px solid #1c2024;"><span style="color: #2dd8b8;">2022</span><span style="color: #dde3e5;">BTS SN, informatique et réseaux — Lycée Joseph Gaillard</span></div>
+          </div>
+        </div>
+        <div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #7c8790; padding-bottom: 14px;">À côté, pour ne pas rouiller</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13.5px; color: #b4bcc2;">
+            <div style="display: flex; gap: 12px;"><span style="width: 118px; flex-shrink: 0; color: #eef1f0; font-weight: 600;">MiruStream</span><span>Next.js · Supabase · Vercel</span></div>
+            <div style="display: flex; gap: 12px;"><span style="width: 118px; flex-shrink: 0; color: #eef1f0; font-weight: 600;">MiruStream API</span><span>FastAPI · Python · Docker</span></div>
+            <div style="display: flex; gap: 12px;"><span style="width: 118px; flex-shrink: 0; color: #eef1f0; font-weight: 600;">MiruList</span><span>JavaScript · Vercel</span></div>
+            <div style="display: flex; gap: 12px;"><span style="width: 118px; flex-shrink: 0; color: #eef1f0; font-weight: 600;">Loup_G</span><span>TypeScript · Vercel</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 8px; padding-top: 28px; border-top: 1px solid #1c2024; display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+        <div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #2dd8b8; padding-bottom: 10px;">Ouvert aux opportunités</div>
+          <h2 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.015em;">Infrastructure, VoIP ou DevOps — parlons-en.</h2>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 12.5px; color: #7c8790; padding-top: 10px;">Martinique · métropole · télétravail — permis B, véhiculé</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
+          <a href="mailto:kendyjerome20@gmail.com" style="display: inline-flex; align-items: center; height: 48px; padding: 0 26px; background: #2dd8b8; color: #06120f; font-weight: 700; font-size: 14.5px; border-radius: 4px;">kendyjerome20@gmail.com</a>
+          <div style="display: flex; gap: 18px; font-family: 'Fragment Mono', monospace; font-size: 12.5px;">
+            <a href="https://linkedin.com/in/kendy-jerome-4b147234b">linkedin</a>
+            <a href="https://github.com/KeNrOm97">github</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+</x-dc>
+</body>
+</html>

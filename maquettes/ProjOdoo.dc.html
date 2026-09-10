@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Fragment+Mono&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #2dd8b8; text-decoration: none; }
+    a:hover { color: #8bf0dd; }
+    p { text-wrap: pretty; }
+    figure { margin: 0; }
+
+    @keyframes flow { to { stroke-dashoffset: -24; } }
+    .flow { stroke-dasharray: 5 7; animation: flow 1s linear infinite; }
+    .flow-slow { stroke-dasharray: 3 6; animation: flow 1.8s linear infinite; }
+
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.28; } }
+    .led { animation: blink 2.2s ease-in-out infinite; }
+
+    @keyframes caret { 50% { opacity: 0; } }
+    .caret { animation: caret 0.9s step-end infinite; }
+
+    .card { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+    .card:hover { transform: translateY(-4px); border-color: #2dd8b8 !important; box-shadow: 0 14px 34px rgba(0,0,0,0.35); }
+    .tile:hover .tile-icon { transform: scale(1.1); }
+    .tile-icon { transition: transform .2s ease; }
+  </style>
+</helmet>
+<div style="min-height: 815px; background: #0d0f12; color: #eef1f0; font-family: 'Familjen Grotesk', system-ui, sans-serif; display: flex;">
+<div style="width: 236px; flex-shrink: 0; background: #101317; border-right: 1px solid #1c2024; display: flex; flex-direction: column; padding: 32px 20px;">
+      <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 24px; border-bottom: 1px solid #1c2024; margin-bottom: 20px;">
+        <div style="width: 42px; height: 42px; border-radius: 50%; background: #2dd8b8; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #06120f; font-size: 14px; flex-shrink: 0;">KJ</div>
+        <div>
+          <div style="font-weight: 700; font-size: 14.5px; color: #eef1f0;">Kendy Jerome</div>
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 10.5px; color: #7c8790;">infra &amp; systèmes</div>
+        </div>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 2px;">
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Accueil</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>La stack</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>OpenWCC</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; border-radius: 4px; background: #172420; color: #2dd8b8; font-weight: 700; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2dd8b8; flex-shrink: 0;"></span>Odoo 18</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>SVI Asterisk</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>WebRTC</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Sauvegarde</div>
+      <div style="display: flex; align-items: center; gap: 9px; padding: 8px 10px; color: #7c8790; font-size: 13.5px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #2b3137; flex-shrink: 0;"></span>Contact</div>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 8px; font-family: 'Fragment Mono', monospace; font-size: 11px; color: #7c8790; margin-top: 28px; padding-top: 16px; border-top: 1px solid #1c2024;">
+        <span class="led" style="width: 6px; height: 6px; border-radius: 50%; background: #2dd8b8; display: inline-block;"></span>disponible — 972
+      </div>
+    </div>
+    <div style="flex-grow: 1; padding: 40px 48px; display: flex; flex-direction: column; gap: 18px; min-width: 0;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 24px;">
+        <div style="max-width: 620px; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-family: 'Fragment Mono', monospace; font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; color: #2dd8b8;">Module métier · Odoo 18</div>
+          <h2 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.15;">Dossiers de subvention — un objet métier, pas un tableur</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #b4bcc2;">Un dossier de subvention se monte d'ordinaire à coups de tableurs et de pièces jointes éparpillées, sans trace fiable de qui a validé quoi. J'ai construit un module Odoo 18 qui en fait un vrai objet métier : formulaire unique, justificatifs rattachés, circuit de validation par états, historique conservé.</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.62; color: #b4bcc2;">Le retour en brouillon est la transition qui justifie le module : elle remplace les allers-retours par courriel et garde la trace de ce qui manquait. Odoo, PostgreSQL et Nginx tournent en services séparés sous Docker Compose, addons montés en volume.</p>
+          <div style="display: flex; align-items: center; gap: 16px; padding-top: 4px; flex-wrap: wrap;">
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;"><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">Odoo 18</span><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">Python</span><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">Docker Compose</span><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">Nginx</span><span style="font-family: 'Fragment Mono', monospace; font-size: 11px; padding: 5px 10px; border: 1px solid #262b30; border-radius: 3px; color: #9aa3a9;">PostgreSQL</span></div>
+          </div>
+          
+        </div>
+        <div style="font-family: 'Fragment Mono', monospace; font-size: 12px; color: #7c8790; text-align: right; flex-shrink: 0; padding-top: 4px;">projet 2 / 5</div>
+      </div>
+      <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; min-height: 0;">
+        <figure style="border: 1px solid #1c2024; background: #101317; border-radius: 6px; padding: 24px 28px 20px 28px;">
+      <svg viewBox="0 0 1010 280" role="img" aria-label="Cycle de vie d'un dossier de subvention : brouillon, déposé, en instruction, puis validé ou refusé ; l'instruction peut renvoyer le dossier en brouillon quand un complément est demandé." style="height: 230px; width: auto; max-width: 100%; display: block; margin: 0 auto;">
+        <defs><marker id="stO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#dde3e5"></path></marker>
+        <marker id="stoO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2dd8b8"></path></marker></defs>
+
+        <circle cx="16" cy="102" r="6" fill="#dde3e5"></circle>
+        <g fill="none" stroke="#dde3e5" stroke-width="2">
+          <rect x="40" y="76" width="150" height="52" rx="3"></rect>
+          <rect x="250" y="76" width="150" height="52" rx="3"></rect>
+          <rect x="460" y="76" width="170" height="52" rx="3"></rect>
+          <rect x="790" y="24" width="150" height="52" rx="3"></rect>
+          <rect x="790" y="140" width="150" height="52" rx="3"></rect>
+        </g>
+        <g font-family="'Familjen Grotesk', sans-serif" font-size="14" fill="#dde3e5" text-anchor="middle">
+          <text x="115" y="107">Brouillon</text>
+          <text x="325" y="107">Déposé</text>
+          <text x="545" y="107">En instruction</text>
+          <text x="865" y="55">Validé</text>
+          <text x="865" y="171">Refusé</text>
+        </g>
+
+        <g class="flow" stroke="#9aa3a9" stroke-width="1.7" fill="none" marker-end="url(#stO)">
+          <path d="M22 102 H36"></path>
+          <path d="M190 102 H246"></path>
+          <path d="M400 102 H456"></path>
+          <path d="M630 90 H710 V50 H786"></path>
+          <path d="M630 114 H710 V166 H786"></path>
+        </g>
+        <path class="flow" d="M545 128 V236 H115 V132" stroke="#2dd8b8" stroke-width="2" fill="none" marker-end="url(#stoO)"></path>
+
+        <g font-family="'Fragment Mono', monospace" font-size="10.5" fill="#dde3e5" text-anchor="middle">
+          <text x="218" y="66">pièces complètes</text>
+          <text x="428" y="66">prise en charge</text>
+          <text x="710" y="42">décision favorable</text>
+          <text x="710" y="186">décision défavorable</text>
+          <text x="330" y="230" fill="#2dd8b8">complément demandé</text>
+        </g>
+
+        <g fill="none" stroke="#dde3e5" stroke-width="2">
+          <circle cx="976" cy="50" r="7"></circle><circle cx="976" cy="166" r="7"></circle>
+        </g>
+        <g fill="#dde3e5"><circle cx="976" cy="50" r="3.5"></circle><circle cx="976" cy="166" r="3.5"></circle></g>
+      </svg>
+      <figcaption style="font-family: 'Fragment Mono', monospace; font-size: 12px; color: #7c8790; line-height: 1.6; padding-top: 14px; border-top: 1px solid #1c2024; margin-top: 12px;">Fig. 03 — Le retour en brouillon est la transition qui justifie le module : c'est elle qui remplace les allers-retours par courriel et garde la trace de ce qui manquait. Odoo, PostgreSQL et Nginx tournent en services séparés sous Docker Compose, addons montés en volume.</figcaption>
+    </figure>
+      </div>
+    </div>
+
+</div>
+</x-dc>
+</body>
+</html>

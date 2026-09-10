@@ -1,0 +1,592 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #ff4a17; text-decoration: none; }
+    a:hover { color: #ffb59d; }
+    p { text-wrap: pretty; }
+    figure { margin: 0; }
+    figcaption { font-family: 'Space Mono', monospace; font-size: 12px; line-height: 1.5; color: #4a4a44; }
+  </style>
+</helmet>
+
+<div style="min-height: 4900px; background: #0e1014; color: #f2ede4; font-family: 'Archivo', system-ui, sans-serif;">
+
+  <!-- BARRE -->
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 48px; height: 56px; border-bottom: 1px solid #23262d; font-family: 'Space Mono', monospace; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em;">
+    <span style="color: #ff4a17;">Kendy Jerome — dossier d'infrastructure</span>
+    <div style="display: flex; gap: 26px; color: #8b8f98;">
+      <a href="#" style="color: #8b8f98;">Architecture</a>
+      <a href="#" style="color: #8b8f98;">Stack</a>
+      <a href="#" style="color: #8b8f98;">Planches</a>
+      <a href="#" style="color: #8b8f98;">Contact</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="display: grid; grid-template-columns: 1.45fr 1fr; gap: 48px; padding: 60px 48px 52px 48px; align-items: end;">
+    <div>
+      <h1 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-size: 116px; line-height: 0.85; letter-spacing: -0.045em; text-transform: uppercase;">Kendy<br><span style="color: #ff4a17;">Jerome</span></h1>
+      <div style="font-family: 'Space Mono', monospace; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #8b8f98; padding-top: 22px;">Ingénieur systèmes &amp; infrastructure — Fort-de-France (972)</div>
+      <p style="margin: 22px 0 0 0; font-size: 19px; line-height: 1.6; max-width: 32em; color: #cfcabe;">Je construis des systèmes qui doivent tenir 24/7. Ci-dessous, les architectures que j'ai montées, dessinées telles qu'elles tournent : les flux, les protocoles, les briques et ce qui les pilote.</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 30px;">
+        <a href="mailto:kendyjerome20@gmail.com" style="display: inline-flex; align-items: center; height: 52px; padding: 0 26px; background: #ff4a17; color: #0e1014; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em;">Me contacter</a>
+        <a href="https://github.com/KeNrOm97" style="display: inline-flex; align-items: center; height: 52px; padding: 0 26px; border: 2px solid #3a3f49; color: #f2ede4; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em;">GitHub</a>
+      </div>
+    </div>
+    <div style="border: 2px solid #23262d; padding: 26px; display: flex; flex-direction: column; gap: 0; font-family: 'Space Mono', monospace; font-size: 13px;">
+      <div style="text-transform: uppercase; letter-spacing: 0.12em; color: #ff4a17; padding-bottom: 16px;">Fiche</div>
+      <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #23262d;"><span style="color: #8b8f98;">Terrain</span><span>Martinique · métropole · remote</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #23262d;"><span style="color: #8b8f98;">Certification</span><span>Cisco CCNA</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #23262d;"><span style="color: #8b8f98;">Diplôme</span><span>Mastère MPP 2025</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #23262d;"><span style="color: #8b8f98;">Spécialités</span><span>FreeBSD · Asterisk · Ansible</span></div>
+      <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0;"><span style="color: #8b8f98;">Statut</span><span style="color: #ff4a17;">ouvert aux opportunités</span></div>
+    </div>
+  </div>
+
+  <!-- PLANCHE 01 : ARCHITECTURE -->
+  <div style="padding: 0 48px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding-bottom: 18px;">
+      <h2 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-size: 40px; letter-spacing: -0.03em; text-transform: uppercase;">Planche 01 — OpenWCC</h2>
+      <span style="font-family: 'Space Mono', monospace; font-size: 12.5px; color: #8b8f98;">plateforme de centre de contacts · FreeBSD 14</span>
+    </div>
+    <figure style="background: #ffffff; border: 3px solid #0e1014; box-shadow: 14px 14px 0 #ff4a17; padding: 28px 30px 22px 30px; color: #111111;">
+      <svg viewBox="0 0 1160 500" role="img" aria-label="Architecture de la plateforme OpenWCC : les clients SIP, navigateur et messagerie traversent le pare-feu PF vers les services lighttpd, Tomcat, Asterisk, Apache James et Openfire, qui accèdent à PostgreSQL, Redis et OpenLDAP ; Ansible déploie l'ensemble et Prometheus le supervise." style="width: 100%; height: auto; display: block;">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#111111"></path></marker>
+          <marker id="ar-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff4a17"></path></marker>
+        </defs>
+
+        <g font-family="'Space Mono', monospace" font-size="11" fill="#8a8a80" letter-spacing="1.4">
+          <text x="20" y="26">ACCÈS</text>
+          <text x="290" y="26">FILTRAGE</text>
+          <text x="470" y="26">SERVICES</text>
+          <text x="790" y="26">DONNÉES</text>
+        </g>
+
+        <!-- accès -->
+        <g fill="none" stroke="#111111" stroke-width="2">
+          <rect x="20" y="70" width="180" height="64"></rect>
+          <rect x="20" y="170" width="180" height="64"></rect>
+          <rect x="20" y="270" width="180" height="64"></rect>
+        </g>
+        <g stroke="#111111" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <g transform="translate(36,86)"><path d="M7 3.5h3l1.2 4-2 1.4a11 11 0 0 0 5.9 5.9l1.4-2 4 1.2v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5 5.7 2 2 0 0 1 7 3.5z"></path></g>
+          <g transform="translate(36,186)"><rect x="3" y="4.5" width="18" height="15" rx="1.5"></rect><path d="M3 9.5h18"></path><circle cx="6.2" cy="7" r="0.8"></circle><circle cx="8.8" cy="7" r="0.8"></circle></g>
+          <g transform="translate(36,286)"><path d="M4 5.5h16v10H9l-5 4z"></path></g>
+        </g>
+        <g font-family="'Archivo', sans-serif" font-size="13" fill="#111111">
+          <text x="70" y="98">Postes SIP</text>
+          <text x="70" y="198">Navigateur WebRTC</text>
+          <text x="70" y="298">Clients mail / XMPP</text>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10.5" fill="#8a8a80">
+          <text x="70" y="115">postes internes</text>
+          <text x="70" y="215">sans logiciel client</text>
+          <text x="70" y="315">SMTP · IMAP · XMPP</text>
+        </g>
+
+        <!-- pare-feu -->
+        <rect x="290" y="70" width="120" height="264" fill="none" stroke="#ff4a17" stroke-width="3"></rect>
+        <g transform="translate(338,178)" stroke="#ff4a17" stroke-width="1.7" fill="none" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 9.7h18M3 14.3h18M9 5v4.7M15 9.7v4.6M9 14.3V19"></path></g>
+        <text x="350" y="222" font-family="'Archivo', sans-serif" font-size="14" fill="#ff4a17" text-anchor="middle">Pare-feu PF</text>
+        <text x="350" y="240" font-family="'Space Mono', monospace" font-size="10.5" fill="#c98a72" text-anchor="middle">règles posées</text>
+        <text x="350" y="254" font-family="'Space Mono', monospace" font-size="10.5" fill="#c98a72" text-anchor="middle">avec le service</text>
+
+        <!-- accès -> pf -->
+        <g stroke="#111111" stroke-width="1.6" fill="none" marker-end="url(#ar)">
+          <path d="M200 102 H286"></path>
+          <path d="M200 202 H286"></path>
+          <path d="M200 302 H286"></path>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10" fill="#6d6d64" text-anchor="middle">
+          <text x="243" y="96">SIP</text>
+          <text x="243" y="196">HTTPS · WSS</text>
+          <text x="243" y="296">SMTP · XMPP</text>
+        </g>
+
+        <!-- services -->
+        <g fill="none" stroke="#111111" stroke-width="2">
+          <rect x="470" y="54" width="230" height="64"></rect>
+          <rect x="470" y="134" width="230" height="64"></rect>
+          <rect x="470" y="214" width="230" height="64"></rect>
+          <rect x="470" y="294" width="230" height="64"></rect>
+        </g>
+        <g stroke="#111111" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <g transform="translate(486,70)"><rect x="9" y="3" width="6" height="18" rx="1"></rect><path d="M2 8h7M2 16h7M15 8h7M15 16h7"></path></g>
+          <g transform="translate(486,150)"><rect x="3" y="9" width="7" height="6" rx="1"></rect><rect x="11" y="9" width="7" height="6" rx="1"></rect><rect x="7" y="3" width="7" height="5" rx="1"></rect><path d="M3 19h18"></path></g>
+          <g transform="translate(486,230)"><path d="M7 3.5h3l1.2 4-2 1.4a11 11 0 0 0 5.9 5.9l1.4-2 4 1.2v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5 5.7 2 2 0 0 1 7 3.5z"></path></g>
+          <g transform="translate(486,310)"><path d="M4 5.5h16v10H9l-5 4z"></path></g>
+        </g>
+        <g font-family="'Archivo', sans-serif" font-size="13" fill="#111111">
+          <text x="520" y="82">lighttpd — frontal TLS</text>
+          <text x="520" y="162">Tomcat 10 · OpenJDK 11</text>
+          <text x="520" y="242">Asterisk 18</text>
+          <text x="520" y="322">Apache James · Openfire</text>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10.5" fill="#8a8a80">
+          <text x="520" y="99">certificat Let's Encrypt</text>
+          <text x="520" y="179">application métier</text>
+          <text x="520" y="259">SVI · files d'attente · routage</text>
+          <text x="520" y="339">messagerie et XMPP</text>
+        </g>
+
+        <!-- pf -> services -->
+        <g stroke="#111111" stroke-width="1.6" fill="none" marker-end="url(#ar)">
+          <path d="M410 86 H466"></path>
+          <path d="M410 246 H466"></path>
+          <path d="M410 326 H466"></path>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10" fill="#6d6d64" text-anchor="middle">
+          <text x="438" y="80">HTTPS</text>
+          <text x="438" y="240">SIP · WSS</text>
+          <text x="438" y="320">SMTP</text>
+        </g>
+        <path d="M585 118 V130" stroke="#111111" stroke-width="1.6" fill="none" marker-end="url(#ar)"></path>
+        <text x="592" y="129" font-family="'Space Mono', monospace" font-size="10" fill="#6d6d64">reverse proxy</text>
+
+        <!-- données -->
+        <g fill="none" stroke="#111111" stroke-width="2">
+          <rect x="790" y="94" width="200" height="64"></rect>
+          <rect x="790" y="174" width="200" height="64"></rect>
+          <rect x="790" y="254" width="200" height="64"></rect>
+        </g>
+        <g stroke="#111111" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <g transform="translate(806,110)"><ellipse cx="12" cy="6" rx="7.5" ry="3"></ellipse><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6"></path><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"></path></g>
+          <g transform="translate(806,190)"><ellipse cx="12" cy="6" rx="7.5" ry="3"></ellipse><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6"></path><path d="M13.2 9.6l-3.2 4.2h4l-3.2 4.2"></path></g>
+          <g transform="translate(806,270)"><circle cx="12" cy="5" r="2.5"></circle><circle cx="5.5" cy="19" r="2.5"></circle><circle cx="18.5" cy="19" r="2.5"></circle><path d="M12 7.5v4M5.5 16.5v-2a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v2"></path></g>
+        </g>
+        <g font-family="'Archivo', sans-serif" font-size="13" fill="#111111">
+          <text x="840" y="122">PostgreSQL 15</text>
+          <text x="840" y="202">Redis</text>
+          <text x="840" y="282">OpenLDAP</text>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10.5" fill="#8a8a80">
+          <text x="840" y="139">données métier et CDR</text>
+          <text x="840" y="219">cache et sessions</text>
+          <text x="840" y="299">comptes et annuaire</text>
+        </g>
+
+        <!-- bus données -->
+        <path d="M765 126 V326" stroke="#111111" stroke-width="1.6" fill="none"></path>
+        <g stroke="#111111" stroke-width="1.6" fill="none">
+          <path d="M700 166 H765"></path>
+          <path d="M700 246 H765"></path>
+          <path d="M700 326 H765"></path>
+        </g>
+        <g stroke="#111111" stroke-width="1.6" fill="none" marker-end="url(#ar)">
+          <path d="M765 126 H786"></path>
+          <path d="M765 206 H786"></path>
+          <path d="M765 286 H786"></path>
+        </g>
+        <g fill="#111111">
+          <circle cx="765" cy="166" r="3"></circle><circle cx="765" cy="246" r="3"></circle><circle cx="765" cy="326" r="3"></circle>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10" fill="#6d6d64">
+          <text x="770" y="120">SQL</text>
+          <text x="770" y="200">cache</text>
+          <text x="770" y="280">LDAP</text>
+        </g>
+
+        <!-- pilotage -->
+        <g fill="none" stroke="#111111" stroke-width="2" stroke-dasharray="6 4">
+          <rect x="290" y="400" width="410" height="56"></rect>
+          <rect x="790" y="400" width="200" height="56"></rect>
+        </g>
+        <g stroke="#111111" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <g transform="translate(306,416)"><path d="M4 5.5a2 2 0 0 1 2-2h12v17H6a2 2 0 0 0-2 2z"></path><path d="M8 8h7M8 11.5h7"></path></g>
+          <g transform="translate(806,416)"><rect x="3" y="4.5" width="18" height="13" rx="1.5"></rect><path d="M6.5 13l3-4 2.5 3 2-5 3.5 6"></path><path d="M9 21h6"></path></g>
+        </g>
+        <g font-family="'Archivo', sans-serif" font-size="13" fill="#111111">
+          <text x="340" y="428">Ansible + scripts Shell</text>
+          <text x="840" y="428">Prometheus · Zabbix</text>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10.5" fill="#8a8a80">
+          <text x="340" y="445">redéploiement intégral, sans intervention manuelle</text>
+          <text x="840" y="445">métriques et alertes</text>
+        </g>
+        <g stroke="#ff4a17" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#ar-o)">
+          <path d="M350 400 V338"></path>
+          <path d="M585 400 V362"></path>
+          <path d="M890 400 V322"></path>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10" fill="#ff4a17">
+          <text x="357" y="380">déploie</text>
+          <text x="592" y="380">déploie</text>
+          <text x="897" y="380">collecte</text>
+        </g>
+
+        <!-- légende -->
+        <g transform="translate(20,470)">
+          <path d="M0 0 H30" stroke="#111111" stroke-width="1.6"></path>
+          <text x="38" y="4" font-family="'Space Mono', monospace" font-size="10.5" fill="#6d6d64">flux applicatif</text>
+          <path d="M170 0 H200" stroke="#ff4a17" stroke-width="1.6" stroke-dasharray="5 4"></path>
+          <text x="208" y="4" font-family="'Space Mono', monospace" font-size="10.5" fill="#6d6d64">pilotage : déploiement et supervision</text>
+          <rect x="470" y="-6" width="12" height="12" fill="none" stroke="#ff4a17" stroke-width="2"></rect>
+          <text x="490" y="4" font-family="'Space Mono', monospace" font-size="10.5" fill="#6d6d64">point de filtrage : rien n'entre sans passer par PF</text>
+        </g>
+      </svg>
+      <figcaption style="padding-top: 18px; border-top: 1px solid #ddd8cc; margin-top: 16px;">Fig. 01 — Tous les flux entrants passent par PF avant d'atteindre un service ; les services partagent un même accès aux données. Ansible pose l'ensemble, la supervision le regarde tourner. <a href="https://github.com/KeNrOm97/OpenWCC" style="color: #111111; border-bottom: 2px solid #ff4a17;">github.com/KeNrOm97/OpenWCC</a></figcaption>
+    </figure>
+  </div>
+
+  <!-- STACK -->
+  <div style="padding: 64px 48px 0 48px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding-bottom: 22px;">
+      <h2 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-size: 40px; letter-spacing: -0.03em; text-transform: uppercase;">La stack, par fonction</h2>
+      <span style="font-family: 'Space Mono', monospace; font-size: 12.5px; color: #8b8f98;">ce que chaque brique fait, pas seulement son nom</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 190px repeat(4, minmax(0, 1fr)); gap: 14px; align-items: stretch;">
+
+      <div style="display: flex; align-items: center; font-family: 'Space Mono', monospace; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #ff4a17; border-right: 2px solid #23262d; padding-right: 14px;">Systèmes</div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="6" rx="1"></rect><rect x="3.5" y="13.5" width="17" height="6" rx="1"></rect><circle cx="6.8" cy="7.5" r="0.9"></circle><circle cx="6.8" cy="16.5" r="0.9"></circle></svg>
+        <div style="font-size: 15px; font-weight: 600;">Serveurs en production</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">FreeBSD 14 · Debian · Ubuntu · CentOS · Windows Server</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="7" height="6" rx="1"></rect><rect x="11" y="9" width="7" height="6" rx="1"></rect><rect x="7" y="3" width="7" height="5" rx="1"></rect><path d="M3 19h18"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Conteneurs</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">Docker · Docker Compose · volumes persistés</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="1.5"></rect><path d="M7 9.5l3 2.5-3 2.5M12.5 14.5h4.5"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Virtualisation</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">VMware · QEMU/KVM · VirtualBox</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5a2 2 0 0 1 2-2h12v17H6a2 2 0 0 0-2 2z"></path><path d="M8 8h7M8 11.5h7"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Infrastructure-as-Code</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">Ansible · Shell · Python 3 · Git · cron</div>
+      </div>
+
+      <div style="display: flex; align-items: center; font-family: 'Space Mono', monospace; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #ff4a17; border-right: 2px solid #23262d; padding-right: 14px;">Temps réel</div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h3l1.2 4-2 1.4a11 11 0 0 0 5.9 5.9l1.4-2 4 1.2v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 5 5.7 2 2 0 0 1 7 3.5z"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Téléphonie</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">Asterisk 18 · FreeSWITCH · SVI · files d'attente</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l2.5-7 4 14 3-9 2 4h5.5"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">WebRTC navigateur</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">appel sans logiciel client · signalisation WSS</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="1.5"></rect><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"></path><circle cx="12" cy="15" r="1.2"></circle></svg>
+        <div style="font-size: 15px; font-weight: 600;">Chiffrement des flux</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">TLS · SRTP · Let's Encrypt renouvelé seul</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-5 4z"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Messagerie</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">Apache James · Openfire XMPP</div>
+      </div>
+
+      <div style="display: flex; align-items: center; font-family: 'Space Mono', monospace; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #ff4a17; border-right: 2px solid #23262d; padding-right: 14px;">Données</div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3"></ellipse><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6"></path><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Bases relationnelles</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">PostgreSQL 15 · MySQL · MariaDB</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3"></ellipse><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6"></path><path d="M13.2 9.6l-3.2 4.2h4l-3.2 4.2"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Cache et distribué</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">Redis · Cassandra en CQL</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"></circle><circle cx="5.5" cy="19" r="2.5"></circle><circle cx="18.5" cy="19" r="2.5"></circle><path d="M12 7.5v4M5.5 16.5v-2a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v2"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Annuaire</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">OpenLDAP · Active Directory · comptes</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="18" rx="1"></rect><path d="M2 8h7M2 16h7M15 8h7M15 16h7"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Frontaux web</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">Nginx · lighttpd · Tomcat 10 sur OpenJDK</div>
+      </div>
+
+      <div style="display: flex; align-items: center; font-family: 'Space Mono', monospace; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.1em; color: #ff4a17; border-right: 2px solid #23262d; padding-right: 14px;">Exploitation</div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="M3 9.7h18M3 14.3h18M9 5v4.7M15 9.7v4.6M9 14.3V19"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Filtrage</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">PF · iptables · règles posées avec le service</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"></circle><circle cx="5" cy="18" r="2.2"></circle><circle cx="19" cy="18" r="2.2"></circle><path d="M10.6 6.9L6.3 15.9M13.4 6.9l4.3 9M7.2 18h9.6"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Réseau</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">VLAN · VPN · DNS · routage et commutation Cisco</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="13" rx="1.5"></rect><path d="M6.5 13l3-4 2.5 3 2-5 3.5 6"></path><path d="M9 21h6"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Supervision</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">Prometheus · Zabbix · support N2/N3</div>
+      </div>
+      <div style="border: 2px solid #23262d; padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff4a17" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="5" rx="1"></rect><path d="M5 9.5v9a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-9"></path><path d="M9.5 13.5h5"></path></svg>
+        <div style="font-size: 15px; font-weight: 600;">Sauvegarde</div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 11.5px; line-height: 1.6; color: #8b8f98;">tar/gzip · SCP/SSH · rotation · cron</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PLANCHE 02 : SVI -->
+  <div style="padding: 64px 48px 0 48px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding-bottom: 18px;">
+      <h2 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-size: 40px; letter-spacing: -0.03em; text-transform: uppercase;">Planche 02 — un appel dans le SVI</h2>
+      <span style="font-family: 'Space Mono', monospace; font-size: 12.5px; color: #8b8f98;">Python · Asterisk AGI · Cassandra</span>
+    </div>
+    <figure style="background: #ffffff; border: 3px solid #0e1014; box-shadow: 14px 14px 0 #ff4a17; padding: 28px 30px 22px 30px; color: #111111;">
+      <svg viewBox="0 0 1000 470" role="img" aria-label="Déroulé d'un appel : l'appelant joint Asterisk, qui lance le script Python AGI ; le script lit le dossier dans Cassandra, fait jouer l'annonce, reçoit la touche DTMF, écrit la trace d'appel et renvoie la destination de routage à Asterisk, qui met l'appelant en relation." style="width: 100%; height: auto; display: block;">
+        <defs>
+          <marker id="sq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#111111"></path></marker>
+          <marker id="sq-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff4a17"></path></marker>
+        </defs>
+
+        <g fill="none" stroke="#111111" stroke-width="2">
+          <rect x="15" y="8" width="170" height="40"></rect>
+          <rect x="275" y="8" width="170" height="40"></rect>
+          <rect x="555" y="8" width="170" height="40"></rect>
+          <rect x="815" y="8" width="170" height="40"></rect>
+        </g>
+        <g font-family="'Archivo', sans-serif" font-size="13" fill="#111111" text-anchor="middle">
+          <text x="100" y="33">Appelant</text>
+          <text x="360" y="33">Asterisk 18</text>
+          <text x="640" y="33">Script Python AGI</text>
+          <text x="900" y="33">Cassandra</text>
+        </g>
+        <g stroke="#b9b4a8" stroke-width="1.4" stroke-dasharray="4 5">
+          <path d="M100 48 V452"></path><path d="M360 48 V452"></path><path d="M640 48 V452"></path><path d="M900 48 V452"></path>
+        </g>
+
+        <g stroke="#111111" stroke-width="1.6" fill="none" marker-end="url(#sq)">
+          <path d="M100 90 H356"></path>
+          <path d="M360 122 H636"></path>
+          <path d="M640 154 H896"></path>
+          <path d="M640 218 H364"></path>
+          <path d="M360 250 H104"></path>
+          <path d="M100 282 H356"></path>
+          <path d="M360 314 H636"></path>
+          <path d="M640 346 H896"></path>
+          <path d="M360 442 H104"></path>
+        </g>
+        <path d="M900 186 H644" stroke="#111111" stroke-width="1.6" fill="none" stroke-dasharray="6 4" marker-end="url(#sq)"></path>
+        <path d="M640 394 H364" stroke="#ff4a17" stroke-width="2" fill="none" marker-end="url(#sq-o)"></path>
+
+        <g font-family="'Space Mono', monospace" font-size="11" fill="#111111" text-anchor="middle">
+          <text x="228" y="84">appel entrant</text>
+          <text x="498" y="116">lancement du script (AGI)</text>
+          <text x="768" y="148">lecture CQL du dossier</text>
+          <text x="772" y="180" fill="#6d6d64">données client</text>
+          <text x="502" y="212">annonce et menu à jouer</text>
+          <text x="232" y="244">message vocal</text>
+          <text x="228" y="276">saisie DTMF</text>
+          <text x="498" y="308">touche transmise</text>
+          <text x="768" y="340">écriture de la trace d'appel</text>
+          <text x="502" y="388" fill="#ff4a17">destination de routage</text>
+          <text x="232" y="436">mise en relation</text>
+        </g>
+        <g font-family="'Space Mono', monospace" font-size="10" fill="#8a8a80" text-anchor="middle">
+          <text x="502" y="406">décidée à l'exécution, pas dans le dialplan</text>
+        </g>
+      </svg>
+      <figcaption style="padding-top: 18px; border-top: 1px solid #ddd8cc; margin-top: 16px;">Fig. 02 — Le seul lien qui compte est en orange : la destination remonte du script, pas d'une règle figée dans le dialplan. Changer un routage devient une écriture en base, pas une modification de configuration. <a href="https://github.com/KeNrOm97/Asterisk-svi-python-cassandra" style="color: #111111; border-bottom: 2px solid #ff4a17;">Asterisk-svi-python-cassandra</a></figcaption>
+    </figure>
+  </div>
+
+  <!-- PLANCHE 03 : ODOO -->
+  <div style="padding: 64px 48px 0 48px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding-bottom: 18px;">
+      <h2 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-size: 40px; letter-spacing: -0.03em; text-transform: uppercase;">Planche 03 — cycle d'un dossier</h2>
+      <span style="font-family: 'Space Mono', monospace; font-size: 12.5px; color: #8b8f98;">module Odoo 18 · dossiers de subvention</span>
+    </div>
+    <figure style="background: #ffffff; border: 3px solid #0e1014; box-shadow: 14px 14px 0 #ff4a17; padding: 28px 30px 22px 30px; color: #111111;">
+      <svg viewBox="0 0 1000 280" role="img" aria-label="Cycle de vie d'un dossier de subvention : brouillon, déposé, en instruction, puis validé ou refusé ; l'instruction peut renvoyer le dossier en brouillon quand un complément est demandé." style="width: 100%; height: auto; display: block;">
+        <defs><marker id="st" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#111111"></path></marker>
+        <marker id="st-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff4a17"></path></marker></defs>
+
+        <circle cx="16" cy="102" r="6" fill="#111111"></circle>
+        <g fill="none" stroke="#111111" stroke-width="2">
+          <rect x="40" y="76" width="150" height="52" rx="3"></rect>
+          <rect x="250" y="76" width="150" height="52" rx="3"></rect>
+          <rect x="460" y="76" width="170" height="52" rx="3"></rect>
+          <rect x="760" y="24" width="150" height="52" rx="3"></rect>
+          <rect x="760" y="140" width="150" height="52" rx="3"></rect>
+        </g>
+        <g font-family="'Archivo', sans-serif" font-size="14" fill="#111111" text-anchor="middle">
+          <text x="115" y="107">Brouillon</text>
+          <text x="325" y="107">Déposé</text>
+          <text x="545" y="107">En instruction</text>
+          <text x="835" y="55">Validé</text>
+          <text x="835" y="171">Refusé</text>
+        </g>
+
+        <g stroke="#111111" stroke-width="1.7" fill="none" marker-end="url(#st)">
+          <path d="M22 102 H36"></path>
+          <path d="M190 102 H246"></path>
+          <path d="M400 102 H456"></path>
+          <path d="M630 90 H700 V50 H756"></path>
+          <path d="M630 114 H700 V166 H756"></path>
+        </g>
+        <path d="M545 128 V236 H115 V132" stroke="#ff4a17" stroke-width="1.9" fill="none" marker-end="url(#st-o)"></path>
+
+        <g font-family="'Space Mono', monospace" font-size="10.5" fill="#111111" text-anchor="middle">
+          <text x="218" y="94">pièces complètes</text>
+          <text x="428" y="94">prise en charge</text>
+          <text x="700" y="42">décision favorable</text>
+          <text x="700" y="186">décision défavorable</text>
+          <text x="330" y="230" fill="#ff4a17">complément demandé</text>
+        </g>
+
+        <g fill="none" stroke="#111111" stroke-width="2">
+          <circle cx="946" cy="50" r="7"></circle><circle cx="946" cy="166" r="7"></circle>
+        </g>
+        <g fill="#111111"><circle cx="946" cy="50" r="3.5"></circle><circle cx="946" cy="166" r="3.5"></circle></g>
+      </svg>
+      <figcaption style="padding-top: 18px; border-top: 1px solid #ddd8cc; margin-top: 16px;">Fig. 03 — Le retour en brouillon est la transition qui justifie le module : c'est elle qui remplace les allers-retours par courriel et garde la trace de ce qui manquait. Odoo, PostgreSQL et Nginx tournent en services séparés sous Docker Compose, addons montés en volume.</figcaption>
+    </figure>
+  </div>
+
+  <!-- PLANCHE 04 : DEUX CHAÎNES -->
+  <div style="padding: 64px 48px 0 48px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding-bottom: 18px;">
+      <h2 style="margin: 0; font-family: 'Archivo Black', sans-serif; font-size: 40px; letter-spacing: -0.03em; text-transform: uppercase;">Planche 04 — deux chaînes</h2>
+      <span style="font-family: 'Space Mono', monospace; font-size: 12.5px; color: #8b8f98;">sauvegarde automatisée · passerelle WebRTC</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
+
+      <figure style="background: #ffffff; border: 3px solid #0e1014; box-shadow: 10px 10px 0 #ff4a17; padding: 24px 26px 20px 26px; color: #111111;">
+        <svg viewBox="0 0 620 230" role="img" aria-label="Chaîne de sauvegarde : cron déclenche la compression tar.gz, transférée en SCP vers un hôte distant, avec rotation sur deux jours puis purge des archives expirées." style="width: 100%; height: auto; display: block;">
+          <defs><marker id="bk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#111111"></path></marker></defs>
+          <g fill="none" stroke="#111111" stroke-width="2">
+            <rect x="20" y="70" width="160" height="50"></rect>
+            <rect x="230" y="70" width="160" height="50"></rect>
+            <rect x="440" y="70" width="160" height="50"></rect>
+            <rect x="440" y="165" width="160" height="50"></rect>
+            <rect x="230" y="165" width="160" height="50"></rect>
+          </g>
+          <g stroke="#111111" stroke-width="1.6" fill="none" marker-end="url(#bk)">
+            <path d="M180 95 H226"></path>
+            <path d="M390 95 H436"></path>
+            <path d="M520 120 V161"></path>
+            <path d="M440 190 H394"></path>
+          </g>
+          <g font-family="'Archivo', sans-serif" font-size="12.5" fill="#111111" text-anchor="middle">
+            <text x="100" y="100">compression tar.gz</text>
+            <text x="310" y="100">transfert SCP / SSH</text>
+            <text x="520" y="100">hôte distant</text>
+            <text x="520" y="195">rotation sur 2 jours</text>
+            <text x="310" y="195">purge des expirées</text>
+          </g>
+          <g font-family="'Space Mono', monospace" font-size="10" fill="#6d6d64" text-anchor="middle">
+            <text x="203" y="88">flux</text>
+            <text x="413" y="88">sur SSH</text>
+          </g>
+          <rect x="20" y="12" width="160" height="34" fill="none" stroke="#ff4a17" stroke-width="2" stroke-dasharray="5 4"></rect>
+          <text x="100" y="34" font-family="'Space Mono', monospace" font-size="12" fill="#ff4a17" text-anchor="middle">cron</text>
+          <path d="M100 46 V66" stroke="#ff4a17" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#bk)"></path>
+          <text x="112" y="62" font-family="'Space Mono', monospace" font-size="10" fill="#ff4a17">déclenche</text>
+        </svg>
+        <figcaption style="padding-top: 16px; border-top: 1px solid #ddd8cc; margin-top: 14px;">Fig. 04 — Aucune dépendance à installer : tar, scp et cron sont déjà là. La purge ferme la boucle, sinon le disque distant se remplit tout seul. <a href="https://github.com/KeNrOm97/Backup-tar-scp" style="color: #111111; border-bottom: 2px solid #ff4a17;">Backup-tar-scp</a></figcaption>
+      </figure>
+
+      <figure style="background: #ffffff; border: 3px solid #0e1014; box-shadow: 10px 10px 0 #ff4a17; padding: 24px 26px 20px 26px; color: #111111;">
+        <svg viewBox="0 0 620 230" role="img" aria-label="Passerelle WebRTC : le navigateur charge la page servie par lighttpd avec un certificat Let's Encrypt, puis traverse le pare-feu PF en WSS pour la signalisation et en SRTP pour le média chiffré jusqu'à Asterisk, qui met en relation avec les postes SIP internes." style="width: 100%; height: auto; display: block;">
+          <defs><marker id="wr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#111111"></path></marker>
+          <marker id="wr-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff4a17"></path></marker></defs>
+          <g fill="none" stroke="#111111" stroke-width="2">
+            <rect x="20" y="30" width="150" height="50"></rect>
+            <rect x="240" y="20" width="90" height="70" stroke="#ff4a17" stroke-width="2.6"></rect>
+            <rect x="400" y="30" width="200" height="50"></rect>
+            <rect x="400" y="160" width="200" height="50"></rect>
+            <rect x="20" y="160" width="150" height="50"></rect>
+          </g>
+          <g font-family="'Archivo', sans-serif" font-size="12.5" fill="#111111" text-anchor="middle">
+            <text x="95" y="60">Navigateur</text>
+            <text x="500" y="60">Asterisk</text>
+            <text x="500" y="190">Postes SIP internes</text>
+            <text x="95" y="190">lighttpd</text>
+          </g>
+          <text x="285" y="60" font-family="'Space Mono', monospace" font-size="12" fill="#ff4a17" text-anchor="middle">PF</text>
+          <g stroke="#111111" stroke-width="1.6" fill="none" marker-end="url(#wr)">
+            <path d="M170 45 H236"></path>
+            <path d="M330 40 H396"></path>
+            <path d="M330 70 H396"></path>
+            <path d="M500 80 V156"></path>
+          </g>
+          <g font-family="'Space Mono', monospace" font-size="10" fill="#111111" text-anchor="middle">
+            <text x="363" y="32">WSS</text>
+            <text x="363" y="88">SRTP</text>
+            <text x="203" y="38">HTTPS</text>
+          </g>
+          <g stroke="#111111" stroke-width="1.6" fill="none" stroke-dasharray="5 4" marker-end="url(#wr)">
+            <path d="M95 160 V84"></path>
+          </g>
+          <text x="103" y="126" font-family="'Space Mono', monospace" font-size="10" fill="#6d6d64">page + certificat</text>
+          <g transform="translate(348,96)" stroke="#ff4a17" stroke-width="1.6" fill="none" stroke-linecap="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="1.5"></rect><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"></path></g>
+          <rect x="230" y="160" width="110" height="50" fill="none" stroke="#ff4a17" stroke-width="2" stroke-dasharray="5 4"></rect>
+          <text x="285" y="182" font-family="'Space Mono', monospace" font-size="10.5" fill="#ff4a17" text-anchor="middle">Let's Encrypt</text>
+          <text x="285" y="197" font-family="'Space Mono', monospace" font-size="10" fill="#c98a72" text-anchor="middle">renouvelé seul</text>
+          <path d="M230 185 H176" stroke="#ff4a17" stroke-width="1.7" fill="none" stroke-dasharray="5 4" marker-end="url(#wr-o)"></path>
+        </svg>
+        <figcaption style="padding-top: 16px; border-top: 1px solid #ddd8cc; margin-top: 14px;">Fig. 05 — Le poste de l'agent n'installe rien : la page arrive de lighttpd, la voix passe chiffrée par PF jusqu'à Asterisk. Le certificat se renouvelle sans intervention.</figcaption>
+      </figure>
+
+    </div>
+  </div>
+
+  <!-- MÉTHODE -->
+  <div style="margin-top: 72px; border-top: 2px solid #23262d; border-bottom: 2px solid #23262d; padding: 52px 48px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 36px;">
+      <div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #ff4a17; padding-bottom: 14px;">01 — Tout passe par un playbook</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #cfcabe;">Même quand l'installation à la main irait plus vite sur le moment. Une machine montée de mémoire ne se refait jamais deux fois pareil, et ça se paie le jour où il faut la remonter dans l'urgence.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #ff4a17; padding-bottom: 14px;">02 — Le filtrage arrive avec le service</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #cfcabe;">Pare-feu et certificats posés en même temps que la brique, jamais après. Ouvrir large en se disant qu'on refermera plus tard, ça finit en règles oubliées six mois plus tard.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #ff4a17; padding-bottom: 14px;">03 — Ce qui n'est pas restauré n'est pas sauvegardé</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #cfcabe;">Je documente au fur et à mesure, parce qu'un service finit toujours par changer de mains. Et je restaure vraiment mes sauvegardes de temps en temps, sinon je ne sais pas encore si c'en sont.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARCOURS -->
+  <div style="padding: 52px 48px 0 48px;">
+    <h2 style="margin: 0 0 22px 0; font-family: 'Archivo Black', sans-serif; font-size: 34px; letter-spacing: -0.03em; text-transform: uppercase;">Parcours</h2>
+    <div style="display: flex; flex-direction: column; font-family: 'Space Mono', monospace; font-size: 13.5px;">
+      <div style="display: grid; grid-template-columns: 140px 1fr 260px; gap: 20px; padding: 14px 0; border-top: 1px solid #23262d;"><span style="color: #ff4a17;">2023–2025</span><span>Mastère MPP, manager de portefeuille de projets, option informatique</span><span style="color: #8b8f98;">Keyce Academy</span></div>
+      <div style="display: grid; grid-template-columns: 140px 1fr 260px; gap: 20px; padding: 14px 0; border-top: 1px solid #23262d;"><span style="color: #ff4a17;">2023</span><span>Licence professionnelle MRIT, option Internet des Objets</span><span style="color: #8b8f98;">Lycée Joseph Gaillard</span></div>
+      <div style="display: grid; grid-template-columns: 140px 1fr 260px; gap: 20px; padding: 14px 0; border-top: 1px solid #23262d;"><span style="color: #ff4a17;">—</span><span>Certification CCNA, réseaux Cisco</span><span style="color: #8b8f98;">Cisco</span></div>
+      <div style="display: grid; grid-template-columns: 140px 1fr 260px; gap: 20px; padding: 14px 0; border-top: 1px solid #23262d; border-bottom: 1px solid #23262d;"><span style="color: #ff4a17;">2022</span><span>BTS SN, option informatique et réseaux</span><span style="color: #8b8f98;">Lycée Joseph Gaillard</span></div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div style="margin: 56px 48px 56px 48px; background: #ff4a17; color: #0e1014; padding: 44px 40px; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
+    <div>
+      <div style="font-family: 'Space Mono', monospace; font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 16px;">Ouvert aux opportunités — infrastructure, VoIP, DevOps</div>
+      <a href="mailto:kendyjerome20@gmail.com" style="font-family: 'Archivo Black', sans-serif; font-size: 52px; line-height: 1; letter-spacing: -0.035em; color: #0e1014; display: block;">kendyjerome20@gmail.com</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px; font-family: 'Space Mono', monospace; font-size: 13.5px; text-align: right;">
+      <a href="https://linkedin.com/in/kendy-jerome-4b147234b" style="color: #0e1014; font-weight: 700;">LinkedIn</a>
+      <a href="https://github.com/KeNrOm97" style="color: #0e1014; font-weight: 700;">GitHub</a>
+      <span>Martinique · métropole · télétravail</span>
+      <span>Permis B, véhiculé</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

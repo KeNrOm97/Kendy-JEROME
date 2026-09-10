@@ -1,0 +1,194 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Portfolio — page unique"
+    },
+    {
+      "id": "page-2",
+      "name": "Variante en presentation"
+    },
+    {
+      "id": "page-3",
+      "name": "Historique"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 6620,
+      "page": "page-1",
+      "title": "Portfolio Kendy Jerome"
+    },
+    {
+      "file": "Cover.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 633,
+      "page": "page-2",
+      "title": "Cover"
+    },
+    {
+      "file": "Stack.dc.html",
+      "x": 1420,
+      "y": 0,
+      "w": 1280,
+      "h": 779,
+      "page": "page-2",
+      "title": "Stack"
+    },
+    {
+      "file": "ProjOpenWCC.dc.html",
+      "x": 2840,
+      "y": 0,
+      "w": 1280,
+      "h": 901,
+      "page": "page-2",
+      "title": "ProjOpenWCC"
+    },
+    {
+      "file": "ProjOdoo.dc.html",
+      "x": 4260,
+      "y": 0,
+      "w": 1280,
+      "h": 815,
+      "page": "page-2",
+      "title": "ProjOdoo"
+    },
+    {
+      "file": "ProjSVI.dc.html",
+      "x": 5680,
+      "y": 0,
+      "w": 1280,
+      "h": 936,
+      "page": "page-2",
+      "title": "ProjSVI"
+    },
+    {
+      "file": "ProjWebRTC.dc.html",
+      "x": 7100,
+      "y": 0,
+      "w": 1280,
+      "h": 767,
+      "page": "page-2",
+      "title": "ProjWebRTC"
+    },
+    {
+      "file": "ProjBackup.dc.html",
+      "x": 8520,
+      "y": 0,
+      "w": 1280,
+      "h": 748,
+      "page": "page-2",
+      "title": "ProjBackup"
+    },
+    {
+      "file": "Contact.dc.html",
+      "x": 9940,
+      "y": 0,
+      "w": 1280,
+      "h": 758,
+      "page": "page-2",
+      "title": "Contact"
+    },
+    {
+      "file": "Carnet.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 5200,
+      "page": "page-3",
+      "title": "Carnet"
+    },
+    {
+      "file": "Planches.dc.html",
+      "x": 1420,
+      "y": 0,
+      "w": 1280,
+      "h": 5000,
+      "page": "page-3",
+      "title": "Planches"
+    },
+    {
+      "file": "Icones.dc.html",
+      "x": 2840,
+      "y": 0,
+      "w": 1180,
+      "h": 1380,
+      "page": "page-3",
+      "title": "Icones"
+    },
+    {
+      "file": "Rack.dc.html",
+      "x": 4160,
+      "y": 0,
+      "w": 1280,
+      "h": 2600,
+      "page": "page-3",
+      "title": "Rack"
+    },
+    {
+      "file": "Boot.dc.html",
+      "x": 5580,
+      "y": 0,
+      "w": 1280,
+      "h": 2600,
+      "page": "page-3",
+      "title": "Boot"
+    },
+    {
+      "file": "Topologie.dc.html",
+      "x": 7000,
+      "y": 0,
+      "w": 1280,
+      "h": 2600,
+      "page": "page-3",
+      "title": "Topologie"
+    },
+    {
+      "file": "NocSombre.dc.html",
+      "x": 8420,
+      "y": 0,
+      "w": 1280,
+      "h": 2100,
+      "page": "page-3",
+      "title": "NocSombre"
+    },
+    {
+      "file": "Blueprint.dc.html",
+      "x": 9840,
+      "y": 0,
+      "w": 1280,
+      "h": 2100,
+      "page": "page-3",
+      "title": "Blueprint"
+    },
+    {
+      "file": "Console.dc.html",
+      "x": 11260,
+      "y": 0,
+      "w": 1280,
+      "h": 2100,
+      "page": "page-3",
+      "title": "Console"
+    },
+    {
+      "file": "Editorial.dc.html",
+      "x": 12680,
+      "y": 0,
+      "w": 1280,
+      "h": 2100,
+      "page": "page-3",
+      "title": "Editorial"
+    }
+  ],
+  "annotations": [],
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  }
+}

@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #ffb000; text-decoration: none; border-bottom: 1px solid #6b4a00; }
+    a:hover { color: #ffd579; border-bottom-color: #ffd579; }
+    p { text-wrap: pretty; }
+  </style>
+</helmet>
+
+<div style="position: relative; min-height: 2560px; background: #0a0806; color: #e8dcc8; font-family: 'IBM Plex Mono', ui-monospace, monospace;">
+
+  <div style="position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, rgba(0,0,0,0.28) 0px, rgba(0,0,0,0.28) 1px, transparent 1px, transparent 3px); pointer-events: none; z-index: 5;"></div>
+
+  <div style="position: relative; z-index: 1;">
+
+    <div style="display: flex; justify-content: space-between; gap: 24px; padding: 16px 56px; border-bottom: 1px solid #2a2118; font-size: 12.5px; color: #7d6f5c;">
+      <span>tty1 — kendy-jerome.fr</span>
+      <span>fort-de-france · 972</span>
+    </div>
+
+    <!-- SÉQUENCE DE DÉMARRAGE -->
+    <div style="padding: 48px 56px 0 56px; font-size: 14.5px; line-height: 2.05;">
+      <div style="color: #7d6f5c;">[    0.000000] initialisation du profil — kendy jerome</div>
+      <div><span style="color: #4ade80;">[  OK  ]</span> <span style="color: #7d6f5c;">montage</span> serveurs FreeBSD, Linux et Windows Server en production</div>
+      <div><span style="color: #4ade80;">[  OK  ]</span> <span style="color: #7d6f5c;">démarrage</span> virtualisation VMware, QEMU, VirtualBox, Docker</div>
+      <div><span style="color: #4ade80;">[  OK  ]</span> <span style="color: #7d6f5c;">démarrage</span> Asterisk — SVI, files d'attente, routage d'appel</div>
+      <div><span style="color: #4ade80;">[  OK  ]</span> <span style="color: #7d6f5c;">démarrage</span> WebRTC navigateur, chiffrement TLS/SRTP</div>
+      <div><span style="color: #4ade80;">[  OK  ]</span> <span style="color: #7d6f5c;">montage</span> PostgreSQL, MariaDB, Redis, Cassandra</div>
+      <div><span style="color: #4ade80;">[  OK  ]</span> <span style="color: #7d6f5c;">application</span> playbooks Ansible et scripts Shell</div>
+      <div><span style="color: #4ade80;">[  OK  ]</span> <span style="color: #7d6f5c;">activation</span> pare-feu PF, VPN, DNS, VLAN</div>
+      <div><span style="color: #4ade80;">[  OK  ]</span> <span style="color: #7d6f5c;">démarrage</span> supervision Prometheus et Zabbix</div>
+      <div><span style="color: #ffb000;">[ INFO ]</span> <span style="color: #7d6f5c;">certification</span> Cisco CCNA — réseaux, commutation, routage</div>
+      <div style="color: #7d6f5c;">[    1.204411] profil prêt — passage en mode interactif</div>
+    </div>
+
+    <!-- NAMEPLATE -->
+    <div style="padding: 44px 56px 0 56px;">
+      <h1 style="margin: 0; font-size: 118px; font-weight: 700; line-height: 0.92; letter-spacing: -0.06em; color: #ffb000; text-shadow: 0 0 28px rgba(255,176,0,0.22);">kendy<br>jerome</h1>
+      <div style="display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; padding-top: 22px; font-size: 16px;">
+        <span style="color: #e8dcc8;">ingénieur systèmes &amp; infrastructure</span>
+        <span style="color: #4a3f30;">|</span>
+        <span style="color: #7d6f5c;">linux · freebsd · voip · automatisation</span>
+      </div>
+      <p style="margin: 26px 0 0 0; font-size: 19px; line-height: 1.7; max-width: 42em; color: #cbbda4;">Je construis des systèmes qui doivent tenir 24/7. De la maquette au service en production : je conçois, j'installe, j'automatise, je sécurise, je supervise.</p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; padding-top: 30px;">
+        <a href="mailto:kendyjerome20@gmail.com" style="display: inline-flex; align-items: center; height: 50px; padding: 0 24px; background: #ffb000; color: #0a0806; font-weight: 700; font-size: 14.5px; border-bottom: none;">./contacter --maintenant</a>
+        <a href="https://github.com/KeNrOm97" style="display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border: 1px solid #4a3f30; color: #e8dcc8; font-size: 14.5px;">git remote -v</a>
+      </div>
+    </div>
+
+    <!-- UNITÉS -->
+    <div style="padding: 64px 56px 0 56px;">
+      <div style="display: flex; align-items: baseline; gap: 14px; padding-bottom: 8px; font-size: 15px;">
+        <span style="color: #4ade80;">$</span><span style="color: #e8dcc8;">systemctl status projets --all</span>
+      </div>
+      <div style="height: 1px; background: #2a2118; margin: 18px 0 30px 0;"></div>
+
+      <div style="display: flex; flex-direction: column; gap: 34px;">
+
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; padding-left: 22px; border-left: 2px solid #ffb000;">
+          <div>
+            <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+              <span style="color: #4ade80; font-size: 17px;">●</span>
+              <span style="font-size: 22px; font-weight: 600; color: #ffb000;">openwcc.service</span>
+              <span style="font-size: 13px; color: #7d6f5c;">— centre de contacts open source</span>
+            </div>
+            <div style="font-size: 13px; color: #7d6f5c; padding: 8px 0 0 30px;">Loaded: freebsd 14 · ansible + shell<br>Active: <span style="color: #4ade80;">déployé</span> · redéploiement intégral sans intervention manuelle</div>
+            <p style="margin: 14px 0 0 30px; font-size: 15.5px; line-height: 1.65; color: #cbbda4;">Plateforme montée service par service derrière un pare-feu PF : téléphonie Asterisk 18, messagerie Apache James, XMPP Openfire, annuaire OpenLDAP, PostgreSQL 15, Redis, Tomcat 10 sur OpenJDK 11, frontal lighttpd.</p>
+            <div style="padding: 12px 0 0 30px;"><a href="https://github.com/KeNrOm97/OpenWCC" style="font-size: 13.5px;">github.com/KeNrOm97/OpenWCC</a></div>
+          </div>
+          <div style="font-size: 13px; line-height: 2; color: #7d6f5c; border-left: 1px solid #2a2118; padding-left: 26px;">
+            <div style="color: #ffb000; padding-bottom: 6px;">├─ mon rôle</div>
+            <div>│ &nbsp;installation de l'OS au frontal</div>
+            <div>│ &nbsp;automatisation Ansible + Shell</div>
+            <div>│ &nbsp;annuaire AD/LDAP et comptes</div>
+            <div>│ &nbsp;VPN, DNS, VLAN, règles PF</div>
+            <div>│ &nbsp;supervision Prometheus, Zabbix</div>
+            <div>└─ support N2/N3, documentation</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; padding-left: 22px; border-left: 2px solid #2a2118;">
+          <div>
+            <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+              <span style="color: #4ade80; font-size: 17px;">●</span>
+              <span style="font-size: 22px; font-weight: 600; color: #ffb000;">odoo-subvention.service</span>
+              <span style="font-size: 13px; color: #7d6f5c;">— module métier Odoo 18</span>
+            </div>
+            <p style="margin: 14px 0 0 30px; font-size: 15.5px; line-height: 1.65; color: #cbbda4;">Le dossier de subvention devient un objet métier : formulaire unique, pièces justificatives rattachées, circuit de validation par états, historique conservé. Odoo, PostgreSQL et Nginx en services séparés sous Docker Compose.</p>
+          </div>
+          <div style="font-size: 13px; line-height: 2; color: #7d6f5c; border-left: 1px solid #2a2118; padding-left: 26px;">
+            <div style="color: #ffb000; padding-bottom: 6px;">├─ stack</div>
+            <div>│ &nbsp;Odoo 18 · Python · ORM</div>
+            <div>│ &nbsp;XML · Docker Compose</div>
+            <div>└─ Nginx · PostgreSQL</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; padding-left: 22px; border-left: 2px solid #2a2118;">
+          <div>
+            <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+              <span style="color: #4ade80; font-size: 17px;">●</span>
+              <span style="font-size: 22px; font-weight: 600; color: #ffb000;">svi-agi.service</span>
+              <span style="font-size: 13px; color: #7d6f5c;">— serveur vocal interactif</span>
+            </div>
+            <p style="margin: 14px 0 0 30px; font-size: 15.5px; line-height: 1.65; color: #cbbda4;">Écrit en Python et branché sur Asterisk via AGI, avec les données d'appel lues et écrites en CQL dans Cassandra. Le routage se décide à l'exécution plutôt que codé en dur dans le dialplan.</p>
+            <div style="padding: 12px 0 0 30px;"><a href="https://github.com/KeNrOm97/Asterisk-svi-python-cassandra" style="font-size: 13.5px;">Asterisk-svi-python-cassandra</a></div>
+          </div>
+          <div style="font-size: 13px; line-height: 2; color: #7d6f5c; border-left: 1px solid #2a2118; padding-left: 26px;">
+            <div style="color: #ffb000; padding-bottom: 6px;">├─ stack</div>
+            <div>│ &nbsp;Python · Asterisk AGI</div>
+            <div>└─ Cassandra · Redis</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; padding-left: 22px; border-left: 2px solid #2a2118;">
+          <div>
+            <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+              <span style="color: #4ade80; font-size: 17px;">●</span>
+              <span style="font-size: 22px; font-weight: 600; color: #ffb000;">webrtc-gw.service</span>
+              <span style="font-size: 13px; color: #7d6f5c;">— passerelle temps réel chiffrée</span>
+            </div>
+            <p style="margin: 14px 0 0 30px; font-size: 15.5px; line-height: 1.65; color: #cbbda4;">Appeler depuis un simple navigateur, sans logiciel client. Signalisation WebSocket sécurisée, flux média chiffrés en SRTP, certificats Let's Encrypt renouvelés automatiquement, servis par lighttpd sur FreeBSD.</p>
+          </div>
+          <div style="font-size: 13px; line-height: 2; color: #7d6f5c; border-left: 1px solid #2a2118; padding-left: 26px;">
+            <div style="color: #ffb000; padding-bottom: 6px;">├─ stack</div>
+            <div>│ &nbsp;Asterisk · WebRTC · SRTP</div>
+            <div>└─ Let's Encrypt · lighttpd</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; padding-left: 22px; border-left: 2px solid #2a2118;">
+          <div>
+            <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+              <span style="color: #ffb000; font-size: 17px;">●</span>
+              <span style="font-size: 22px; font-weight: 600; color: #ffb000;">backup.timer</span>
+              <span style="font-size: 13px; color: #7d6f5c;">— sauvegarde à 3 niveaux</span>
+            </div>
+            <div style="font-size: 13px; color: #7d6f5c; padding: 8px 0 0 30px;">Trigger: cron · rotation sur 2 jours</div>
+            <p style="margin: 14px 0 0 30px; font-size: 15.5px; line-height: 1.65; color: #cbbda4;">Compression tar.gz, transfert SCP vers un hôte distant, purge des archives expirées. Sans dépendance, pensée pour tourner seule en production et rester lisible par le prochain administrateur.</p>
+            <div style="padding: 12px 0 0 30px;"><a href="https://github.com/KeNrOm97/Backup-tar-scp" style="font-size: 13.5px;">Backup-tar-scp</a></div>
+          </div>
+          <div style="font-size: 13px; line-height: 2; color: #7d6f5c; border-left: 1px solid #2a2118; padding-left: 26px;">
+            <div style="color: #ffb000; padding-bottom: 6px;">├─ stack</div>
+            <div>│ &nbsp;Shell · tar/gzip · SCP/SSH</div>
+            <div>└─ cron · FreeBSD</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MÉTHODE -->
+    <div style="padding: 64px 56px 0 56px;">
+      <div style="display: flex; align-items: baseline; gap: 14px; font-size: 15px;"><span style="color: #4ade80;">$</span><span>cat /etc/methode.conf</span></div>
+      <div style="height: 1px; background: #2a2118; margin: 18px 0 26px 0;"></div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px; font-size: 15.5px; line-height: 1.8;">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <p style="margin: 0; color: #7d6f5c;"># l'installation à la main va plus vite sur le moment,<br># et ne se refait jamais deux fois pareil.</p>
+          <p style="margin: 0; color: #cbbda4;">Je passe par un playbook Ansible ou un script même quand ça coûte plus cher au premier jour. OpenWCC se réinstalle de bout en bout sans que j'aie à me souvenir de quoi que ce soit.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <p style="margin: 0; color: #7d6f5c;"># une sauvegarde jamais restaurée n'est pas<br># encore une sauvegarde.</p>
+          <p style="margin: 0; color: #cbbda4;">Le pare-feu et les certificats arrivent en même temps que le service, jamais après. Je documente au fur et à mesure, parce qu'un service finit toujours par changer de mains.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARCOURS -->
+    <div style="padding: 64px 56px 0 56px;">
+      <div style="display: flex; align-items: baseline; gap: 14px; font-size: 15px;"><span style="color: #4ade80;">$</span><span>history --parcours</span></div>
+      <div style="height: 1px; background: #2a2118; margin: 18px 0 22px 0;"></div>
+      <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14.5px;">
+        <div style="display: flex; gap: 24px;"><span style="color: #ffb000; width: 110px; flex-shrink: 0;">2023–2025</span><span style="color: #cbbda4;">Mastère MPP, manager de portefeuille de projets, option informatique</span><span style="color: #7d6f5c;">Keyce Academy</span></div>
+        <div style="display: flex; gap: 24px;"><span style="color: #ffb000; width: 110px; flex-shrink: 0;">2023</span><span style="color: #cbbda4;">Licence professionnelle MRIT, option Internet des Objets</span><span style="color: #7d6f5c;">Lycée Joseph Gaillard</span></div>
+        <div style="display: flex; gap: 24px;"><span style="color: #ffb000; width: 110px; flex-shrink: 0;">—</span><span style="color: #cbbda4;">Certification CCNA, réseaux Cisco</span><span style="color: #7d6f5c;">Cisco</span></div>
+        <div style="display: flex; gap: 24px;"><span style="color: #ffb000; width: 110px; flex-shrink: 0;">2022</span><span style="color: #cbbda4;">BTS SN, option informatique et réseaux</span><span style="color: #7d6f5c;">Lycée Joseph Gaillard</span></div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div style="padding: 72px 56px 64px 56px;">
+      <div style="border-top: 1px solid #2a2118; padding-top: 40px;">
+        <div style="font-size: 15px; color: #7d6f5c; padding-bottom: 16px;">disponible pour un poste en infrastructure, VoIP ou DevOps — Martinique, métropole, télétravail</div>
+        <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;">
+          <span style="color: #4ade80; font-size: 30px;">$</span>
+          <a href="mailto:kendyjerome20@gmail.com" style="font-size: 30px; font-weight: 600; border-bottom: none;">mail kendyjerome20@gmail.com</a>
+          <span style="display: inline-block; width: 16px; height: 30px; background: #ffb000;"></span>
+        </div>
+        <div style="display: flex; gap: 28px; padding-top: 24px; font-size: 14px;">
+          <a href="https://linkedin.com/in/kendy-jerome-4b147234b">linkedin</a>
+          <a href="https://github.com/KeNrOm97">github</a>
+          <span style="color: #7d6f5c;">permis B, véhiculé</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
