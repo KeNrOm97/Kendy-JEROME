@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   margin: 0;
@@ -104,11 +108,31 @@ figure {
   border-color: #2dd8b8 !important;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 }
+.card-static:hover {
+  transform: none;
+  border-color: #1c2024 !important;
+  box-shadow: none;
+}
 .tile:hover .tile-icon {
   transform: scale(1.12) rotate(-3deg);
 }
 .tile-icon {
   transition: transform 0.25s ease;
+}
+
+/* Diagrammes : sur petit écran, on scrolle plutôt que d'écraser le texte */
+.diagram {
+  max-width: 100%;
+}
+@media (max-width: 760px) {
+  .diagram {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .diagram svg {
+    min-width: 560px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -120,5 +144,25 @@ figure {
 @media (max-width: 640px) {
   .topbar-sub {
     display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .ticker-track,
+  .flow,
+  .flow-slow,
+  .led,
+  .led2,
+  .led3,
+  .caret {
+    animation: none !important;
   }
 }
