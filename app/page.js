@@ -1,5 +1,178 @@
 import UptimeClock from "./components/UptimeClock";
 
+const stackIcons = {
+  freebsd: (
+    <>
+      <circle cx="12" cy="14" r="5.4" fill="none" stroke="#AB2B28" strokeWidth="1.8" />
+      <path d="M9 9.2C8 6.6 8.6 4.4 10.6 3c-.4 1.6 0 2.8 1 3.6" fill="none" stroke="#AB2B28" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M14.6 9.6c1.4-2.4 1.2-4.6-.6-6.3c.1 1.6-.4 2.8-1.5 3.4" fill="none" stroke="#AB2B28" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M16.6 16.4l3.6 1.1-1.6 1-.4 1.8-1.6-2.1z" fill="#AB2B28" />
+    </>
+  ),
+  linux: (
+    <>
+      <ellipse cx="12" cy="13" rx="5.4" ry="6.6" fill="#111" />
+      <ellipse cx="12" cy="14.5" rx="3.1" ry="4.2" fill="#fff" />
+      <ellipse cx="7.2" cy="19" rx="1.7" ry="2.3" transform="rotate(-16 7.2 19)" fill="#111" />
+      <ellipse cx="16.8" cy="19" rx="1.7" ry="2.3" transform="rotate(16 16.8 19)" fill="#111" />
+      <circle cx="10" cy="10.5" r="1.1" fill="#111" />
+      <circle cx="14" cy="10.5" r="1.1" fill="#111" />
+      <circle cx="10" cy="10.8" r="0.45" fill="#fff" />
+      <circle cx="14" cy="10.8" r="0.45" fill="#fff" />
+      <path d="M9 13.6c1.4 1.5 4.6 1.5 6 0" fill="none" stroke="#111" strokeWidth="0.9" />
+      <path d="M11.6 15.8c-.5 1.5-1.3 2.1-2.3 1.9" fill="none" stroke="#f4a300" strokeWidth="1.3" strokeLinecap="round" />
+      <path d="M12.4 15.8c.5 1.5 1.3 2.1 2.3 1.9" fill="none" stroke="#f4a300" strokeWidth="1.3" strokeLinecap="round" />
+    </>
+  ),
+  windows: (
+    <>
+      <rect x="3" y="3" width="8" height="8" fill="#F25022" />
+      <rect x="13" y="3" width="8" height="8" fill="#7FBA00" />
+      <rect x="3" y="13" width="8" height="8" fill="#00A4EF" />
+      <rect x="13" y="13" width="8" height="8" fill="#FFB900" />
+    </>
+  ),
+  cisco: (
+    <g fill="#1BA0D7">
+      <rect x="2.5" y="12" width="1.8" height="4" />
+      <rect x="5.3" y="9.5" width="1.8" height="6.5" />
+      <rect x="8.1" y="7.5" width="1.8" height="8.5" />
+      <rect x="10.9" y="6.5" width="1.8" height="9.5" />
+      <rect x="13.7" y="7.5" width="1.8" height="8.5" />
+      <rect x="16.5" y="9.5" width="1.8" height="6.5" />
+      <rect x="19.3" y="12" width="1.8" height="4" />
+    </g>
+  ),
+  docker: (
+    <g fill="#2496ED">
+      <rect x="3.5" y="12" width="2.6" height="2.6" />
+      <rect x="6.6" y="12" width="2.6" height="2.6" />
+      <rect x="9.7" y="12" width="2.6" height="2.6" />
+      <rect x="6.6" y="8.8" width="2.6" height="2.6" />
+      <rect x="9.7" y="8.8" width="2.6" height="2.6" />
+      <rect x="9.7" y="5.6" width="2.6" height="2.6" />
+      <path d="M2.5 14.6c0-1 .8-1.6 1.8-1.6h15.6c1 0 1.9 1.5 1.4 2.9-.7 2.1-3 3.9-6.6 3.9-6.7 0-11.2-2-12.2-5.2z" />
+    </g>
+  ),
+  ansible: (
+    <>
+      <circle cx="12" cy="12" r="8.6" fill="none" stroke="#EE0000" strokeWidth="1.8" />
+      <path d="M12 6.4l4.6 11.6-4.6-3-4.6 3z" fill="#EE0000" />
+      <circle cx="12" cy="12" r="1.4" fill="#0d0f12" />
+    </>
+  ),
+  python: (
+    <>
+      <path d="M11.9 3.3c1.8 0 3.2.3 3.2 1.6v3h-6.4v.8h8.8c1.4 0 2.5 1.7 2.5 4.9 0 3.3-1.1 4.7-2.5 4.7h-2v-2.2c0-1.6-1.3-2.7-2.9-2.7H9.1c-1.3 0-2.4-1.2-2.4-2.7V6.1c0-1.4 1.4-2.8 5.2-2.8z" fill="#3776AB" />
+      <path d="M12.1 20.7c-1.8 0-3.2-.3-3.2-1.6v-3h6.4v-.8H6.5c-1.4 0-2.5-1.7-2.5-4.9 0-3.3 1.1-4.7 2.5-4.7h2v2.2c0 1.6 1.3 2.7 2.9 2.7h3.5c1.3 0 2.4 1.2 2.4 2.7v3.6c0 1.4-1.4 2.8-5.2 2.8z" fill="#FFD43B" />
+      <circle cx="10.2" cy="5" r="0.7" fill="#0d0f12" />
+      <circle cx="13.8" cy="19" r="0.7" fill="#0d0f12" />
+    </>
+  ),
+  odoo: (
+    <>
+      <circle cx="8" cy="12" r="5" fill="none" stroke="#714B67" strokeWidth="2.3" />
+      <circle cx="16" cy="12" r="5" fill="#714B67" />
+    </>
+  ),
+  asterisk: (
+    <g stroke="#F38020" strokeWidth="2.4" strokeLinecap="round">
+      <path d="M12 3.5v17" />
+      <path d="M4.2 8l15.6 8" />
+      <path d="M19.8 8L4.2 16" />
+    </g>
+  ),
+  nginx: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="#009639" strokeWidth="1.7" />
+      <path d="M8.4 16V8l7.2 8V8" fill="none" stroke="#009639" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
+  lighttpd: (
+    <>
+      <g fill="none" stroke="#8a97a1" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3.5" y="4.5" width="17" height="6" rx="1" />
+        <rect x="3.5" y="13.5" width="17" height="6" rx="1" />
+      </g>
+      <circle cx="6.8" cy="7.5" r="0.9" fill="#8a97a1" />
+      <circle cx="6.8" cy="16.5" r="0.9" fill="#8a97a1" />
+    </>
+  ),
+  letsencrypt: (
+    <>
+      <path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z" fill="none" stroke="#5b8ec4" strokeWidth="1.7" strokeLinejoin="round" />
+      <rect x="9" y="11" width="6" height="5" rx="1" fill="none" stroke="#5b8ec4" strokeWidth="1.5" />
+      <path d="M10.3 11V9.3a1.7 1.7 0 0 1 3.4 0V11" fill="none" stroke="#5b8ec4" strokeWidth="1.5" />
+    </>
+  ),
+  postgresql: (
+    <>
+      <path d="M12.5 3.4c4.6 0 7.6 3 7.4 7.4-.1 3-1.2 5.4-3 7-1 .9-1.4 1.6-1.5 2.7-.9.4-1.9.2-2.3-.6-1.6.3-3.4 0-4.7-1-2.7-2-4-5.4-3.4-8.9.6-3.9 3.6-6.6 7.5-6.6z" fill="none" stroke="#4169E1" strokeWidth="1.7" strokeLinejoin="round" />
+      <path d="M9 10.3c-1.6-.3-2.7.3-2.9 1.4" fill="none" stroke="#4169E1" strokeWidth="1.3" strokeLinecap="round" />
+      <path d="M13.4 20.3c-.2-1.4.2-2.6 1.5-3.6" fill="none" stroke="#4169E1" strokeWidth="1.3" strokeLinecap="round" />
+      <circle cx="10.6" cy="10.5" r="0.9" fill="#4169E1" />
+    </>
+  ),
+  redis: (
+    <g fill="#DC382D">
+      <path d="M12 4.2l7 3-7 3-7-3z" />
+      <path d="M5 10.3l7 3 7-3v2.4l-7 3-7-3z" opacity="0.72" />
+      <path d="M5 14.6l7 3 7-3v2.4l-7 3-7-3z" opacity="0.48" />
+    </g>
+  ),
+  prometheus: (
+    <>
+      <path d="M12 3.4c3 2.6 4.6 5.2 4.6 8 0 2-1 3.3-2 4.2.7-1.6.4-2.8-.5-4-.2 1.6-.9 2.6-2.1 3.4-1.2-.8-1.9-1.8-2.1-3.4-.9 1.2-1.2 2.4-.5 4-1-.9-2-2.2-2-4.2 0-2.8 1.6-5.4 4.6-8z" fill="#E6522C" />
+      <rect x="8.4" y="19" width="7.2" height="1.8" rx="0.9" fill="#E6522C" />
+    </>
+  ),
+  zabbix: (
+    <>
+      <path d="M12 3l3 6.3L21 12l-6 2.7L12 21l-3-6.3L3 12l6-2.7z" fill="#D40000" />
+      <circle cx="12" cy="12" r="2.3" fill="#0d0f12" />
+    </>
+  ),
+};
+
+const stackGroups = [
+  {
+    title: "Systèmes & réseau",
+    items: [
+      { key: "freebsd", name: "FreeBSD", note: "OpenWCC · passerelle WebRTC" },
+      { key: "linux", name: "Linux", note: "Debian · Ubuntu · CentOS" },
+      { key: "windows", name: "Windows Server", note: "postes et serveurs de gestion" },
+      { key: "cisco", name: "Cisco", note: "CCNA · VLAN · routage" },
+    ],
+  },
+  {
+    title: "Conteneurs, IaC & scripts",
+    items: [
+      { key: "docker", name: "Docker", note: "module Odoo · MiruStream API" },
+      { key: "ansible", name: "Ansible", note: "playbooks · redéploiement OpenWCC" },
+      { key: "python", name: "Python", note: "scripts · AGI · automatisation" },
+      { key: "odoo", name: "Odoo", note: "module dossiers de subvention" },
+    ],
+  },
+  {
+    title: "Temps réel & frontaux web",
+    items: [
+      { key: "asterisk", name: "Asterisk", note: "SVI 18 · files d’attente" },
+      { key: "nginx", name: "Nginx", note: "reverse proxy · module Odoo" },
+      { key: "lighttpd", name: "lighttpd", note: "frontal TLS · OpenWCC · WebRTC" },
+      { key: "letsencrypt", name: "Let's Encrypt", note: "certificats · passerelle WebRTC" },
+    ],
+  },
+  {
+    title: "Données & observabilité",
+    items: [
+      { key: "postgresql", name: "PostgreSQL", note: "OpenWCC · module Odoo" },
+      { key: "redis", name: "Redis", note: "cache · OpenWCC · SVI" },
+      { key: "prometheus", name: "Prometheus", note: "métriques · OpenWCC" },
+      { key: "zabbix", name: "Zabbix", note: "alertes · OpenWCC" },
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <div style={{background: '#0d0f12', color: '#eef1f0', fontFamily: "var(--font-familjen-grotesk), system-ui, sans-serif"}}>
@@ -13,14 +186,14 @@ export default function Home() {
           </span>
         </div>
         <nav style={{display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px, 4vw, 26px)'}}>
-          <a href="#architecture" style={{color: '#8a949d'}}>
-            architecture
+          <a href="#realisations" style={{color: '#8a949d'}}>
+            réalisations
           </a>
           <a href="#stack" style={{color: '#8a949d'}}>
             stack
           </a>
-          <a href="#projets" style={{color: '#8a949d'}}>
-            projets
+          <a href="#web" style={{color: '#8a949d'}}>
+            web
           </a>
           <a href="#contact" style={{color: '#8a949d'}}>
             contact
@@ -35,7 +208,7 @@ export default function Home() {
             Fort-de-France (972) · certifié Cisco CCNA
           </div>
           <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: 'clamp(34px, 7.2vw, 66px)', lineHeight: '1.08', letterSpacing: '-0.02em'}}>
-            Des systèmes qui tiennent, pendant que je fais autre chose.
+            Des systèmes qui tiennent, même quand personne ne regarde.
           </h1>
           <p style={{margin: '24px 0 0 0', fontSize: 'clamp(15px, 2.6vw, 18px)', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '33em'}}>
             Infrastructures FreeBSD et Linux, téléphonie Asterisk, réseaux chiffrés, déploiements automatisés. Je conçois, j'installe, j'automatise, je sécurise, je supervise
@@ -246,13 +419,13 @@ export default function Home() {
         </div>
       </div>
       {/* ARCHITECTURE ANIMÉE */}
-      <div id="architecture" style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', scrollMarginTop: '70px'}}>
+      <div id="realisations" style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', scrollMarginTop: '70px'}}>
         <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '24px'}}>
           <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.2vw, 38px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             OpenWCC, en train de tourner
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
-            flux réel · FreeBSD 14
+            architecture · FreeBSD 14
           </span>
         </div>
         <p style={{margin: '0 0 24px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
@@ -589,246 +762,33 @@ export default function Home() {
             chaque brique, le projet où elle sert
           </span>
         </div>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px'}}>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <circle cx="12" cy="14" r="5.4" fill="none" stroke="#AB2B28" strokeWidth="1.8" />
-              <path d="M9 9.2C8 6.6 8.6 4.4 10.6 3c-.4 1.6 0 2.8 1 3.6" fill="none" stroke="#AB2B28" strokeWidth="1.8" strokeLinecap="round" />
-              <path d="M14.6 9.6c1.4-2.4 1.2-4.6-.6-6.3c.1 1.6-.4 2.8-1.5 3.4" fill="none" stroke="#AB2B28" strokeWidth="1.8" strokeLinecap="round" />
-              <path d="M16.6 16.4l3.6 1.1-1.6 1-.4 1.8-1.6-2.1z" fill="#AB2B28" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              FreeBSD
+        <div style={{display: 'flex', flexDirection: 'column', gap: '28px'}}>
+          {stackGroups.map((group) => (
+            <div key={group.title}>
+              <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '12px'}}>
+                {group.title}
+              </div>
+              <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px'}}>
+                {group.items.map((item) => (
+                  <div key={item.key} className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
+                    <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
+                      {stackIcons[item.key]}
+                    </svg>
+                    <div style={{fontSize: '14px', fontWeight: '600'}}>
+                      {item.name}
+                    </div>
+                    <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
+                      {item.note}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              OpenWCC · passerelle WebRTC
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <rect x="3" y="3" width="8" height="8" fill="#F25022" />
-              <rect x="13" y="3" width="8" height="8" fill="#7FBA00" />
-              <rect x="3" y="13" width="8" height="8" fill="#00A4EF" />
-              <rect x="13" y="13" width="8" height="8" fill="#FFB900" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Windows Server
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              postes et serveurs de gestion
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <ellipse cx="12" cy="13" rx="5.4" ry="6.6" fill="#111" />
-              <ellipse cx="12" cy="14.5" rx="3.1" ry="4.2" fill="#fff" />
-              <ellipse cx="7.2" cy="19" rx="1.7" ry="2.3" transform="rotate(-16 7.2 19)" fill="#111" />
-              <ellipse cx="16.8" cy="19" rx="1.7" ry="2.3" transform="rotate(16 16.8 19)" fill="#111" />
-              <circle cx="10" cy="10.5" r="1.1" fill="#111" />
-              <circle cx="14" cy="10.5" r="1.1" fill="#111" />
-              <circle cx="10" cy="10.8" r="0.45" fill="#fff" />
-              <circle cx="14" cy="10.8" r="0.45" fill="#fff" />
-              <path d="M9 13.6c1.4 1.5 4.6 1.5 6 0" fill="none" stroke="#111" strokeWidth="0.9" />
-              <path d="M11.6 15.8c-.5 1.5-1.3 2.1-2.3 1.9" fill="none" stroke="#f4a300" strokeWidth="1.3" strokeLinecap="round" />
-              <path d="M12.4 15.8c.5 1.5 1.3 2.1 2.3 1.9" fill="none" stroke="#f4a300" strokeWidth="1.3" strokeLinecap="round" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Linux
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              Debian · Ubuntu · CentOS
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <g fill="#2496ED">
-                <rect x="3.5" y="12" width="2.6" height="2.6" />
-                <rect x="6.6" y="12" width="2.6" height="2.6" />
-                <rect x="9.7" y="12" width="2.6" height="2.6" />
-                <rect x="6.6" y="8.8" width="2.6" height="2.6" />
-                <rect x="9.7" y="8.8" width="2.6" height="2.6" />
-                <rect x="9.7" y="5.6" width="2.6" height="2.6" />
-                <path d="M2.5 14.6c0-1 .8-1.6 1.8-1.6h15.6c1 0 1.9 1.5 1.4 2.9-.7 2.1-3 3.9-6.6 3.9-6.7 0-11.2-2-12.2-5.2z" />
-              </g>
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Docker
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              module Odoo · MiruStream API
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <circle cx="12" cy="12" r="8.6" fill="none" stroke="#EE0000" strokeWidth="1.8" />
-              <path d="M12 6.4l4.6 11.6-4.6-3-4.6 3z" fill="#EE0000" />
-              <circle cx="12" cy="12" r="1.4" fill="#0d0f12" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Ansible
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              playbooks · redéploiement OpenWCC
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <g stroke="#F38020" strokeWidth="2.4" strokeLinecap="round">
-                <path d="M12 3.5v17" />
-                <path d="M4.2 8l15.6 8" />
-                <path d="M19.8 8L4.2 16" />
-              </g>
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Asterisk
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              SVI 18 · files d’attente
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <path d="M12.5 3.4c4.6 0 7.6 3 7.4 7.4-.1 3-1.2 5.4-3 7-1 .9-1.4 1.6-1.5 2.7-.9.4-1.9.2-2.3-.6-1.6.3-3.4 0-4.7-1-2.7-2-4-5.4-3.4-8.9.6-3.9 3.6-6.6 7.5-6.6z" fill="none" stroke="#4169E1" strokeWidth="1.7" strokeLinejoin="round" />
-              <path d="M9 10.3c-1.6-.3-2.7.3-2.9 1.4" fill="none" stroke="#4169E1" strokeWidth="1.3" strokeLinecap="round" />
-              <path d="M13.4 20.3c-.2-1.4.2-2.6 1.5-3.6" fill="none" stroke="#4169E1" strokeWidth="1.3" strokeLinecap="round" />
-              <circle cx="10.6" cy="10.5" r="0.9" fill="#4169E1" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              PostgreSQL
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              OpenWCC · module Odoo
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <g fill="#DC382D">
-                <path d="M12 4.2l7 3-7 3-7-3z" />
-                <path d="M5 10.3l7 3 7-3v2.4l-7 3-7-3z" opacity="0.72" />
-                <path d="M5 14.6l7 3 7-3v2.4l-7 3-7-3z" opacity="0.48" />
-              </g>
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Redis
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              cache · OpenWCC · SVI
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="#009639" strokeWidth="1.7" />
-              <path d="M8.4 16V8l7.2 8V8" fill="none" stroke="#009639" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Nginx
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              reverse proxy · module Odoo
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <g fill="none" stroke="#8a97a1" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3.5" y="4.5" width="17" height="6" rx="1" />
-                <rect x="3.5" y="13.5" width="17" height="6" rx="1" />
-              </g>
-              <circle cx="6.8" cy="7.5" r="0.9" fill="#8a97a1" />
-              <circle cx="6.8" cy="16.5" r="0.9" fill="#8a97a1" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              lighttpd
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              frontal TLS · OpenWCC · WebRTC
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <path d="M12 3.4c3 2.6 4.6 5.2 4.6 8 0 2-1 3.3-2 4.2.7-1.6.4-2.8-.5-4-.2 1.6-.9 2.6-2.1 3.4-1.2-.8-1.9-1.8-2.1-3.4-.9 1.2-1.2 2.4-.5 4-1-.9-2-2.2-2-4.2 0-2.8 1.6-5.4 4.6-8z" fill="#E6522C" />
-              <rect x="8.4" y="19" width="7.2" height="1.8" rx="0.9" fill="#E6522C" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Prometheus
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              métriques · OpenWCC
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <path d="M12 3l3 6.3L21 12l-6 2.7L12 21l-3-6.3L3 12l6-2.7z" fill="#D40000" />
-              <circle cx="12" cy="12" r="2.3" fill="#0d0f12" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Zabbix
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              alertes · OpenWCC
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <path d="M11.9 3.3c1.8 0 3.2.3 3.2 1.6v3h-6.4v.8h8.8c1.4 0 2.5 1.7 2.5 4.9 0 3.3-1.1 4.7-2.5 4.7h-2v-2.2c0-1.6-1.3-2.7-2.9-2.7H9.1c-1.3 0-2.4-1.2-2.4-2.7V6.1c0-1.4 1.4-2.8 5.2-2.8z" fill="#3776AB" />
-              <path d="M12.1 20.7c-1.8 0-3.2-.3-3.2-1.6v-3h6.4v-.8H6.5c-1.4 0-2.5-1.7-2.5-4.9 0-3.3 1.1-4.7 2.5-4.7h2v2.2c0 1.6 1.3 2.7 2.9 2.7h3.5c1.3 0 2.4 1.2 2.4 2.7v3.6c0 1.4-1.4 2.8-5.2 2.8z" fill="#FFD43B" />
-              <circle cx="10.2" cy="5" r="0.7" fill="#0d0f12" />
-              <circle cx="13.8" cy="19" r="0.7" fill="#0d0f12" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Python
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              scripts · AGI · automatisation
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <g fill="#1BA0D7">
-                <rect x="2.5" y="12" width="1.8" height="4" />
-                <rect x="5.3" y="9.5" width="1.8" height="6.5" />
-                <rect x="8.1" y="7.5" width="1.8" height="8.5" />
-                <rect x="10.9" y="6.5" width="1.8" height="9.5" />
-                <rect x="13.7" y="7.5" width="1.8" height="8.5" />
-                <rect x="16.5" y="9.5" width="1.8" height="6.5" />
-                <rect x="19.3" y="12" width="1.8" height="4" />
-              </g>
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Cisco
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              CCNA · VLAN · routage
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <circle cx="8" cy="12" r="5" fill="none" stroke="#714B67" strokeWidth="2.3" />
-              <circle cx="16" cy="12" r="5" fill="#714B67" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Odoo
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              module dossiers de subvention
-            </div>
-          </div>
-          <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
-            <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
-              <path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z" fill="none" stroke="#5b8ec4" strokeWidth="1.7" strokeLinejoin="round" />
-              <rect x="9" y="11" width="6" height="5" rx="1" fill="none" stroke="#5b8ec4" strokeWidth="1.5" />
-              <path d="M10.3 11V9.3a1.7 1.7 0 0 1 3.4 0V11" fill="none" stroke="#5b8ec4" strokeWidth="1.5" />
-            </svg>
-            <div style={{fontSize: '14px', fontWeight: '600'}}>
-              Let's Encrypt
-            </div>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', lineHeight: '1.5'}}>
-              certificats · passerelle WebRTC
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       {/* SÉQUENCE ANIMÉE */}
-      <div id="projets" style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', scrollMarginTop: '70px'}}>
+      <div style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
         <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '24px'}}>
           <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.2vw, 38px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Un appel dans le SVI
@@ -1335,7 +1295,7 @@ export default function Home() {
         </div>
       </div>
       {/* PROJETS WEB */}
-      <div style={{padding: 'clamp(32px, 7vw, 56px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
+      <div id="web" style={{padding: 'clamp(32px, 7vw, 56px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', scrollMarginTop: '70px'}}>
         <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '18px'}}>
           <h2 style={{margin: '0', fontSize: 'clamp(22px, 4.6vw, 30px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Projets web
@@ -1345,14 +1305,17 @@ export default function Home() {
           </span>
         </div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '16px'}}>
-          <a className="card" href="https://kodi-v2.vercel.app/browse" target="_blank" rel="noopener noreferrer" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px', textDecoration: 'none', color: 'inherit'}}>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Media center</div>
-            <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruStream</h3>
-            <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Catalogue, lecture et déploiement continu.</p>
-            <div style={{display: 'flex', flexWrap: 'wrap', gap: '6px', paddingTop: '4px'}}>
-              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Next.js</span>
-              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Supabase</span>
-              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
+          <a className="card" href="https://kodi-v2.vercel.app/browse" target="_blank" rel="noopener noreferrer" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit'}}>
+            <img src="/mirustream.jpg" alt="Page d'accueil de MiruStream" width="1100" height="687" loading="lazy" style={{width: '100%', height: 'auto', display: 'block', borderBottom: '1px solid #1c2024'}} />
+            <div style={{padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px', flexGrow: '1'}}>
+              <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Media center</div>
+              <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruStream</h3>
+              <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Catalogue, lecture et déploiement continu.</p>
+              <div style={{display: 'flex', flexWrap: 'wrap', gap: '6px', paddingTop: '4px'}}>
+                <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Next.js</span>
+                <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Supabase</span>
+                <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
+              </div>
             </div>
           </a>
           <div className="card card-static" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
@@ -1366,13 +1329,16 @@ export default function Home() {
             </div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', color: '#7c8790', paddingTop: '2px'}}>dépôt privé</div>
           </div>
-          <a className="card" href="https://mywatchlist-ten.vercel.app/" target="_blank" rel="noopener noreferrer" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px', textDecoration: 'none', color: 'inherit'}}>
-            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Catalogue</div>
-            <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruList</h3>
-            <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Suivi de catalogue et de progression avec interface web.</p>
-            <div style={{display: 'flex', flexWrap: 'wrap', gap: '6px', paddingTop: '4px'}}>
-              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>JavaScript</span>
-              <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
+          <a className="card" href="https://mywatchlist-ten.vercel.app/" target="_blank" rel="noopener noreferrer" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column', textDecoration: 'none', color: 'inherit'}}>
+            <img src="/mirulist.jpg" alt="Page d'accueil de MiruList" width="1100" height="687" loading="lazy" style={{width: '100%', height: 'auto', display: 'block', borderBottom: '1px solid #1c2024'}} />
+            <div style={{padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px', flexGrow: '1'}}>
+              <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Catalogue</div>
+              <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruList</h3>
+              <p style={{margin: '0', fontSize: '13.5px', lineHeight: '1.55', color: '#9aa3a9', flexGrow: '1'}}>Suivi de catalogue et de progression avec interface web.</p>
+              <div style={{display: 'flex', flexWrap: 'wrap', gap: '6px', paddingTop: '4px'}}>
+                <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>JavaScript</span>
+                <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '10.5px', padding: '4px 8px', border: '1px solid #262b30', borderRadius: '3px', color: '#9aa3a9'}}>Vercel</span>
+              </div>
             </div>
           </a>
           <div className="card card-static" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px'}}>
