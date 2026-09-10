@@ -4,16 +4,16 @@ export default function Home() {
   return (
     <div style={{minHeight: '6620px', background: '#0d0f12', color: '#eef1f0', fontFamily: "var(--font-familjen-grotesk), system-ui, sans-serif"}}>
       {/* BARRE */}
-      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '24px', padding: '0 48px', height: '54px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), ui-monospace, monospace", fontSize: '14px', color: '#7c8790'}}>
-        <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-          <span className="led" style={{width: '7px', height: '7px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
-          <span>
+      <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '10px 24px', padding: 'clamp(12px, 3vw, 16px) clamp(16px, 5vw, 48px)', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), ui-monospace, monospace", fontSize: 'clamp(11px, 2.8vw, 14px)', color: '#7c8790'}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: '10px', minWidth: '0', flex: '1 1 auto'}}>
+          <span className="led" style={{width: '7px', height: '7px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block', flexShrink: '0'}} />
+          <span style={{whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', minWidth: '0'}}>
             Kendy Jerome · infrastructure
             &amp;
             systèmes
           </span>
         </div>
-        <div style={{display: 'flex', gap: '26px'}}>
+        <div style={{display: 'flex', flexWrap: 'wrap', gap: 'clamp(12px, 4vw, 26px)'}}>
           <a href="#architecture" style={{color: '#7c8790'}}>
             architecture
           </a>
@@ -29,15 +29,15 @@ export default function Home() {
         </div>
       </div>
       {/* HERO */}
-      <div style={{display: 'grid', gridTemplateColumns: '1.35fr 1fr', gap: '48px', padding: '64px 48px 0 48px', alignItems: 'start'}}>
+      <div className="hero-grid" style={{display: 'grid', gridTemplateColumns: '1.35fr 1fr', gap: 'clamp(28px, 5vw, 48px)', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', alignItems: 'start'}}>
         <div>
-          <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '18px'}}>
+          <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(11px, 2.6vw, 13px)', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '18px'}}>
             Fort-de-France (972) · certifié Cisco CCNA
           </div>
-          <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: '66px', lineHeight: '1.04', letterSpacing: '-0.02em'}}>
+          <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: 'clamp(34px, 7.2vw, 66px)', lineHeight: '1.08', letterSpacing: '-0.02em'}}>
             Des systèmes qui tiennent, pendant que je fais autre chose.
           </h1>
-          <p style={{margin: '24px 0 0 0', fontSize: '18px', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '33em'}}>
+          <p style={{margin: '24px 0 0 0', fontSize: 'clamp(15px, 2.6vw, 18px)', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '33em'}}>
             Infrastructures FreeBSD et Linux, téléphonie Asterisk, réseaux chiffrés, déploiements automatisés. Je conçois, j'installe, j'automatise, je sécurise, je supervise
             <span className="caret" style={{color: '#2dd8b8'}}>
               _
@@ -61,7 +61,7 @@ export default function Home() {
             </span>
           </div>
           <div style={{padding: '26px 18px 22px 18px', textAlign: 'center'}}>
-            <div id="dc-uptime" style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '46px', fontWeight: '500', letterSpacing: '0.03em', color: '#eef1f0'}}><UptimeClock /></div>
+            <div id="dc-uptime" style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(30px, 9vw, 46px)', fontWeight: '500', letterSpacing: '0.03em', color: '#eef1f0'}}><UptimeClock /></div>
           </div>
           <div style={{display: 'flex', flexDirection: 'column', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', borderTop: '1px solid #1c2024'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 18px', borderBottom: '1px solid #16191d'}}>
@@ -244,9 +244,9 @@ export default function Home() {
         </div>
       </div>
       {/* ARCHITECTURE ANIMÉE */}
-      <div id="architecture" style={{padding: '72px 48px 0 48px', scrollMarginTop: '70px'}}>
-        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '24px'}}>
-          <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+      <div id="architecture" style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', scrollMarginTop: '70px'}}>
+        <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '24px'}}>
+          <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.2vw, 38px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             OpenWCC, en train de tourner
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
@@ -256,7 +256,7 @@ export default function Home() {
         <p style={{margin: '0 0 24px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
           Un centre de contacts, d'habitude, c'est une licence propriétaire et une boîte noire. On m'a demandé d'en construire un avec des briques ouvertes, le tout derrière un pare-feu, sur FreeBSD. La partie dont je suis le plus fier ne se voit pas : chaque brique est écrite dans un playbook Ansible, donc la plateforme entière se redéploie sans intervention manuelle.
         </p>
-        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: '28px 32px 22px 32px'}}>
+        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: 'clamp(16px, 4vw, 28px) clamp(14px, 4vw, 32px) clamp(14px, 3vw, 22px) clamp(14px, 4vw, 32px)'}}>
           <svg viewBox="0 0 1160 500" role="img" aria-label="Architecture de la plateforme OpenWCC : les clients SIP, navigateur et messagerie traversent le pare-feu PF vers les services lighttpd, Tomcat, Asterisk, Apache James et Openfire, qui accèdent à PostgreSQL, Redis et OpenLDAP ; Ansible déploie l'ensemble et Prometheus le supervise." style={{width: '100%', height: 'auto', display: 'block'}}>
             <defs>
               <marker id="arA" viewBox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
@@ -576,16 +576,16 @@ export default function Home() {
         </figure>
       </div>
       {/* STACK EN TUILES */}
-      <div id="stack" style={{padding: '72px 48px 0 48px', scrollMarginTop: '70px'}}>
-        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '26px'}}>
-          <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+      <div id="stack" style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', scrollMarginTop: '70px'}}>
+        <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '26px'}}>
+          <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.2vw, 38px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Stack
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
             chaque brique, le projet où elle sert
           </span>
         </div>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '12px'}}>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px'}}>
           <div className="card tile" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '18px', display: 'flex', flexDirection: 'column', gap: '11px'}}>
             <svg className="tile-icon" viewBox="0 0 24 24" width="28" height="28" style={{overflow: 'visible'}}>
               <circle cx="12" cy="14" r="5.4" fill="none" stroke="#AB2B28" strokeWidth="1.8" />
@@ -824,9 +824,9 @@ export default function Home() {
         </div>
       </div>
       {/* SÉQUENCE ANIMÉE */}
-      <div id="projets" style={{padding: '72px 48px 0 48px', scrollMarginTop: '70px'}}>
-        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '24px'}}>
-          <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+      <div id="projets" style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', scrollMarginTop: '70px'}}>
+        <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '24px'}}>
+          <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.2vw, 38px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Un appel dans le SVI
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
@@ -836,7 +836,7 @@ export default function Home() {
         <p style={{margin: '0 0 24px 0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2', maxWidth: '62em'}}>
           Un serveur vocal interactif classique code son routage en dur dans le dialplan : le moindre changement demande une intervention. J'ai écrit le mien en Python, branché sur Asterisk via AGI, avec les données d'appel lues et écrites en direct dans Cassandra. Changer un routage devient une écriture en base, pas une modification de configuration.
         </p>
-        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: '28px 32px 22px 32px'}}>
+        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: 'clamp(16px, 4vw, 28px) clamp(14px, 4vw, 32px) clamp(14px, 3vw, 22px) clamp(14px, 4vw, 32px)'}}>
           <svg viewBox="0 0 1000 470" role="img" aria-label="Déroulé d'un appel : l'appelant joint Asterisk, qui lance le script Python AGI ; le script lit le dossier dans Cassandra, fait jouer l'annonce, reçoit la touche DTMF, écrit la trace d'appel et renvoie la destination de routage à Asterisk, qui met l'appelant en relation." style={{width: '100%', height: 'auto', display: 'block'}}>
             <defs>
               <marker id="sqA" viewBox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
@@ -935,9 +935,9 @@ export default function Home() {
         </figure>
       </div>
       {/* ODOO 18 */}
-      <div style={{padding: '72px 48px 0 48px'}}>
-        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '18px'}}>
-          <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+      <div style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
+        <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '18px'}}>
+          <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.2vw, 38px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Dossiers de subvention
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
@@ -967,7 +967,7 @@ export default function Home() {
             PostgreSQL
           </span>
         </div>
-        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: '28px 32px 22px 32px'}}>
+        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: 'clamp(16px, 4vw, 28px) clamp(14px, 4vw, 32px) clamp(14px, 3vw, 22px) clamp(14px, 4vw, 32px)'}}>
           <svg viewBox="0 0 1010 280" role="img" aria-label="Cycle de vie d'un dossier de subvention : brouillon, déposé, en instruction, puis validé ou refusé ; l'instruction peut renvoyer le dossier en brouillon quand un complément est demandé." style={{width: '100%', height: 'auto', display: 'block'}}>
             <defs>
               <marker id="stO" viewBox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
@@ -1042,9 +1042,9 @@ export default function Home() {
         </figure>
       </div>
       {/* WEBRTC */}
-      <div style={{padding: '72px 48px 0 48px'}}>
-        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '18px'}}>
-          <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+      <div style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
+        <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '18px'}}>
+          <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.2vw, 38px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Appeler depuis un navigateur, sans rien installer
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
@@ -1074,7 +1074,7 @@ export default function Home() {
             lighttpd
           </span>
         </div>
-        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: '28px 32px 22px 32px'}}>
+        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: 'clamp(16px, 4vw, 28px) clamp(14px, 4vw, 32px) clamp(14px, 3vw, 22px) clamp(14px, 4vw, 32px)'}}>
           <svg viewBox="0 0 620 230" role="img" aria-label="Passerelle WebRTC : le navigateur charge la page servie par lighttpd avec un certificat Let's Encrypt, puis traverse le pare-feu PF en WSS pour la signalisation et en SRTP pour le média chiffré jusqu'à Asterisk, qui met en relation avec les postes SIP internes." style={{width: '100%', height: 'auto', display: 'block'}}>
             <defs>
               <marker id="wrW" viewBox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
@@ -1150,9 +1150,9 @@ export default function Home() {
         </figure>
       </div>
       {/* SHELL */}
-      <div style={{padding: '72px 48px 0 48px'}}>
-        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '18px'}}>
-          <h2 style={{margin: '0', fontSize: '38px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+      <div style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
+        <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '18px'}}>
+          <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.2vw, 38px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Une sauvegarde sans prétention, qui tourne seule
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
@@ -1179,7 +1179,7 @@ export default function Home() {
             cron
           </span>
         </div>
-        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: '28px 32px 22px 32px'}}>
+        <figure style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: 'clamp(16px, 4vw, 28px) clamp(14px, 4vw, 32px) clamp(14px, 3vw, 22px) clamp(14px, 4vw, 32px)'}}>
           <svg viewBox="0 0 620 230" role="img" aria-label="Chaîne de sauvegarde : cron déclenche la compression tar.gz, transférée en SCP vers un hôte distant, avec rotation sur deux jours puis purge des archives expirées." style={{width: '100%', height: 'auto', display: 'block'}}>
             <defs>
               <marker id="bkB" viewBox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto-start-reverse">
@@ -1247,8 +1247,8 @@ export default function Home() {
         </div>
       </div>
       {/* MÉTHODE */}
-      <div style={{marginTop: '72px', borderTop: '1px solid #1c2024', borderBottom: '1px solid #1c2024', padding: '56px 48px', background: '#101317'}}>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: '36px'}}>
+      <div style={{marginTop: '72px', borderTop: '1px solid #1c2024', borderBottom: '1px solid #1c2024', padding: 'clamp(32px, 7vw, 56px) clamp(16px, 5vw, 48px)', background: '#101317'}}>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 'clamp(24px, 5vw, 36px)'}}>
           <div>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
               01. jamais deux fois pareil
@@ -1276,12 +1276,12 @@ export default function Home() {
         </div>
       </div>
       {/* PARCOURS */}
-      <div style={{padding: '56px 48px 0 48px'}}>
-        <h2 style={{margin: '0 0 22px 0', fontSize: '30px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+      <div style={{padding: 'clamp(32px, 7vw, 56px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
+        <h2 style={{margin: '0 0 22px 0', fontSize: 'clamp(22px, 4.6vw, 30px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
           Parcours
         </h2>
         <div style={{display: 'flex', flexDirection: 'column', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13.5px'}}>
-          <div style={{display: 'grid', gridTemplateColumns: '130px 1fr 240px', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'minmax(64px, 130px) minmax(140px, 1fr) minmax(100px, 240px)', gap: 'clamp(10px, 3vw, 20px)', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
             <span style={{color: '#2dd8b8'}}>
               2023–2025
             </span>
@@ -1292,7 +1292,7 @@ export default function Home() {
               Keyce Academy
             </span>
           </div>
-          <div style={{display: 'grid', gridTemplateColumns: '130px 1fr 240px', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'minmax(64px, 130px) minmax(140px, 1fr) minmax(100px, 240px)', gap: 'clamp(10px, 3vw, 20px)', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
             <span style={{color: '#2dd8b8'}}>
               2023
             </span>
@@ -1303,7 +1303,7 @@ export default function Home() {
               Lycée Joseph Gaillard
             </span>
           </div>
-          <div style={{display: 'grid', gridTemplateColumns: '130px 1fr 240px', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'minmax(64px, 130px) minmax(140px, 1fr) minmax(100px, 240px)', gap: 'clamp(10px, 3vw, 20px)', padding: '14px 0', borderTop: '1px solid #1c2024'}}>
             <span style={{color: '#2dd8b8'}}>
               -
             </span>
@@ -1314,7 +1314,7 @@ export default function Home() {
               Cisco
             </span>
           </div>
-          <div style={{display: 'grid', gridTemplateColumns: '130px 1fr 240px', gap: '20px', padding: '14px 0', borderTop: '1px solid #1c2024', borderBottom: '1px solid #1c2024'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'minmax(64px, 130px) minmax(140px, 1fr) minmax(100px, 240px)', gap: 'clamp(10px, 3vw, 20px)', padding: '14px 0', borderTop: '1px solid #1c2024', borderBottom: '1px solid #1c2024'}}>
             <span style={{color: '#2dd8b8'}}>
               2022
             </span>
@@ -1328,16 +1328,16 @@ export default function Home() {
         </div>
       </div>
       {/* PROJETS WEB */}
-      <div style={{padding: '56px 48px 0 48px'}}>
-        <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '20px', paddingBottom: '18px'}}>
-          <h2 style={{margin: '0', fontSize: '30px', fontWeight: '700', letterSpacing: '-0.015em'}}>
+      <div style={{padding: 'clamp(32px, 7vw, 56px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
+        <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', justifyContent: 'space-between', gap: '10px 20px', paddingBottom: '18px'}}>
+          <h2 style={{margin: '0', fontSize: 'clamp(22px, 4.6vw, 30px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
             Projets web
           </h2>
           <span style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#7c8790'}}>
             à côté, pour ne pas rouiller
           </span>
         </div>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: '16px'}}>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '16px'}}>
           <a className="card" href="https://kodi-v2.vercel.app/browse" target="_blank" rel="noopener noreferrer" style={{border: '1px solid #1c2024', borderRadius: '6px', padding: '22px', display: 'flex', flexDirection: 'column', gap: '10px', textDecoration: 'none', color: 'inherit'}}>
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em'}}>Media center</div>
             <h3 style={{margin: '0', fontSize: '18px', fontWeight: '700'}}>MiruStream</h3>
@@ -1379,12 +1379,12 @@ export default function Home() {
         </div>
       </div>
       {/* CONTACT */}
-      <div id="contact" style={{padding: '72px 48px 64px 48px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap', scrollMarginTop: '70px'}}>
+      <div id="contact" style={{padding: 'clamp(40px, 8vw, 72px) clamp(16px, 5vw, 48px) clamp(36px, 6vw, 64px) clamp(16px, 5vw, 48px)', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '40px', flexWrap: 'wrap', scrollMarginTop: '70px'}}>
         <div>
           <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
             Ouvert aux opportunités
           </div>
-          <h2 style={{margin: '0', fontSize: '40px', fontWeight: '700', letterSpacing: '-0.015em', maxWidth: '14em'}}>
+          <h2 style={{margin: '0', fontSize: 'clamp(26px, 5.6vw, 40px)', fontWeight: '700', letterSpacing: '-0.015em', maxWidth: '14em'}}>
             Infrastructure, VoIP ou DevOps : parlons-en.
           </h2>
           <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13px', color: '#7c8790', paddingTop: '14px'}}>
