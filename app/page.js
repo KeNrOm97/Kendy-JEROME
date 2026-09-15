@@ -214,10 +214,10 @@ export default function Home() {
           Fort-de-France (972) · certifié Cisco CCNA
         </div>
         <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: 'clamp(34px, 7.2vw, 66px)', lineHeight: '1.08', letterSpacing: '-0.02em'}}>
-          Des systèmes qui tiennent, même quand personne ne regarde.
+          Bonjour, je suis Kendy Jerome.
         </h1>
         <p style={{margin: '24px 0 0 0', fontSize: 'clamp(15px, 2.6vw, 18px)', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '38em'}}>
-          Infrastructures FreeBSD et Linux, téléphonie Asterisk, réseaux chiffrés, déploiements automatisés. Je conçois, j'installe, j'automatise, je sécurise, je supervise
+          Passionné par tout ce qui touche à l'IT. Administrateur systèmes et réseaux : infrastructures FreeBSD et Linux, téléphonie Asterisk, réseaux chiffrés, déploiements automatisés. Je conçois, j'installe, j'automatise, je sécurise, je supervise. Ce que j'aime avant tout : comprendre un système jusqu'au bout, puis le rendre invisible pour ceux qui s'en servent
           <span className="caret" style={{color: '#2dd8b8'}}>
             _
           </span>
