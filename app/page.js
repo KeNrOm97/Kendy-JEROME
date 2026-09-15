@@ -209,7 +209,7 @@ export default function Home() {
       </header>
       <main>
       {/* HERO */}
-      <div className="hero-grid" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '0', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', maxWidth: '760px', margin: '0 auto'}}>
+      <div className="hero-grid" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', gap: '0', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', maxWidth: '760px', margin: '0 auto'}}>
         <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(11px, 2.6vw, 13px)', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '18px'}}>
           Fort-de-France (972) · certifié Cisco CCNA
         </div>
@@ -217,12 +217,27 @@ export default function Home() {
           Bonjour, je suis Kendy Jerome.
         </h1>
         <p style={{margin: '24px 0 0 0', fontSize: 'clamp(15px, 2.6vw, 18px)', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '38em'}}>
-          Passionné par tout ce qui touche à l'IT. Administrateur systèmes et réseaux : infrastructures FreeBSD et Linux, téléphonie Asterisk, réseaux chiffrés, déploiements automatisés. Je conçois, j'installe, j'automatise, je sécurise, je supervise. Ce que j'aime avant tout : comprendre un système jusqu'au bout, puis le rendre invisible pour ceux qui s'en servent
+          Passionné par tout ce qui touche à l'IT. Administrateur systèmes et réseaux : je conçois, j'installe, j'automatise, je sécurise, je supervise. Ce que j'aime avant tout : comprendre un système jusqu'au bout, puis le rendre invisible pour ceux qui s'en servent
           <span className="caret" style={{color: '#2dd8b8'}}>
             _
           </span>
         </p>
-        <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'center', paddingTop: '30px'}}>
+        <div style={{display: 'flex', gap: '10px', flexWrap: 'wrap', paddingTop: '18px'}}>
+          {[
+            { key: 'freebsd', label: 'FreeBSD' },
+            { key: 'linux', label: 'Linux' },
+            { key: 'asterisk', label: 'Asterisk' },
+            { key: 'ansible', label: 'Ansible' },
+          ].map((item) => (
+            <span key={item.key} style={{display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '7px 12px', border: '1px solid #1c2024', borderRadius: '999px', background: '#101317', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#c7ccce'}}>
+              <svg viewBox="0 0 24 24" width="16" height="16" style={{overflow: 'visible', flexShrink: '0'}}>
+                {stackIcons[item.key]}
+              </svg>
+              {item.label}
+            </span>
+          ))}
+        </div>
+        <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'flex-start', paddingTop: '30px'}}>
           <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', background: '#2dd8b8', color: '#06120f', fontWeight: '700', fontSize: '15px', borderRadius: '4px'}}>
             Me contacter
           </a>
