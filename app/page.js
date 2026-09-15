@@ -234,7 +234,7 @@ export default function Home() {
       {/* TON PARCOURS */}
       <div style={{padding: 'clamp(40px, 7vw, 56px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
         <h2 style={{margin: '0 0 22px 0', fontSize: 'clamp(20px, 4vw, 26px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
-          Ton parcours
+          Parcours
         </h2>
         <div style={{display: 'flex', flexDirection: 'column', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13.5px'}}>
           {parcours.map((step, i) => (
@@ -247,6 +247,36 @@ export default function Home() {
               <span style={{color: '#7c8790'}}>{step.place}</span>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* MÉTHODE */}
+      <div style={{marginTop: '48px', borderTop: '1px solid #1c2024', borderBottom: '1px solid #1c2024', padding: 'clamp(32px, 7vw, 56px) clamp(16px, 5vw, 48px)', background: '#101317'}}>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 'clamp(24px, 5vw, 36px)'}}>
+          <div>
+            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
+              01. jamais deux fois pareil
+            </div>
+            <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
+              Un playbook Ansible même quand l'installation à la main irait plus vite. Ça se paie le jour où il faut remonter la machine dans l'urgence.
+            </p>
+          </div>
+          <div>
+            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
+              02. jamais après
+            </div>
+            <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
+              Pare-feu et certificats posés avec le service, jamais après. Ouvrir large en se disant qu'on refermera plus tard finit en règle oubliée.
+            </p>
+          </div>
+          <div>
+            <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '14px'}}>
+              03. restaurée, vraiment
+            </div>
+            <p style={{margin: '0', fontSize: '16.5px', lineHeight: '1.65', color: '#b4bcc2'}}>
+              Une sauvegarde qu'on n'a jamais restaurée, on ne sait pas encore si c'en est une. Je documente au fur et à mesure.
+            </p>
+          </div>
         </div>
       </div>
 
