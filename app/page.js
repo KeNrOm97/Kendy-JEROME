@@ -209,41 +209,45 @@ export default function Home() {
       </header>
       <main>
       {/* HERO */}
-      <div className="hero-grid" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', gap: '0', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
-        <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(12px, 2.6vw, 14px)', color: '#5c666e', paddingBottom: '14px'}}>
-          <span style={{color: '#2dd8b8'}}>$</span> whoami
-        </div>
-        <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: 'clamp(34px, 7.2vw, 66px)', lineHeight: '1.08', letterSpacing: '-0.02em'}}>
-          Bonjour, je suis Kendy Jerome.
-        </h1>
-        <p style={{margin: '24px 0 0 0', fontSize: 'clamp(15px, 2.6vw, 18px)', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '38em'}}>
-          Passionné par tout ce qui touche à l'IT. Administrateur systèmes et réseaux : je conçois, j'installe, j'automatise, je sécurise, je supervise. Ce que j'aime avant tout : comprendre un système jusqu'au bout, puis le rendre invisible pour ceux qui s'en servent
-          <span className="caret" style={{color: '#2dd8b8'}}>
-            _
-          </span>
-        </p>
-        <div style={{display: 'flex', gap: '10px', flexWrap: 'wrap', paddingTop: '18px'}}>
-          {[
-            { key: 'freebsd', label: 'FreeBSD' },
-            { key: 'linux', label: 'Linux' },
-            { key: 'asterisk', label: 'Asterisk' },
-            { key: 'ansible', label: 'Ansible' },
-          ].map((item) => (
-            <span key={item.key} style={{display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '7px 12px', border: '1px solid #1c2024', borderRadius: '999px', background: '#101317', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12.5px', color: '#c7ccce'}}>
-              <svg viewBox="0 0 24 24" width="16" height="16" style={{overflow: 'visible', flexShrink: '0'}}>
-                {stackIcons[item.key]}
-              </svg>
-              {item.label}
+      <div className="hero-grid" style={{display: 'grid', gridTemplateColumns: '1.3fr 0.7fr', gap: 'clamp(28px, 5vw, 48px)', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', alignItems: 'start'}}>
+        <div>
+          <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: 'clamp(34px, 7.2vw, 66px)', lineHeight: '1.08', letterSpacing: '-0.02em'}}>
+            Bonjour, je suis Kendy Jerome.
+          </h1>
+          <p style={{margin: '24px 0 0 0', fontSize: 'clamp(15px, 2.6vw, 18px)', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '38em'}}>
+            La technologie me passionne depuis toujours, particulièrement tout ce qui touche à l'infrastructure et aux réseaux : comprendre comment ça tient, comment ça tombe, et comment le réparer avant que ça tombe
+            <span className="caret" style={{color: '#2dd8b8'}}>
+              _
             </span>
-          ))}
+          </p>
+          <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', paddingTop: '30px'}}>
+            <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', background: '#2dd8b8', color: '#06120f', fontWeight: '700', fontSize: '15px', borderRadius: '4px'}}>
+              Me contacter
+            </a>
+            <a href="https://github.com/KeNrOm97" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', border: '1px solid #262b30', color: '#eef1f0', fontSize: '15px', borderRadius: '4px'}}>
+              GitHub
+            </a>
+          </div>
         </div>
-        <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'flex-start', paddingTop: '30px'}}>
-          <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', background: '#2dd8b8', color: '#06120f', fontWeight: '700', fontSize: '15px', borderRadius: '4px'}}>
-            Me contacter
-          </a>
-          <a href="https://github.com/KeNrOm97" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', border: '1px solid #262b30', color: '#eef1f0', fontSize: '15px', borderRadius: '4px'}}>
-            GitHub
-          </a>
+        <div style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', padding: '20px'}}>
+          <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#5c666e', paddingBottom: '16px'}}>
+            Au quotidien
+          </div>
+          <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+            {[
+              { key: 'freebsd', label: 'FreeBSD' },
+              { key: 'linux', label: 'Linux' },
+              { key: 'asterisk', label: 'Asterisk' },
+              { key: 'ansible', label: 'Ansible' },
+            ].map((item) => (
+              <div key={item.key} style={{display: 'flex', alignItems: 'center', gap: '10px', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13px', color: '#c7ccce'}}>
+                <svg viewBox="0 0 24 24" width="18" height="18" style={{overflow: 'visible', flexShrink: '0'}}>
+                  {stackIcons[item.key]}
+                </svg>
+                {item.label}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       {/* TON PARCOURS */}
