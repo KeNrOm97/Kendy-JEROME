@@ -135,12 +135,6 @@ figure {
   }
 }
 
-@media (max-width: 760px) {
-  .hero-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 @media (max-width: 640px) {
   .topbar-sub {
     display: none !important;

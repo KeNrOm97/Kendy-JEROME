@@ -209,9 +209,9 @@ export default function Home() {
       </header>
       <main>
       {/* HERO */}
-      <div className="hero-grid" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', gap: '0', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', maxWidth: '760px', margin: '0 auto'}}>
-        <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(11px, 2.6vw, 13px)', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '18px'}}>
-          Fort-de-France (972) · certifié Cisco CCNA
+      <div className="hero-grid" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', gap: '0', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)'}}>
+        <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(12px, 2.6vw, 14px)', color: '#5c666e', paddingBottom: '14px'}}>
+          <span style={{color: '#2dd8b8'}}>$</span> whoami
         </div>
         <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: 'clamp(34px, 7.2vw, 66px)', lineHeight: '1.08', letterSpacing: '-0.02em'}}>
           Bonjour, je suis Kendy Jerome.
