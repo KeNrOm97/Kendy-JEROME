@@ -1,4 +1,3 @@
-import UptimeClock from "./components/UptimeClock";
 import SessionTimer from "./components/SessionTimer";
 import ProjectsBanner from "./components/ProjectsBanner";
 import ProjectsGrid from "./components/ProjectsGrid";
@@ -210,69 +209,26 @@ export default function Home() {
       </header>
       <main>
       {/* HERO */}
-      <div className="hero-grid" style={{display: 'grid', gridTemplateColumns: '1.35fr 1fr', gap: 'clamp(28px, 5vw, 48px)', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', alignItems: 'start'}}>
-        <div>
-          <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(11px, 2.6vw, 13px)', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '18px'}}>
-            Fort-de-France (972) · certifié Cisco CCNA
-          </div>
-          <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: 'clamp(34px, 7.2vw, 66px)', lineHeight: '1.08', letterSpacing: '-0.02em'}}>
-            Des systèmes qui tiennent, même quand personne ne regarde.
-          </h1>
-          <p style={{margin: '24px 0 0 0', fontSize: 'clamp(15px, 2.6vw, 18px)', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '33em'}}>
-            Infrastructures FreeBSD et Linux, téléphonie Asterisk, réseaux chiffrés, déploiements automatisés. Je conçois, j'installe, j'automatise, je sécurise, je supervise
-            <span className="caret" style={{color: '#2dd8b8'}}>
-              _
-            </span>
-          </p>
-          <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', paddingTop: '30px'}}>
-            <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', background: '#2dd8b8', color: '#06120f', fontWeight: '700', fontSize: '15px', borderRadius: '4px'}}>
-              Me contacter
-            </a>
-            <a href="https://github.com/KeNrOm97" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', border: '1px solid #262b30', color: '#eef1f0', fontSize: '15px', borderRadius: '4px'}}>
-              GitHub
-            </a>
-          </div>
+      <div className="hero-grid" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '0', padding: 'clamp(40px, 8vw, 64px) clamp(16px, 5vw, 48px) 0 clamp(16px, 5vw, 48px)', maxWidth: '760px', margin: '0 auto'}}>
+        <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(11px, 2.6vw, 13px)', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#2dd8b8', paddingBottom: '18px'}}>
+          Fort-de-France (972) · certifié Cisco CCNA
         </div>
-        {/* PANNEAU LIVE */}
-        <div style={{border: '1px solid #1c2024', background: '#101317', borderRadius: '6px', overflow: 'hidden'}}>
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', padding: '12px 18px', borderBottom: '1px solid #1c2024', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11.5px', color: '#7c8790'}}>
-            <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
-              <span className="led" style={{width: '6px', height: '6px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
-              en direct
-            </span>
-          </div>
-          <div style={{padding: '26px 18px 22px 18px', textAlign: 'center'}}>
-            <div id="dc-uptime" style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: 'clamp(30px, 9vw, 46px)', fontWeight: '500', letterSpacing: '0.03em', color: '#eef1f0'}}><UptimeClock /></div>
-          </div>
-          <div style={{display: 'flex', flexDirection: 'column', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '12px', borderTop: '1px solid #1c2024'}}>
-            <div style={{display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 18px', borderBottom: '1px solid #16191d'}}>
-              <span className="led" style={{width: '6px', height: '6px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
-              <span style={{flexGrow: '1', color: '#c7ccce'}}>
-                asterisk 18
-              </span>
-              <span style={{color: '#5c666e'}}>
-                svi actif
-              </span>
-            </div>
-            <div style={{display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 18px', borderBottom: '1px solid #16191d'}}>
-              <span className="led2" style={{width: '6px', height: '6px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
-              <span style={{flexGrow: '1', color: '#c7ccce'}}>
-                postgresql 15
-              </span>
-              <span style={{color: '#5c666e'}}>
-                connecté
-              </span>
-            </div>
-            <div style={{display: 'flex', alignItems: 'center', gap: '12px', padding: '11px 18px'}}>
-              <span className="led3" style={{width: '6px', height: '6px', borderRadius: '50%', background: '#2dd8b8', display: 'inline-block'}} />
-              <span style={{flexGrow: '1', color: '#c7ccce'}}>
-                pare-feu pf
-              </span>
-              <span style={{color: '#5c666e'}}>
-                règles chargées
-              </span>
-            </div>
-          </div>
+        <h1 style={{margin: '0', fontFamily: "var(--font-familjen-grotesk), sans-serif", fontWeight: '700', fontSize: 'clamp(34px, 7.2vw, 66px)', lineHeight: '1.08', letterSpacing: '-0.02em'}}>
+          Des systèmes qui tiennent, même quand personne ne regarde.
+        </h1>
+        <p style={{margin: '24px 0 0 0', fontSize: 'clamp(15px, 2.6vw, 18px)', lineHeight: '1.62', color: '#b4bcc2', maxWidth: '38em'}}>
+          Infrastructures FreeBSD et Linux, téléphonie Asterisk, réseaux chiffrés, déploiements automatisés. Je conçois, j'installe, j'automatise, je sécurise, je supervise
+          <span className="caret" style={{color: '#2dd8b8'}}>
+            _
+          </span>
+        </p>
+        <div style={{display: 'flex', gap: '14px', flexWrap: 'wrap', justifyContent: 'center', paddingTop: '30px'}}>
+          <a href="#contact" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', background: '#2dd8b8', color: '#06120f', fontWeight: '700', fontSize: '15px', borderRadius: '4px'}}>
+            Me contacter
+          </a>
+          <a href="https://github.com/KeNrOm97" target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', height: '50px', padding: '0 26px', border: '1px solid #262b30', color: '#eef1f0', fontSize: '15px', borderRadius: '4px'}}>
+            GitHub
+          </a>
         </div>
       </div>
       {/* TON PARCOURS */}

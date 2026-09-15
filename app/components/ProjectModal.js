@@ -35,7 +35,7 @@ export default function ProjectModal({ project, onClose }) {
             <div style={{fontFamily: "var(--font-fragment-mono), monospace", fontSize: '11px', color: '#2dd8b8', textTransform: 'uppercase', letterSpacing: '.06em', paddingBottom: '8px'}}>
               {kicker}
             </div>
-            <h2 style={{margin: '0', fontSize: 'clamp(22px, 4vw, 30px)', fontWeight: '700', letterSpacing: '-0.015em'}}>
+            <h2 style={{margin: '0', fontSize: 'clamp(22px, 4vw, 30px)', fontWeight: '700', letterSpacing: '-0.015em', color: '#eef1f0'}}>
               {title}
             </h2>
           </div>
@@ -81,7 +81,7 @@ export default function ProjectModal({ project, onClose }) {
         ) : null}
 
         {link && (
-          <a href={link} target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', marginTop: '18px', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13px'}}>
+          <a href={link} target="_blank" rel="noopener noreferrer" style={{display: 'inline-flex', marginTop: '18px', fontFamily: "var(--font-fragment-mono), monospace", fontSize: '13px', color: '#2dd8b8'}}>
             {linkLabel}
           </a>
         )}
